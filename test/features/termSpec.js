@@ -1,10 +1,9 @@
-var chai = require('chai');
-var chaiHttp = require('chai-http');
-var Browser = require('zombie');
-var http = require('http');
-var assert = require('assert');
-
-var server = require('../../app');
+var chai      = require('chai');
+var chaiHttp  = require('chai-http');
+var http      = require('http');
+var assert    = require('assert');
+var Browser   = require('zombie');
+var server    = require('../../app');
 
 var should = chai.should();
 var expect = chai.expect();
@@ -33,5 +32,12 @@ describe('homepage', function() {
   it('should have the title on the homepage', function() {
     assert.ok(this.browser.success);
     assert.equal(this.browser.text('h1'), 'Developer\'s Dictionary');
+  });
+
+  it('should have a list on the homepage', function() {
+    var list = "MongoDB: MongoDB is an open-source, document database that provides persistence for your application data.AJAX: It is the use of the XMLHttpRequest object to communicate with server-side scripts.AngularJS: AngularJS is a structural framework for dynamic web apps.";
+    
+    assert.ok(this.browser.success);
+    assert.equal(this.browser.text('li'), list);
   });
 });
