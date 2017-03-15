@@ -3,18 +3,20 @@
 
 }
 
-a {
-  color: #fff;
+.source {
+  color: #888;
   font-family: 'Raleway', sans-serif;
+  text-decoration: underline;
 }
 .term-title {
   font-family: 'Roboto', sans-serif;
-  color: #fff;
+  font-weight: bolder;
+
 }
 
 .short-def {
   font-family: 'Raleway', sans-serif;
-  color: #fff;
+
 }
 
 .definitions {
@@ -28,4 +30,11 @@ a {
 .jumbotron {
   text-align: center;
   background: #7c4dff;
+  color: #fff;
+}
+
+.jumbotron a {
+  color:#fff;
+  font-weight: bolder;
+  font-size: 1.3em;
 }
