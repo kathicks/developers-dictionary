@@ -1,0 +1,31 @@
+#show-page {
+  background: #7c4dff;
+
+}
+
+a {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+.term-title {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+.short-def {
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+}
+
+.definitions {
+  padding: 2em;
+  color:#888;
+  background: #fff;
+  border-radius: 1vw;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.jumbotron {
+  text-align: center;
+  background: #7c4dff;
+}
