@@ -10,11 +10,33 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
+   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway|Roboto:500,700" rel="stylesheet">
+
    <link href="stylesheets/style.css" rel="stylesheet">
 
  </head>
  <body>
-   <h1>Developer's Dictionary</h1>
-   <%- body %>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        	<span class="sr-only">Toggle navigation</span>
+        	<span class="glyphicon glyphicon-th-list icon-ok"></span>
+        </button>
+        <a class="navbar-brand" href="/">Developer's Dictionary</a>
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Add Entry<span class="sr-only">(current)</span></a></li>
+          <li><a href="pages/info.html">Log In</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+  <div class="content">
+    <%- body %>
+  </div>
  </body>
 </html>

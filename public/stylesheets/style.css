@@ -6,3 +6,28 @@ body {
 a {
   color: #00B7FF;
 }
+
+.navbar {
+  background-color: #FFFFFF;
+  min-height: 82px;
+  padding-top: 16px;
+  border-style: none;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+.navbar-brand {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 30px;
+  color: #1c1b1b !important;
+  margin-left: 10px !important;
+}
+
+.navbar-right {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 24px;
+  color: #1c1b1b !important;
+  margin-right: 10px;
+}
