@@ -1,15 +1,24 @@
 .modal-title {
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 24px;
+  padding-top: 15px;
 }
 
 .btn-addterm {
   display: block;
   margin: 0 auto;
+  padding: 10px 35px 10px 35px;
 }
 
 .modal-header .close {
-    margin-top: 6px;
+  padding-top: 16px;
+  padding-right: 22px;
+  font-size: 36px;
+}
+
+.modal-header {
+  border-style: none;
 }
 
 .modal {
@@ -29,4 +38,12 @@
  display: inline-block;
  text-align: left;
  vertical-align: middle;
+}
+
+textarea {
+  resize: none;
+}
+
+.modal-body {
+  padding: 10px 40px 40px 40px;
 }
