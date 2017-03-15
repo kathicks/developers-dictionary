@@ -22,7 +22,6 @@ router.post('/newterm', function(req, res){
 
   // Set our collection
   var collection = db.get('termcollection');
-  console.log(collection);
 
   // Submit to the db
   collection.insert({
