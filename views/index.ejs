@@ -1,5 +1,22 @@
 <ul>
   <% term.forEach(function(term) { %>
-    <li><%= term.term %>: <%= term.definition %></li>
+    <li><%= term.term %>: <%= term.shortDefinition %></li>
   <% }) %>
 </ul>
+
+<h3> Add a term to Developers Dictionary </h3>
+<form method="post" action="/newterm">
+  <label for="term">Term</label>
+    <input type="text" name="term">
+  <br>
+  <label for="shortDefinition">Short Definition</label>
+    <input type="text" name="shortDefinition">
+  <br>
+  <label for="definition">Definition</label>
+    <textarea name="definition"></textarea>
+  <br>
+  <label for="source">Source</label>
+    <input type="url" name="source">
+  <br>
+  <input type="submit" value="Add">
+</form>

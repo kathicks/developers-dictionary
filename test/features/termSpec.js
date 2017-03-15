@@ -35,9 +35,11 @@ describe('homepage', function() {
   });
 
   it('should have a list on the homepage', function() {
-    var list = "MongoDB: MongoDB is an open-source, document database that provides persistence for your application data.AJAX: It is the use of the XMLHttpRequest object to communicate with server-side scripts.AngularJS: AngularJS is a structural framework for dynamic web apps.";
-    
     assert.ok(this.browser.success);
-    assert.equal(this.browser.text('li'), list);
+    this.browser.assert.elements('li', 3);
+  });
+
+  it('should have a form on the homepage', function(){
+    this.browser.assert.element('form');
   });
 });

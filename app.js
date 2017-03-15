@@ -10,7 +10,7 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/developers-dictionary');
 
-var index = require('./routes/index');
+var terms = require('./routes/terms');
 var users = require('./routes/users');
 
 var app = express();
@@ -33,7 +33,7 @@ app.use(function(req,res,next){
     next();
 });
 
-app.use('/', index);
+app.use('/', terms);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
