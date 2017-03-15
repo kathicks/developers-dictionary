@@ -10,6 +10,8 @@ router.get('/', function(req, res) {
     });
 });
 
+/* GET term page. */
+
 /* POST to add new term. */
 router.post('/newterm', function(req, res){
   var db = req.db;
