@@ -28,7 +28,7 @@ router.post('/newterm', function(req, res){
 
   // Get our form values, rely on the name attributes
   var term = req.body.term;
-  var shortDefinition = req.body.shortDefinition;
+  var summary = req.body.summary;
   var definition = req.body.definition;
   var source = req.body.source;
 
@@ -38,9 +38,10 @@ router.post('/newterm', function(req, res){
   // Submit to the db
   collection.insert({
     "term" : term,
-    "shortDefinition" : shortDefinition,
-    "definition" : definition,
-    "source" : source
+    "summary" : summary,
+    "definitions" : [
+      { "definition" : definition, "source" : source, "rating": 0 }
+    ]
   }, function (err, doc) {
     if (err) {
       res.send("Could not add information to the database");
