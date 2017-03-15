@@ -20,10 +20,10 @@ chai.use(chaiHttp);
       this.browser.visit('/', done);
     });
 
-    it('should have the title', function() {
-      assert.ok(this.browser.success);
-      assert.equal(this.browser.text('h1'), 'Developer\'s Dictionary');
-    });
+  it('should have the title', function() {
+    assert.ok(this.browser.success);
+    assert.equal(this.browser.text('a.navbar-brand'), 'Developer\'s Dictionary');
+  });
 
     it('should have a list', function() {
       assert.ok(this.browser.success);
