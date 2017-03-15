@@ -10,6 +10,16 @@ router.get('/', function(req, res) {
     });
 });
 
+router.get('/show/:id', function(req, res) {
+  var db = req.db;
+  console.log(req.body);
+    var collection = db.get('termcollection');
+    collection.findOne({'_id': req.params.id },function(e,docs){
+      console.log(docs);
+        res.render('show', { term : docs });
+    });
+});
+
 /* GET term page. */
 
 /* POST to add new term. */
