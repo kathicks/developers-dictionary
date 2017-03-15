@@ -1,6 +1,6 @@
 <ul>
   <% term.forEach(function(term) { %>
-    <li><%= term.term %>: <%= term.shortDefinition %></li>
+    <li><a href='/show/<%= term._id %>'><%= term.term %></a>: <%= term.shortDefinition %></li>
   <% }) %>
 </ul>
 
