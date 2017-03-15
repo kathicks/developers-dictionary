@@ -1,8 +1,11 @@
-<ul>
-  <% term.forEach(function(term) { %>
-    <li><a href='/show/<%= term._id %>'><%= term.term %></a>: <%= term.shortDefinition %></li>
-  <% }) %>
-</ul>
+<div id=listscroll>
+  <ul>
+    <% term.forEach(function(term) { %>
+      <p id="termtitle"><a href='/show/<%= term._id %>'><%= term.term %></a></p>
+      <p id="shortdefinition"><%= term.shortDefinition %></p>
+    <% }) %>
+  </ul>
+</div>
 
 <div id="addTerm" class="modal fade" role="dialog">
   <div class="modal-dialog">

@@ -5,3 +5,53 @@ body {
 .content {
   margin-top: 90px;
 }
+
+#navbar li:hover { cursor:pointer; }
+
+#listscroll {
+  margin-top: 10%;
+  margin-left: 30%;
+  position: absolute;
+  height: 55%;
+  width: 45%;
+  overflow-y: scroll;
+}
+
+#termtitle {
+  font-family: 'Roboto'!important;
+  font-weight: 700;
+  font-size: 36px;
+  color: #FF5722;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#shortdefinition {
+  font-family: 'Raleway';
+  font-weight: 200;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+}
+
+a {
+  color: #FF5722;
+}
+
+a:link {
+  color: #FF5722;
+}
+a:visited {
+  color: #FF5722;
+}
+a:hover {
+  color: #FF5722;
+  text-decoration: none;
+}
+a:active {
+  color: #FF5722;
+}
