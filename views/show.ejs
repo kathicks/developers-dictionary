@@ -64,24 +64,20 @@
   </script>
   <script type="text/javascript">
     $(".upvote").on('click', function(event){
+
       event.preventDefault();
 
-      var rating = $(this).siblings('.rating');
+      var rating = $(this).parents().siblings('.rating');
 
       $.post(this.href, function(response){
         rating.text(response.new_rating);
-
-      // $.post({
-      //     url: "/upvote",
-      //     method: "POST",
-      //     // data:
-          }).done(function() {
-   alert( "success" );
- }).fail(function() {
-   alert( "failure" );
- }).always(function() {
-   alert( "complete" );
- });
+      }).done(function() {
+        alert( "success" );
+     }).fail(function() {
+       alert( "failure" );
+     }).always(function() {
+       alert( "complete" );
+     });
   });
 
   </script>

@@ -85,7 +85,7 @@ router.post('/newdefinition', function(req, res) {
 });
 
 /* POST to add new definition to term. */
-router.post('/upvote', function(req, res){
+router.post('/show/:id', function(req, res){
   var db = req.db;
   var term = req.body.term;
   var definition = req.body.definition;
