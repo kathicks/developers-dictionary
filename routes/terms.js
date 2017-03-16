@@ -19,7 +19,6 @@ router.get('/show/:id', function(req, res) {
     collection.findOne({
         '_id': req.params.id
     }, function(e, docs) {
-        console.log(docs);
         res.render('show', {
             term: docs
         });
@@ -64,7 +63,7 @@ router.post('/newdefinition', function(req, res) {
     // Get our form values, rely on the name attributes
     var definition = req.body.definition;
     var source = req.body.source;
-    var term = req.body.term
+    var term = req.body.term;
     // Set our collection
     var collection = db.get('termcollection');
     // Submit to the db
@@ -83,6 +82,18 @@ router.post('/newdefinition', function(req, res) {
             });
         }
     });
+});
+
+/* POST to add new definition to term. */
+router.post('/upvote', function(req, res){
+  var db = req.db;
+  var term = req.body.term;
+  var definition = req.body.definition;
+  var rating = req.body.rating;
+  var collection = db.get('termcollection');
+  console.log(req.body);
+  collection.update({"term": term, "definitions.definition":definition}, {$inc:{"definitions.$.rating": 1}});
+  res.send( { new_rating: definition.rating } );
 });
 
 

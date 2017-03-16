@@ -15,11 +15,14 @@
       <div class='col-md-4'>
 
         <div class='definitions'>
-          <div class="vote">
-            <i class="fa fa-chevron-up"></i>
-            <%= definition.rating %>
+          <form class="vote" id="" method="post" action="/upvote">
+            <input type="hidden" class="form-control" value="<%= term.term %>" name="term" readonly>
+            <input type="hidden" class="form-control" value="<%= definition.definition %>" name="definition" readonly>
+            <button type="submit" name="upvote"  class="upvote"><i class="fa fa-chevron-up"></i></button>
+            <input type="text" name="rating" value="<%= definition.rating %>" readonly>
             <i class="fa fa-chevron-down"></i>
-          </div>
+          </form>
+          <p class="rating"><%= definition.rating %></p>
           <p class="long-def"><%= definition.definition %></p>
           <a class="source" href="<%= definition.source %>">Source</a>
         </div>
@@ -58,5 +61,28 @@
   <script type="text/javascript">
     window.sr = ScrollReveal();
     sr.reveal('.definitions');
-  </script>  
+  </script>
+  <script type="text/javascript">
+    $(".upvote").on('click', function(event){
+      event.preventDefault();
+
+      var rating = $(this).siblings('.rating');
+
+      $.post(this.href, function(response){
+        rating.text(response.new_rating);
+
+      // $.post({
+      //     url: "/upvote",
+      //     method: "POST",
+      //     // data:
+          }).done(function() {
+   alert( "success" );
+ }).fail(function() {
+   alert( "failure" );
+ }).always(function() {
+   alert( "complete" );
+ });
+  });
+
+  </script>
 </body>
