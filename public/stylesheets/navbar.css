@@ -1,8 +1,9 @@
 .navbar {
-  background-color: #FFFFFF;
+  background: transparent;
   min-height: 82px;
   padding-top: 16px;
   border-style: none;
+  color: #1c1b1b !important;
 }
 
 .navbar-brand {
@@ -18,4 +19,8 @@
   color: #1c1b1b !important;
   margin-right: 10px;
   cursor: default;
+}
+
+.nav-links {
+  color: #1c1b1b !important;
 }
