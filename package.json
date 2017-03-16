@@ -24,8 +24,5 @@
     "nodemon": "^1.11.0",
     "serve-favicon": "~2.3.2",
     "zombie": "^5.0.5"
-  },
-  "devDependencies": {
-    "mocha": "^3.2.0"
   }
 }

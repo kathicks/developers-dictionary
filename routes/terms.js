@@ -12,6 +12,7 @@ router.get('/', function(req, res) {
     });
 });
 
+/* GET term page. */
 router.get('/show/:id', function(req, res) {
     var db = req.db;
 
@@ -25,8 +26,6 @@ router.get('/show/:id', function(req, res) {
         });
     });
 });
-
-/* GET term page. */
 
 /* POST to add new term. */
 router.post('/newterm', function(req, res) {
@@ -64,7 +63,7 @@ router.post('/newdefinition', function(req, res) {
     // Get our form values, rely on the name attributes
     var definition = req.body.definition;
     var source = req.body.source;
-    var term = req.body.term
+    var term = req.body.term;
     // Set our collection
     var collection = db.get('termcollection');
     // Submit to the db
@@ -85,5 +84,4 @@ router.post('/newdefinition', function(req, res) {
     });
 });
 
-
-        module.exports = router;
+module.exports = router;

@@ -1,7 +1,7 @@
 <div id=listscroll>
   <ul>
     <% term.forEach(function(term) { %>
-      <p id="termtitle"><a href='/show/<%= term._id %>'><%= term.term %></a></p>
+      <p id="termtitle"><a href='/show/<%= term._id %>' class="showPage"><%= term.term %></a></p>
       <p id="shortdefinition"><%= term.shortDefinition %></p>
     <% }) %>
   </ul>
