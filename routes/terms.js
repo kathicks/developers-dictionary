@@ -39,31 +39,34 @@ router.post('/newterm', function(req, res) {
     var collection = db.get('termcollection');
 
     req.checkBody({ 'term': { isLength: { options: [{ min: 2, max: 30 }], errorMessage: 'Must be between 2 and 30 characters long' }, errorMessage: 'Invalid Term' } });
-    // ('term', "Enter a term that is between 2 and 30 characters").isLength(term, {min:2, max:30});
     req.checkBody({ 'summary': { isLength: { options: [{ min: 25, max: 80 }], errorMessage: 'Must be between 25 and 80 characters long' }, errorMessage: 'Invalid Summary' } });
 
     var errors = req.validationErrors();
       if (errors) {
-        console.log(errors);
         res.redirect('/');
         return;
       } else {
-        // Submit to the db
-        collection.insert({
-            "term": term,
-            "summary": summary,
-            "definitions": [{
-                "definition": definition,
-                "source": source,
-                "rating": 0
-            }]
-        }, function(err, doc) {
-            if (err) {
-                res.send("Could not add information to the database");
-            } else {
-                res.redirect("/");
-            }
-        });
+        if (collection.find( { "term" : term}, function (e, docs) {
+          if (JSON.stringify(docs) === JSON.stringify([])) {
+            collection.insert({
+                "term": term,
+                "summary": summary,
+                "definitions": [{
+                    "definition": definition,
+                    "source": source,
+                    "rating": 0
+                }]
+            }, function(err, doc) {
+                if (err) {
+                    res.send("Could not add information to the database");
+                } else {
+                    res.redirect("/");
+                }
+            });
+          } else {
+            res.redirect('/');
+          }
+        }));
       }
 
 });
