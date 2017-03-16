@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressLayouts=require("express-ejs-layouts");
 
+var validator = require('express-validator');
+
 var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/developers-dictionary');
@@ -24,9 +26,12 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(validator());
 app.use(cookieParser());
+
 app.use(expressLayouts);
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use(function(req,res,next){
     req.db = db;
