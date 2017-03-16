@@ -38,3 +38,9 @@
   font-weight: bolder;
   font-size: 1.3em;
 }
+
+.vote{
+  text-align: right;
+  margin-bottom: 1em;
+  color: #7c4dff;
+}

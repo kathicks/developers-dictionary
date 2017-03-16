@@ -4,17 +4,51 @@
     <div class='row'>
       <div class='col-md-12'>
         <h2 class = "term-title"><%= term.term %></h2>
-        <p class="short-def"><%= term.shortDefinition %></p>
-        <a href="#">Add definition</a>
+        <p class="short-def"><%= term.summary %></p>
+        <a type="button" data-toggle="modal" data-target="#addDef">Add definition</a>
       </div>
     </div>
   </div>
   <div class='container'>
     <div class='row'>
       <div class='col-md-4'>
+        <% term.definitions.forEach(function(definition) { %>
         <div class='definitions'>
-          <p class="long-def"><%= term.definition %></p>
-          <a class="source" href="<%= term.source %>">Source</a>
+          <div class="vote">
+            <i class="fa fa-chevron-up"></i>
+            <%= definition.rating %>
+            <i class="fa fa-chevron-down"></i>
+          </div>
+          <p class="long-def"><%= definition.definition %></p>
+          <a class="source" href="<%= definition.source %>">Source</a>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+
+  <div id="addDef" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Add a Definition </h3>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="/newdefinition">
+            <div class="form-group">
+              <input type="hidden" class="form-control" value="<%= term.term %>" name="term" readonly>
+            </div>
+            <div class="form-group">
+              <label for="definition">Definition</label>
+              <textarea class="form-control" id="definition" name="definition" rows="15"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="source">Source</label>
+              <input type="url" class="form-control" id="source" name="source">
+            </div>
+              <button type="submit" class="btn btn-default btn-addterm">Add</button>
+          </form>
         </div>
       </div>
     </div>
