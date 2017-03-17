@@ -55,3 +55,7 @@ a:hover {
 a:active {
   color: #FF5722;
 }
+
+.flash-element {
+  text-transform:capitalize;
+}

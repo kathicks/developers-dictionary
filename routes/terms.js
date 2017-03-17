@@ -8,7 +8,8 @@ router.get('/', function(req, res) {
     collection.find({}, {}, function(e, docs) {
 
         res.render('index', {
-            term: docs
+            term: docs,
+            messages: req.flash('errors')
         });
     });
 });
@@ -46,6 +47,8 @@ router.post('/newterm', function(req, res) {
 
     var errors = req.validationErrors();
       if (errors) {
+        req.flash('errors', errors);
+        console.log(errors);
         res.redirect('/');
         return;
       } else {
