@@ -1,5 +1,5 @@
 #show-page {
-  background: #7c4dff;
+  background: #FFFFFF;
 
 }
 
@@ -7,6 +7,7 @@
   color: #888;
   font-family: 'Raleway', sans-serif;
   text-decoration: underline;
+  float:left;
 }
 .term-title {
   font-family: 'Roboto', sans-serif;
@@ -20,6 +21,9 @@
 }
 
 .definitions {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #7c4dff;
   padding: 2em;
   color:#888;
   background: #fff;
@@ -45,6 +49,7 @@
   text-align: right;
   margin-bottom: 1em;
   color: #7c4dff;
+  float: right;
 }
 
 .downvote, .upvote, .rating{
@@ -57,6 +62,15 @@
 
 }
 
+.vote-source {
+  flex-direction: row;
+  background-color: #7c4dff;
+}
+
 .add-definition-link:hover {
   color: black;
+}
+
+.term-header {
+  padding-bottom: 18px;
 }
