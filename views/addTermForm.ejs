@@ -9,11 +9,11 @@
         <form method="post" action="/newterm">
           <div class="form-group">
             <label for="term">Term</label>
-            <input type="text" class="form-control" id="term" name="term">
+            <input type="text" class="form-control" id="term" name="term"  minlength="2" maxlength="30" required>
           </div>
           <div class="form-group">
             <label for="summary">Short Definition</label>
-            <input type="text" class="form-control" id="summary" name="summary">
+            <input type="text" class="form-control" id="summary" name="summary" minlength="25" maxlength="80" required>
           </div>
           <div class="form-group">
             <label for="definition">Definition</label>
