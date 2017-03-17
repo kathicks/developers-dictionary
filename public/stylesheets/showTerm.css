@@ -63,8 +63,8 @@
 }
 
 .vote-source {
-  flex-direction: row;
   background-color: #7c4dff;
+  height: 30px;
 }
 
 .add-definition-link:hover {
