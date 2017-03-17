@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
         res.render('index', {
             term: docs,
             messages: req.flash('errors'),
-            notices: req.flash('notice')
+            notices: req.flash('notice'),
             home: true
         });
         console.log(req.flash('errors'));
