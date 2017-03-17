@@ -1,38 +1,55 @@
 #show-page {
-  background: #7c4dff;
+  background: #FFFFFF;
 
 }
 
 .source {
-  color: #888;
+  color:  #7c4dff !important;
   font-family: 'Raleway', sans-serif;
   text-decoration: underline;
+  text-align: center;
+  font-weight: 400 !important;
 }
 .term-title {
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
-
+  font-size: 3em;
 }
 
 .short-def {
   font-family: 'Raleway', sans-serif;
+}
 
+.long-def-beginning {
+  font-weight: 700;
+}
+
+
+.panel-body {
+  border: none;
 }
 
 .definitions {
-  padding: 2em;
-  color:#888;
+  /*border-style: solid;*/
+  /*border-width: 3px;*/
+  border-color: none;
+  /*padding: 2em;*/
+  color: black;
   background: #fff;
-  border-radius: 1vw;
-  margin: 1em;
+  border-radius: 1em;
+  margin: 2em;
+  font-size: 1.6em;
+  text-align: center;
+  text-justify: inter-word;
   overflow-wrap: break-word;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
 }
 
 .jumbotron {
   text-align: center;
   background: #7c4dff;
   color: #fff;
+
 }
 
 .jumbotron a {
@@ -42,7 +59,7 @@
 }
 
 .vote{
-  text-align: right;
+  text-align: center;
   margin-bottom: 1em;
   color: #7c4dff;
 }
@@ -50,4 +67,27 @@
 .downvote, .upvote, .rating{
   background: transparent;
   display: inline !important;
+}
+
+.add-definition-link {
+  cursor: default;
+
+}
+
+.panel-footer {
+  background-color: grey;
+  height: 30px;
+  padding: 1.5em;
+  padding-top: 0em;
+  padding-bottom: 0.5em;
+  border-bottom-left-radius: 0.7vw;
+  border-bottom-right-radius: 0.7vw;
+}
+
+.add-definition-link:hover {
+  color: black;
+}
+
+.term-header {
+  padding-bottom: 18px;
 }
