@@ -7,7 +7,8 @@ router.get('/', function(req, res) {
     var collection = db.get('termcollection');
     collection.find({}, {}, function(e, docs) {
         res.render('index', {
-            term: docs
+            term: docs,
+            home: true
         });
     });
 });
@@ -21,7 +22,8 @@ router.get('/show/:id', function(req, res) {
     }, function(e, docs) {
         console.log(docs);
         res.render('show', {
-            term: docs
+            term: docs,
+            home: false
         });
     });
 });
