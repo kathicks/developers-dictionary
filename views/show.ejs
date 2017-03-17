@@ -15,11 +15,13 @@
       <div class='col-md-4'>
 
         <div class='definitions'>
-          <div class="vote">
-            <i class="fa fa-chevron-up"></i>
-            <%= definition.rating %>
-            <i class="fa fa-chevron-down"></i>
-          </div>
+          <form class="vote">
+            <input type="hidden" class="form-control" value="<%= term.term %>" name="term" readonly>
+            <input type="hidden" class="form-control form-def" value="<%= definition.definition %>" name="definition" readonly>
+            <button type="submit" name="upvote"  class=" btn upvote"><i class="fa fa-chevron-up"></i></button>
+            <p class="rating"><%= definition.rating %></p>
+            <button type="submit" name="downvote"  class="btn downvote"><i class="fa fa-chevron-down"></i></button>
+          </form>
           <p class="long-def"><%= definition.definition %></p>
           <a class="source" href="<%= definition.source %>">Source</a>
         </div>
@@ -58,5 +60,61 @@
   <script type="text/javascript">
     window.sr = ScrollReveal();
     sr.reveal('.definitions');
-  </script>  
+  </script>
+  <script type="text/javascript">
+    $(".upvote").on('click', function(event){
+
+      event.preventDefault();
+
+      var rating = $(this).siblings('.rating');
+      var term = $(this).siblings($("input[name='term']")).val()
+      var definition = $(this).siblings(".form-def").val()
+      data = {"term": term, "definition":definition}
+      console.log(data)
+      $.ajax({
+        url: "/show/upvote",
+        method: "POST",
+        data: data,
+      }).done(function(response) {
+        console.log()
+        for (var i = 0; i < response.definitions.length; i++) {
+          if (response.definitions[i].definition === definition) {
+            rating.text(response.definitions[i].rating)
+          }
+        }
+     }).fail(function() {
+       alert( "failure" );
+     }).always(function() {
+       console.log( "complete" );
+     });
+  });
+
+  $(".downvote").on('click', function(event){
+
+    event.preventDefault();
+
+    var rating = $(this).siblings('.rating');
+    var term = $(this).siblings($("input[name='term']")).val()
+    var definition = $(this).siblings(".form-def").val()
+    data = {"term": term, "definition":definition}
+    console.log(data)
+    $.ajax({
+      url: "/show/downvote",
+      method: "POST",
+      data: data,
+    }).done(function(response) {
+      console.log()
+      for (var i = 0; i < response.definitions.length; i++) {
+        if (response.definitions[i].definition === definition) {
+          rating.text(response.definitions[i].rating)
+        }
+      }
+   }).fail(function() {
+     alert( "failure" );
+   }).always(function() {
+     console.log( "complete" );
+   });
+});
+
+  </script>
 </body>

@@ -46,3 +46,8 @@
   margin-bottom: 1em;
   color: #7c4dff;
 }
+
+.downvote, .upvote, .rating{
+  background: transparent;
+  display: inline !important;
+}

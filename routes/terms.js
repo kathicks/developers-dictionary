@@ -6,6 +6,7 @@ router.get('/', function(req, res) {
     var db = req.db;
     var collection = db.get('termcollection');
     collection.find({}, {}, function(e, docs) {
+
         res.render('index', {
             term: docs
         });
@@ -16,12 +17,14 @@ router.get('/', function(req, res) {
 router.get('/show/:id', function(req, res) {
     var db = req.db;
     var collection = db.get('termcollection');
-    collection.findOne({
+    collection.find({
         '_id': req.params.id
     }, function(e, docs) {
-        console.log(docs);
+      docs[0].definitions.sort(function(a ,b){
+          return b.rating - a.rating
+        })
         res.render('show', {
-            term: docs
+            term: docs[0]
         });
     });
 });
@@ -87,6 +90,7 @@ router.post('/newdefinition', function(req, res) {
         "rating": 0
     }}}, function(err, doc) {
         if (err) {
+          console.log(err)
             res.send("Could not add information to the database");
         } else {
             collection.findOne({
@@ -96,6 +100,34 @@ router.post('/newdefinition', function(req, res) {
             });
         }
     });
+});
+
+/* POST to upvote definition's rating. */
+router.post('/show/upvote', function(req, res){
+  var db = req.db;
+  var term = req.body.term;
+  var definition = req.body.definition;
+  var rating = req.body.rating;
+  var collection = db.get('termcollection');
+  collection.update({"term": term, "definitions.definition":definition}, {$inc:{"definitions.$.rating": 1}}, function(err, result){
+    collection.findOne({"term": term},{"definitions":definition}, function(e, doc){
+      res.json(doc)
+    })
+  });
+});
+
+/* POST to downvote definition's rating. */
+router.post('/show/downvote', function(req, res){
+  var db = req.db;
+  var term = req.body.term;
+  var definition = req.body.definition;
+  var rating = req.body.rating;
+  var collection = db.get('termcollection');
+  collection.update({"term": term, "definitions.definition":definition}, {$inc:{"definitions.$.rating": -1}}, function(err, result){
+    collection.findOne({"term": term},{"definitions":definition}, function(e, doc){
+      res.json(doc)
+    })
+  });
 });
 
 module.exports = router;
