@@ -51,3 +51,12 @@
   background: transparent;
   display: inline !important;
 }
+
+.add-definition-link {
+  cursor: default;
+
+}
+
+.add-definition-link:hover {
+  color: black;
+}
