@@ -8,8 +8,11 @@ router.get('/', function(req, res) {
     collection.find({}, {}, function(e, docs) {
         res.render('index', {
             term: docs,
+            messages: req.flash('errors'),
+            notices: req.flash('notice')
             home: true
         });
+        console.log(req.flash('errors'));
     });
 });
 
@@ -45,6 +48,8 @@ router.post('/newterm', function(req, res) {
 
     var errors = req.validationErrors();
       if (errors) {
+        req.flash('errors', errors);
+        console.log(errors);
         res.redirect('/');
         return;
       } else {
@@ -62,10 +67,12 @@ router.post('/newterm', function(req, res) {
                 if (err) {
                     res.send("Could not add information to the database");
                 } else {
-                    res.redirect("/");
+                  req.flash('notice', [ {param: 'term', msg: "Successfully created a new term!"}]);
+                  res.redirect("/");
                 }
             });
           } else {
+            req.flash('errors', [ {param: 'term', msg: "Already added to the database"}]);
             res.redirect('/');
           }
         }));

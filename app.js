@@ -4,9 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 var expressLayouts=require("express-ejs-layouts");
-
 var validator = require('express-validator');
+var flash = require('connect-flash');
 
 var mongo = require('mongodb');
 var monk = require('monk');
@@ -28,6 +29,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(validator());
 app.use(cookieParser());
+app.use(session({
+   secret: 'secret',
+   proxy: true,
+   resave: true,
+   saveUninitialized: true
+}));
+app.use(flash());
 
 app.use(expressLayouts);
 app.use(express.static(path.join(__dirname, 'public')));

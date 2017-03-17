@@ -45,6 +45,23 @@
     </div>
   </nav>
   <div class="content">
+    <div class="container">
+      <% if (typeof messages != 'undefined') { %>
+        <% messages.forEach(function(message) { %>
+          <div class="alert alert-warning">
+            <span class="flash-element"><%= message.param %></span>: <%= message.msg %>
+          </div>
+        <% }) %>
+      <% } %>
+      <% if (typeof notices != 'undefined') { %>
+        <% notices.forEach(function(message) { %>
+          <div class="alert alert-success">
+            <span class="flash-element"><%= message.param %></span>: <%= message.msg %>
+          </div>
+        <% }) %>
+      <% } %>
+    </div>
+
     <%- body %>
     <%- include addTermForm.ejs %>
   </div>
