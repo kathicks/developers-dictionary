@@ -34,7 +34,10 @@
 
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="nav-links" data-toggle="modal" data-target="#addTerm">Add Entry</a></li>
+          <% if (home) { %>
+            <li><a class="nav-links" data-toggle="modal" data-target="#addTerm">Add Entry</a></li>
+          <% } %> 
+
           <li><a class="nav-links">Log In</a></li>
         </ul>
       </div>

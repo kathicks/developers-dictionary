@@ -8,7 +8,8 @@ router.get('/', function(req, res) {
     collection.find({}, {}, function(e, docs) {
 
         res.render('index', {
-            term: docs
+            term: docs,
+            home: true
         });
     });
 });
@@ -21,10 +22,11 @@ router.get('/show/:id', function(req, res) {
         '_id': req.params.id
     }, function(e, docs) {
       docs[0].definitions.sort(function(a ,b){
-          return b.rating - a.rating
-        })
+          return b.rating - a.rating;
+        });
         res.render('show', {
-            term: docs[0]
+            term: docs[0],
+            home: false
         });
     });
 });
