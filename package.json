@@ -17,6 +17,8 @@
     "ejs": "~2.5.5",
     "express": "~4.14.1",
     "express-ejs-layouts": "^2.2.0",
+    "express-session": "^1.15.1",
+    "express-validator": "^3.1.2",
     "mocha": "^3.2.0",
     "mongodb": "^2.2.24",
     "monk": "^4.0.0",
@@ -24,8 +26,5 @@
     "nodemon": "^1.11.0",
     "serve-favicon": "~2.3.2",
     "zombie": "^5.0.5"
-  },
-  "devDependencies": {
-    "mocha": "^3.2.0"
   }
 }

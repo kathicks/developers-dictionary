@@ -13,9 +13,9 @@ router.get('/', function(req, res) {
     });
 });
 
+/* GET term page. */
 router.get('/show/:id', function(req, res) {
     var db = req.db;
-
     var collection = db.get('termcollection');
     collection.find({
         '_id': req.params.id
@@ -29,8 +29,6 @@ router.get('/show/:id', function(req, res) {
     });
 });
 
-/* GET term page. */
-
 /* POST to add new term. */
 router.post('/newterm', function(req, res) {
     var db = req.db;
@@ -43,22 +41,37 @@ router.post('/newterm', function(req, res) {
     // Set our collection
     var collection = db.get('termcollection');
 
-    // Submit to the db
-    collection.insert({
-        "term": term,
-        "summary": summary,
-        "definitions": [{
-            "definition": definition,
-            "source": source,
-            "rating": 0
-        }]
-    }, function(err, doc) {
-        if (err) {
-            res.send("Could not add information to the database");
-        } else {
-            res.redirect("/");
-        }
-    });
+    req.checkBody({ 'term': { isLength: { options: [{ min: 2, max: 30 }], errorMessage: 'Must be between 2 and 30 characters long' }, errorMessage: 'Invalid Term' } });
+    req.checkBody({ 'summary': { isLength: { options: [{ min: 25, max: 80 }], errorMessage: 'Must be between 25 and 80 characters long' }, errorMessage: 'Invalid Summary' } });
+
+    var errors = req.validationErrors();
+      if (errors) {
+        res.redirect('/');
+        return;
+      } else {
+        if (collection.find( { "term" : term}, function (e, docs) {
+          if (JSON.stringify(docs) === JSON.stringify([])) {
+            collection.insert({
+                "term": term,
+                "summary": summary,
+                "definitions": [{
+                    "definition": definition,
+                    "source": source,
+                    "rating": 0
+                }]
+            }, function(err, doc) {
+                if (err) {
+                    res.send("Could not add information to the database");
+                } else {
+                    res.redirect("/");
+                }
+            });
+          } else {
+            res.redirect('/');
+          }
+        }));
+      }
+
 });
 
 /* POST to add new definition to term. */
@@ -117,8 +130,4 @@ router.post('/show/downvote', function(req, res){
   });
 });
 
-
-
-
-
-        module.exports = router;
+module.exports = router;
