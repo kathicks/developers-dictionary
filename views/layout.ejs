@@ -50,6 +50,13 @@
           </div>
         <% }) %>
       <% } %>
+      <% if (typeof notices != 'undefined') { %>
+        <% notices.forEach(function(message) { %>
+          <div class="alert alert-success">
+            <span class="flash-element"><%= message.param %></span>: <%= message.msg %>
+          </div>
+        <% }) %>
+      <% } %>
     </div>
 
     <%- body %>
