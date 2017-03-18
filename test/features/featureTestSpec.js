@@ -86,6 +86,19 @@ describe('index page', function() {
         assert.equal(browser.text('p#warningAlert'), 'Must be between 25 and 80 characters long');
       }).then(done, done);
     })
+    it("can't add duplicate terms", function(done){
+      termcollection.insert({"term": term, "summary": summary})
+      var browser = this.browser;
+      browser.clickLink('a#newTerm');
+      browser.assert.element('#addTerm');
+      browser.fill('term', term);
+      browser.fill('summary', summary);
+      browser.pressButton('Add').then(function() {
+        assert.ok(browser.success);
+        assert.equal(browser.text('p#warningAlert'), 'Already added to the database');
+      }).then(done, done);
+
+    })
   })
 
   after(function(done) {
