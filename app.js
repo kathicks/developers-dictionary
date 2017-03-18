@@ -15,9 +15,9 @@ var db;
 
 if (process.env.NODE_ENV === "test") {
   db = monk('localhost:27017/developers-dictionary-test');
-}else {
+} else {
   db = monk('localhost:27017/developers-dictionary-development');
-}
+};
 
 var terms = require('./routes/terms');
 var users = require('./routes/users');

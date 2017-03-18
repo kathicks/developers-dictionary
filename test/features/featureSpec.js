@@ -1,3 +1,4 @@
+
 // process.env.NODE_ENV = "test";
 //
 // var chai = require('chai');
@@ -19,16 +20,19 @@
 //   var definition;
 //   var source;
 //
+
 //   before(function() {
 //     this.server = http.createServer(server).listen(8000);
 //     this.browser = new Browser({
 //         site: 'http://localhost:8000'
 //     });
+
 //
 //     term = "Mocha";
 //     summary = "Mocha is a feature-rich JavaScript test framework running on Node.js";
 //     definition = "Mocha is a JavaScript test framework running on node.js, featuring browser support, asynchronous testing, test coverage reports, and use of any assertion library.";
 //     source = "https://en.wikipedia.org/wiki/Mocha_(JavaScript_framework)";
+
 //   });
 //
 //   before(function(done) {
