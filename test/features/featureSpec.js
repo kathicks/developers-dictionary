@@ -1,4 +1,6 @@
-process.env.NODE_ENV = "test";
+var mongo = require('mongodb');
+var monk = require('monk');
+var db = monk('localhost:27017/developers-dictionary-test');
 
 var chai = require('chai');
 var chaiHttp = require('chai-http');
