@@ -1,6 +1,8 @@
 # Developer's Dictionary
 
-#### A fun and engaging definitions resource for software developers.
+#### A fun and engaging definitions resource for software developers
+
+[![Code Climate](https://codeclimate.com/github/KatHicks/developers-dictionary/badges/gpa.svg)](https://codeclimate.com/github/KatHicks/developers-dictionary)
 
 Developer's Dictionary was built by [Mica Whitby](https://github.com/MicaW), [Sho Marovatsanga](https://github.com/Taziva), [Kat Hicks](https://github.com/KatHicks), [Tamar Lehmann](https://github.com/tamarlehmann), [Eleanor Kavanagh-Brown](https://github.com/bnzene) and [Barbara Shinkarenko](https://github.com/varvarra) in 8 days as their final project for Makers Academy.
 
