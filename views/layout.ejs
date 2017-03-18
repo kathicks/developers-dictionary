@@ -49,7 +49,7 @@
       <% if (typeof messages != 'undefined') { %>
         <% messages.forEach(function(message) { %>
           <div class="alert alert-warning">
-            <span class="flash-element"><%= message.param %></span>: <%= message.msg %>
+            <span class="flash-element"><%= message.param %></span>:<p id="warningAlert"><%= message.msg %></p>
           </div>
         <% }) %>
       <% } %>
