@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta charset="utf-8">
-   <title>Developer's Dictionary</title>
-   <meta name="description" content="">
-   <meta name="author" content="">
 
-   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-   <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-   <link href="/stylesheets/style.css" rel="stylesheet">
-   <link href="/stylesheets/navbar.css" rel="stylesheet">
-   <link href="/stylesheets/showTerm.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <title>Developer's Dictionary</title>
+    <meta name="description" content="A fun and engaging definitions resource for software developers">
+    <meta name="author" content="">
 
-   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway:200,400,700|Roboto:500,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/navbar.css" rel="stylesheet">
+    <link href="/stylesheets/showTerm.css" rel="stylesheet">
+    <link href="/stylesheets/modal.css" rel="stylesheet">
 
-   <link href="/stylesheets/modal.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Raleway:200,400,700|Roboto:500,700" rel="stylesheet">
+</head>
 
- </head>
- <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
         	<span class="sr-only">Toggle navigation</span>
         	<span class="glyphicon glyphicon-th-list icon-ok"></span>
         </button>
-        <a class="navbar-brand" href="/">Developer's Dictionary</a>
-      </div>
+                <a class="navbar-brand" href="/">Developer's Dictionary</a>
+            </div>
 
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <% if (home) { %>
-            <li><a class="nav-links" data-toggle="modal" data-target="#addTerm" id="newTerm">Add Entry</a></li>
-          <% } %>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <% if (home) { %>
+                        <li><a class="nav-links" data-toggle="modal" data-target="#addTerm" id="newTerm">Add Entry</a></li>
+                    <% } %>
+                    <li><a class="nav-links">Log In</a></li>
+                </ul>
+            </div>
 
-          <li><a class="nav-links">Log In</a></li>
-        </ul>
-      </div>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="container">
+            <% if (typeof messages != 'undefined') { %>
+                <% messages.forEach(function(message) { %>
+                    <div class="alert alert-warning">
+                        <span class="flash-element"><%= message.param %></span>:
+                        <p id="warningAlert">
+                            <%= message.msg %>
+                        </p>
+                    </div>
+                <% }) %>
+            <% } %>
+            <% if (typeof notices != 'undefined') { %>
+                <% notices.forEach(function(message) { %>
+                    <div class="alert alert-success">
+                        <span class="flash-element"><%= message.param %></span>:
+                        <p id="successAlert">
+                            <%= message.msg %>
+                        </p>
+                    </div>
+                <% }) %>
+            <% } %>
+        </div>
 
+        <%- body %>
+            <%- include addTermForm.ejs %>
     </div>
-  </nav>
-  <div class="content">
-    <div class="container">
-      <% if (typeof messages != 'undefined') { %>
-        <% messages.forEach(function(message) { %>
-          <div class="alert alert-warning">
-            <span class="flash-element"><%= message.param %></span>:<p id="warningAlert"><%= message.msg %></p>
-          </div>
-        <% }) %>
-      <% } %>
-      <% if (typeof notices != 'undefined') { %>
-        <% notices.forEach(function(message) { %>
-          <div class="alert alert-success">
-            <span class="flash-element"><%= message.param %></span>: <p id="successAlert">
-              <%= message.msg %>
-            </p>
-          </div>
-        <% }) %>
-      <% } %>
-    </div>
+    <script src="/javascripts/upAndDownVote.js"></script>
+</body>
 
-    <%- body %>
-    <%- include addTermForm.ejs %>
-  </div>
- </body>
 </html>
