@@ -49,7 +49,7 @@ router.post('/newterm', function(req, res) {
     var errors = req.validationErrors();
       if (errors) {
         req.flash('errors', errors);
-        console.log(errors);
+        // console.log(errors);
         res.redirect('/');
         return;
       } else {

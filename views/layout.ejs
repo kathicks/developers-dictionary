@@ -35,7 +35,7 @@
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <% if (home) { %>
-            <li><a class="nav-links" data-toggle="modal" data-target="#addTerm">Add Entry</a></li>
+            <li><a class="nav-links" data-toggle="modal" data-target="#addTerm" id="newTerm">Add Entry</a></li>
           <% } %>
 
           <li><a class="nav-links">Log In</a></li>
@@ -49,14 +49,16 @@
       <% if (typeof messages != 'undefined') { %>
         <% messages.forEach(function(message) { %>
           <div class="alert alert-warning">
-            <span class="flash-element"><%= message.param %></span>: <%= message.msg %>
+            <span class="flash-element"><%= message.param %></span>:<p id="warningAlert"><%= message.msg %></p>
           </div>
         <% }) %>
       <% } %>
       <% if (typeof notices != 'undefined') { %>
         <% notices.forEach(function(message) { %>
           <div class="alert alert-success">
-            <span class="flash-element"><%= message.param %></span>: <%= message.msg %>
+            <span class="flash-element"><%= message.param %></span>: <p id="successAlert">
+              <%= message.msg %>
+            </p>
           </div>
         <% }) %>
       <% } %>
