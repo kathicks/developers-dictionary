@@ -1,28 +1,38 @@
-// // Setting up the test database
-// var mongo = require('mongodb');
-// var monk = require('monk');
-// var db = monk('localhost:27017/developers-dictionary-test');
+
+// process.env.NODE_ENV = "test";
 //
-// // Packages
-// var chai = require('chai'); // Assertion library
-// var Browser = require('zombie'); // Feature testing
+// var chai = require('chai');
+// var chaiHttp = require('chai-http');
 // var http = require('http');
 // var assert = require('assert');
-//
-// // Linking in application
+// var Browser = require('zombie');
 // var server = require('../../app');
 //
-// // Assertion library
+// var should = chai.should();
 // var expect = chai.expect();
+//
+// chai.use(chaiHttp);
 //
 // describe('Developers Dictionary', function() {
 //
+//   var term;
+//   var summary;
+//   var definition;
+//   var source;
+//
+
 //   before(function() {
 //     this.server = http.createServer(server).listen(8000);
 //     this.browser = new Browser({
 //         site: 'http://localhost:8000'
 //     });
-//     // Setting up browser for zombie
+
+//
+//     term = "Mocha";
+//     summary = "Mocha is a feature-rich JavaScript test framework running on Node.js";
+//     definition = "Mocha is a JavaScript test framework running on node.js, featuring browser support, asynchronous testing, test coverage reports, and use of any assertion library.";
+//     source = "https://en.wikipedia.org/wiki/Mocha_(JavaScript_framework)";
+
 //   });
 //
 //   before(function(done) {
