@@ -11,7 +11,7 @@ var flash = require('connect-flash');
 
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/developers-dictionary');
+var db = monk('localhost:27017/developers-dictionary-development');
 
 var terms = require('./routes/terms');
 var users = require('./routes/users');
