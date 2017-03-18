@@ -8,7 +8,8 @@ Developer's Dictionary was built by [Mica Whitby](https://github.com/MicaW), [Sh
 
 ## Technologies
 
-- Using the `MERN` stack
+- Built using `Node.js` and `Express`
+- Runs off a `MongoDB` database
 
 ## Objectives
 
