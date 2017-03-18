@@ -1,0 +1,12 @@
+sudo:
+  - required
+language:
+  - node_js
+node_js:
+  - "6"
+services:
+  - mongodb
+script:
+  - npm test
+before_script:
+  - npm install
