@@ -9,7 +9,7 @@ var server = require('../../app');
 
 var mongo  = require('mongodb');
 var monk   = require('monk');
-var should = chai.should();
+var should = require('should');
 
 describe('Developers Dictionary', function(){
 
@@ -17,13 +17,14 @@ describe('Developers Dictionary', function(){
   var terms;
   var data;
   var definition;
+  var longDefinition;
 
   beforeEach(function() {
     db_test = monk('localhost:27017/developers-dictionary-test');
     terms = db_test.get('termcollection');
 
     data = {
-      "term" : "Angular",
+      "term" : "Angular ",
       "summary" : "A structural framework for dynamic web apps",
       "definitions" : [
         {
@@ -39,11 +40,17 @@ describe('Developers Dictionary', function(){
       "source" : "https://en.wikipedia.org/wiki/AngularJS",
       "rating" : 0
     };
+  });
 
+  before(function(){
     this.server = http.createServer(server).listen(8000);
     this.browser = new Browser({
       site: 'http://localhost:8000'
     });
+  });
+
+  after(function(done) {
+    this.server.close(done);
   });
 
   describe('Show Page', function(){
@@ -55,32 +62,42 @@ describe('Developers Dictionary', function(){
       });
     });
 
-    describe('Element', function(){
+    describe('Features', function(){
       beforeEach(function(done) {
         var self = this;
         self.browser.visit('/', function(err){
           if (err) return done(err);
-          console.log("working");
           self.browser.clickLink('a.showPage', function(){
-            // console.log("working");
           });
           done();
         });
       });
 
       it('should have a title', function(){
-        // should.exists(this.browser.text('h2', 'What is Angular?'));
+        should.exists(this.browser.text('h2', 'What is Angular?'));
+      });
+
+      it('should not have a space between title and ?', function(){
+        (this.browser.text('h2')).should.not.match('What is Angular ?');
+      });
+
+      it('should have an add an explanation button', function(){
+        should.exists(this.browser.text('a', 'Add an explanation'));
+      });
+
+      it('should have an the long definition', function(){
+        longDefinition = "It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. AngularJS's data binding and dependency injection eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology.\r\n\r\nAngularJS is what HTML would have been, had it been designed for applications.";
+        should.exists(this.browser.text('div', '.long-def'));
+        should.exists(this.browser.text('div#long-def'), longDefinition);
+      });
+
+      it('should have a source which is a link', function(){
+        should.exists(this.browser.text('a', "https://docs.angularjs.org/guide/introduction"));
+      });
+
+      it('should have an upvote button', function(){
+        this.browser.assert.element('button.upvote');
       });
     });
   });
-
-//
-//    before(function(done) {
-//        this.browser.visit('/', done);
-//    });
-//
-//
-//   it('should have the title', function() {
-//       assert.equal(this.browser.text('h2, 'term-title), 'Developer\'s Dictionary');
-//   });
 });
