@@ -19,7 +19,7 @@
             <span class="long-def-beginning"><%= definition.definition.split(' ').slice(0, 5).join(" ") %></span>
             <span class="long-def-body"><%= definition.definition.split(' ').slice(5).join(" ") %></span>
           </div>
-              <a class="source" href="<%= definition.source %>">Source: <i><%= definition.source.split("/")[2] %></i></a>
+              <a class="source" href="<%= definition.source %>" target="_blank"><small>Source:<i><%= definition.source.split("/")[2] %></i></small></a>
               <form class="vote">
                 <input type="hidden" class="form-control" value="<%= term.term %>" name="term" readonly>
                 <input type="hidden" class="form-control form-def" value="<%= definition.definition %>" name="definition" readonly>

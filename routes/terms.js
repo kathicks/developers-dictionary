@@ -35,7 +35,7 @@ router.get('/show/:id', function(req, res) {
 /* POST to add new term. */
 router.post('/newterm', function(req, res) {
     var db = req.db;
-    var term = req.body.term;
+    var term = req.body.term.trim();
     var summary = req.body.summary;
     var definition = req.body.definition;
     var source = req.body.source;
