@@ -12,7 +12,6 @@ router.get('/', function(req, res) {
             notices: req.flash('notice'),
             home: true
         });
-        console.log(req.flash('errors'));
     });
 });
 

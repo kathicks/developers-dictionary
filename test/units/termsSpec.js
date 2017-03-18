@@ -1,18 +1,12 @@
-// Setting up the test database
-var mongo = require('mongodb');
-var monk = require('monk');
-
-// Packages
+var mongo  = require('mongodb');
+var monk   = require('monk');
 var should = require('should');
-
-// Linking in application
 var server = require('../../app');
 
 describe('Developers Dictionary', function() {
 
   var db_test;
   var terms;
-
   var data;
 
   beforeEach(function() {
@@ -47,12 +41,12 @@ describe('Developers Dictionary', function() {
   });
 
   it('can add a term to the termcollection', function(done) {
-    terms.insert(data, function(err, doc) {
+    terms.insert(data, function(err, insertion) {
       if(err) return done(err);
-      
-      should.exists(doc);
+      should.exists(insertion);
       done();
     });
+    terms.find({}).should.eventually.have.length(1);
   });
 
 });
