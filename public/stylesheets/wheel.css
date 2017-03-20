@@ -1,0 +1,89 @@
+.wheel-container {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  padding-bottom: 60%;
+  vertical-align: middle;
+}
+
+#svg-menu {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+#wheel {
+  display:block;
+  margin:0 auto;
+}
+
+#scroll-button-left {
+  position:relative;
+  float: left;
+  z-index: 1;
+}
+
+#scroll-button-right {
+  position:relative;
+  float: right;
+  z-index: 1;
+}
+
+#scroll {
+  margin-top: 50vh;
+  align: middle;
+  font-size: 2em;
+  color: black;
+}
+
+a {
+  cursor:pointer;
+  outline:none;
+}
+
+body {
+  overflow: hidden;
+}
+
+.item .sector {
+  transition:all .1s linear;
+  stroke:none;
+}
+
+.menu-trigger {
+  fill:grey;
+  pointer-events:auto;
+}
+
+.menu-trigger:hover,.menu-trigger:focus {
+  cursor:pointer;
+}
+
+.term {
+  fill: #9c56b8;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.def {
+  overflow: visible;
+  font-family: 'Cutive Mono';
+  font-weight: 100;
+  fill: #474747;
+}
+
+text.term:hover {
+  font-weight: 400;
+  fill:black;
+  opacity: 30%;
+  stroke:none;
+}
+
+symbol {
+  overflow:visible;
+}
+
+#itemsContainer {
+  display:block;
+  margin:0 auto;
+}

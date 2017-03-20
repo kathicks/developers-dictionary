@@ -1,5 +1,7 @@
-<div class="container">
-  <div class="col-md-3"></div>
+<?xml version="1.0" standalone="no"?>
+<?xml-stylesheet type="text/css" href="../public/stylesheets/wheel.css"?>
+  <div class="container-fluid">
+     <div class="col-md-3"></div>
     <div class="col-md-6">
       <div id="search-and-filter">
         <form class="form-inline" action="/" method="post">
@@ -17,21 +19,55 @@
             </select>
           </div>
         </form>
+        </div>
       </div>
-    </div>
-</div>
+      <div id="scroll" class="container-fluid">
+        <a type="button" id="scroll-button-left" onmousedown="inter=setInterval(startAction, 1*150);" onmouseup="clearInterval(inter);" ><i class="fa fa-chevron-left"></i></a>
+        <a type="button" id="scroll-button-right" onmousedown="inter=setInterval(startAction, 1*150);" onmouseup="clearInterval(inter);" ><i class="fa fa-chevron-right"></i></a>
+      </div>
+  </div>
 
-<div id=listscroll>
-    <ul>
-        <% term.forEach(function(term) { %>
-            <p id="termtitle">
-                <a href='/show/<%= term._id %>' class="showPage">
-                    <%= term.term %>
-                </a>
-            </p>
-            <p id="summary">
-                <%= term.summary %>
-            </p>
-            <% }) %>
-    </ul>
-</div>
+  <div id="wheel-container">
+    <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+     "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+    <svg id="svg-menu"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="-45 -50 450 225"
+      id="wheel"
+      style="transform-origin: 50% 50% 0px; transform: matrix3d(0.999999, -0.00156607, 0, 0, 0.00156607, 0.999999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); touch-action: none; user-select: none;">
+      <defs>
+        <style type="text/css">
+          @import url('https://fonts.googleapis.com/css?family=Roboto');
+          @import url('https://fonts.googleapis.com/css?family=Cutive+Mono:100');
+       </style>
+      </defs>
+
+    <g id="symbolsContainer">
+      <symbol id="term-1" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-01" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-2em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text><text id="Definition1" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+      <symbol id="term-2" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-02" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-2em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text><text id="Definition2" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+      <symbol id="term-3" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-03" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-2em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text><text id="Definition3" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+      <symbol id="term-4" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-04" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-2em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text><text id="Definition4" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+      <symbol id="term-5" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-05" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-2em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text><text id="Definition5" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+      <symbol id="term-6" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-06" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-2em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text><text id="Definition6" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+      <symbol id="term-7" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-07" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-2em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text><text id="Definition7" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+      <symbol id="term-8" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-08" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-2em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text><text id="Definition8" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+      <symbol id="term-9" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-09" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-2em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text><text id="Definition9" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+    </g>
+
+    <g id="itemsContainer" transform="scale(0.7)" position="fixed" >
+      <a class="item" id="item-1" role="link" tabindex="0" xlink:href="" xlink:title="" xlink:target="_parent" transform="matrix(1,0,0,1,0,0)" data-svg-origin="250 250" style=""><path fill="none" stroke="#111" stroke-width="1" class="sector" d="M250,250 l250,0 A250,250 0 0,0 484.92315519647707,164.49496416858284 z"></path><use xlink:href="#term-1" width="35" height="35" x="441.27923583984375" y="195.68658447265625" transform="rotate(80 458.77923583984375 213.18658447265625)"></use></a>
+      <a class="item" id="item-2" role="link" tabindex="0" xlink:href="" xlink:title="" xlink:target="_parent" transform="matrix(0.93969,-0.34202,0.34202,0.93969,-70.42819102789429,100.58188063494009)" data-svg-origin="250 250" style=""><path fill="none" stroke="#111" stroke-width="1" class="sector" d="M250,250 l250,0 A250,250 0 0,0 484.92315519647707,164.49496416858284 z"></path><use xlink:href="#term-2" width="35" height="35" x="441.27923583984375" y="195.68658447265625" transform="rotate(80 458.77923583984375 213.18658447265625)"></use></a>
+      <a class="item" id="item-3" role="link" tabindex="0" xlink:href="" xlink:title="" xlink:target="_parent" transform="matrix(0.76604,-0.64278,0.64278,0.76604,-102.20801320137934,219.1857916418903)" data-svg-origin="250 250" style=""><path fill="none" stroke="#111" stroke-width="1" class="sector" d="M250,250 l250,0 A250,250 0 0,0 484.92315519647707,164.49496416858284 z"></path><use xlink:href="#term-3" width="35" height="35" x="441.27923583984375" y="195.68658447265625" transform="rotate(80 458.77923583984375 213.18658447265625)"></use></a>
+      <a class="item" id="item-4" role="link" tabindex="0" xlink:href="" xlink:title="" xlink:target="_parent" transform="matrix(0.5,-0.86602,0.86602,0.5,-91.5063509461097,341.5063509461096)" data-svg-origin="250 250" style=""><path fill="none" stroke="#111" stroke-width="1" class="sector" d="M250,250 l250,0 A250,250 0 0,0 484.92315519647707,164.49496416858284 z"></path><use xlink:href="#term-4" width="35" height="35" x="441.27923583984375" y="195.68658447265625" transform="rotate(80 458.77923583984375 213.18658447265625)"></use></a>
+      <a class="item" id="item-5" role="link" tabindex="0" xlink:href="" xlink:title="" xlink:target="_parent" transform="matrix(0.17364,-0.9848,0.9848,0.17364,-39.613982669784605,452.7898938363194)" data-svg-origin="250 250" style=""><path fill="none" stroke="#111" stroke-width="1" class="sector" d="M250,250 l250,0 A250,250 0 0,0 484.92315519647707,164.49496416858284 z"></path><use xlink:href="#term-5" width="35" height="35" x="441.27923583984375" y="195.68658447265625" transform="rotate(80 458.77923583984375 213.18658447265625)"></use></a>
+      <a class="item" id="item-6" role="link" tabindex="0" xlink:href="" xlink:title="" xlink:target="_parent" transform="matrix(-0.17364,-0.9848,0.9848,-0.17364,47.21010616368059,539.6139826697845)" data-svg-origin="250 250" style=""><path fill="none" stroke="#111" stroke-width="1" class="sector" d="M250,250 l250,0 A250,250 0 0,0 484.92315519647707,164.49496416858284 z"></path><use xlink:href="#term-6" width="35" height="35" x="441.27923583984375" y="195.68658447265625" transform="rotate(80 458.77923583984375 213.18658447265625)"></use></a>
+      <a class="item" id="item-7" role="link" tabindex="0" xlink:href="" xlink:title="" xlink:target="_parent" transform="matrix(-0.49999,-0.86602,0.86602,-0.49999,158.49364905389027,591.5063509461096)" data-svg-origin="250 250" style=""><path fill="none" stroke="#111" stroke-width="1" class="sector" d="M250,250 l250,0 A250,250 0 0,0 484.92315519647707,164.49496416858284 z"></path><use xlink:href="#term-7" width="35" height="35" x="441.27923583984375" y="195.68658447265625" transform="rotate(80 458.77923583984375 213.18658447265625)"></use></a>
+      <a class="item" id="item-8" role="link" tabindex="0" xlink:href="" xlink:title="" xlink:target="_parent" transform="matrix(-0.76604,-0.64278,0.64278,-0.76604,280.8142083581096,602.2080132013793)" data-svg-origin="250 250" style=""><path fill="none" stroke="#111" stroke-width="1" class="sector" d="M250,250 l250,0 A250,250 0 0,0 484.92315519647707,164.49496416858284 z"></path><use xlink:href="#term-8" width="35" height="35" x="441.27923583984375" y="195.68658447265625" transform="rotate(80 458.77923583984375 213.18658447265625)"></use></a>
+      <a class="item" id="item-9" role="link" tabindex="0" xlink:href="" xlink:title="" xlink:target="_parent" transform="matrix(-0.93969,-0.34202,0.34202,-0.93969,399.41811936505985,570.4281910278943)" data-svg-origin="250 250" style=""><path fill="none" stroke="#111" stroke-width="1" class="sector" d="M250,250 l250,0 A250,250 0 0,0 484.92315519647707,164.49496416858284 z"></path><use xlink:href="#term-9" width="35" height="35" x="441.27923583984375" y="195.68658447265625" transform="rotate(80 458.77923583984375 213.18658447265625)"></use></a>
+    </g>
+
+    </svg>
+  </div>
+<script src="/javascripts/wheel.js"></script>
