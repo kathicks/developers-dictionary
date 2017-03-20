@@ -81,3 +81,8 @@ window.onload = (function() {
   startAction();
   });
 });
+
+$(".tag").on('change', 'select', function(event) {
+    event.preventDefault();
+    console.log($(".tag").val)
+});

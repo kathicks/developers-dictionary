@@ -19,7 +19,11 @@ router.get('/wheel', function(req, res) {
     var db = req.db;
     var collection = db.get('termcollection');
     collection.find({}, {}, function(e, docs) {
-        res.json(docs);
+      if (typeof req.session.results != 'undefined') {
+        docs = req.session.results;
+        req.session.destroy();
+      }
+      res.json(docs);
     });
 });
 
@@ -41,7 +45,7 @@ router.get('/show/:id', function(req, res) {
 });
 
 /* POST to filter by tag. */
-router.post('/', function(req, res){
+router.post('/wheel', function(req, res){
   var db = req.db;
   var tag = req.body.tag;
   console.log(req.body);
@@ -52,6 +56,7 @@ router.post('/', function(req, res){
   }, function(err, result) {
     if (err) console.log(err);
     console.log(result);
+    req.session.results = result;
     res.render('index', {
         term: result,
         messages: req.flash('errors'),
