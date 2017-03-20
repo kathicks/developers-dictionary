@@ -22,8 +22,8 @@
         </div>
       </div>
       <div id="scroll" class="container-fluid">
-        <a type="button" id="scroll-button-left" onmousedown="inter=setInterval(startAction, 1*150);" onmouseup="clearInterval(inter);" ><i class="fa fa-chevron-left"></i></a>
-        <a type="button" id="scroll-button-right" onmousedown="inter=setInterval(startAction, 1*150);" onmouseup="clearInterval(inter);" ><i class="fa fa-chevron-right"></i></a>
+        <a type="button" id="scroll-button-left" onmousedown="inter=setInterval(startAction(), 1*150);" onmouseup="clearInterval(inter);" ><i class="fa fa-chevron-left"></i></a>
+        <a type="button" id="scroll-button-right" onmousedown="inter=setInterval(startAction(), 1*150);" onmouseup="clearInterval(inter);" ><i class="fa fa-chevron-right"></i></a>
       </div>
   </div>
 
@@ -70,4 +70,5 @@
 
     </svg>
   </div>
+
 <script src="/javascripts/wheel.js"></script>

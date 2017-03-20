@@ -24,15 +24,15 @@ window.onload = (function() {
   var def8 = svg.getElementById("Definition8");
   var def9 = svg.getElementById("Definition9");
 
-  var xlink1 = svg.getElementById("item-1")
-  var xlink2 = svg.getElementById("item-2")
-  var xlink3 = svg.getElementById("item-3")
-  var xlink4 = svg.getElementById("item-4")
-  var xlink5 = svg.getElementById("item-5")
-  var xlink6 = svg.getElementById("item-6")
-  var xlink7 = svg.getElementById("item-7")
-  var xlink8 = svg.getElementById("item-8")
-  var xlink9 = svg.getElementById("item-9")
+  var xlink1 = svg.getElementById("item-1");
+  var xlink2 = svg.getElementById("item-2");
+  var xlink3 = svg.getElementById("item-3");
+  var xlink4 = svg.getElementById("item-4");
+  var xlink5 = svg.getElementById("item-5");
+  var xlink6 = svg.getElementById("item-6");
+  var xlink7 = svg.getElementById("item-7");
+  var xlink8 = svg.getElementById("item-8");
+  var xlink9 = svg.getElementById("item-9");
 
   $.ajax({
     url: "/wheel",
@@ -63,12 +63,21 @@ window.onload = (function() {
         index1 = index1 + 1;
       }
       else {
-        index1 = 0
+        index1 = 0;
       }
   };
 
-  startAction = function(){updateInnerHTML(text1, def1, xlink1, index1); updateInnerHTML(text2, def2, xlink2, index1); updateInnerHTML(text3, def3, xlink3, index1); updateInnerHTML(text4, def4, xlink4, index1); updateInnerHTML(text5, def5, xlink5, index1); updateInnerHTML(text6, def6, xlink6, index1); updateInnerHTML(text7, def7, xlink7, index1); updateInnerHTML(text8, def8, xlink8, index1); updateInnerHTML(text9, def9, xlink9, index1)};
+  startAction = function(){
+    updateInnerHTML(text1, def1, xlink1, index1);
+    updateInnerHTML(text2, def2, xlink2, index1);
+    updateInnerHTML(text3, def3, xlink3, index1);
+    updateInnerHTML(text4, def4, xlink4, index1);
+    updateInnerHTML(text5, def5, xlink5, index1);
+    updateInnerHTML(text6, def6, xlink6, index1);
+    updateInnerHTML(text7, def7, xlink7, index1);
+    updateInnerHTML(text8, def8, xlink8, index1);
+    updateInnerHTML(text9, def9, xlink9, index1);
+  };
   startAction();
   });
 });
-;
