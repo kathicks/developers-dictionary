@@ -4,7 +4,10 @@
             <div class='col-md-12 term-header'>
                 <h2 class="term-title">What is <%= term.term %>?</h2>
                 <p class="short-def">
-                    <%= term.summary %>
+                  <%= term.summary %>
+                </p>
+                <p class="tags">
+                   #<%= term.tags %>
                 </p>
                 <a type="button" data-toggle="modal" data-target="#addDef" class="add-definition-link"><i class="fa fa-plus" aria-hidden="true"></i>   Add an explanation</a>
             </div>

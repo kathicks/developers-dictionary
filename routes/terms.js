@@ -82,7 +82,7 @@ router.post('/newterm', function(req, res) {
                     collection.insert({
                         "term": term,
                         "summary": summary,
-                        "tag": tag,
+                        "tags": tag,
                         "definitions": [{
                             "definition": definition,
                             "source": source,
