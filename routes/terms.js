@@ -26,6 +26,7 @@ router.get('/wheel', function(req, res) {
 /* GET term page. */
 router.get('/show/:id', function(req, res) {
     var db = req.db;
+    console.log(req.params)
     var collection = db.get('termcollection');
     collection.find({
         '_id': req.params.id
@@ -122,7 +123,8 @@ router.post('/newterm', function(req, res) {
 /* POST to add new definition to term. */
 router.post('/newdefinition', function(req, res) {
     var db = req.db;
-    var definition = req.body.definition;
+    var definition = req.body.definition.replace(/[\n\r]+/g, ' ');
+    console.log(definition)
     var source = req.body.source;
     var term = req.body.term;
     var collection = db.get('termcollection');
