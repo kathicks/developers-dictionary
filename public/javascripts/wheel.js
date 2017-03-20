@@ -24,25 +24,41 @@ window.onload = (function() {
   var def8 = svg.getElementById("Definition8");
   var def9 = svg.getElementById("Definition9");
 
+  var xlink1 = svg.getElementById("item-1")
+  var xlink2 = svg.getElementById("item-2")
+  var xlink3 = svg.getElementById("item-3")
+  var xlink4 = svg.getElementById("item-4")
+  var xlink5 = svg.getElementById("item-5")
+  var xlink6 = svg.getElementById("item-6")
+  var xlink7 = svg.getElementById("item-7")
+  var xlink8 = svg.getElementById("item-8")
+  var xlink9 = svg.getElementById("item-9")
+
   $.ajax({
     url: "/wheel",
     method: "GET",
   }).done(function(response) {
     terms = response;
     }).then(function() {
-      outputTermString = function(element, index){
+      outputTermString = function(index){
       var string = terms[index].term;
       return string;
     };
 
-    outputDefString = function(element, index){
-      var string = terms[index].summary;
+    outputDefString = function(index){
+      var string = terms[index].summary.split('').slice(0, 40).join("") + '...';
       return string;
     };
 
-    updateInnerHTML1 = function(element1, element2, index) {
-      element1.textContent = outputTermString(element1, index)
-      element2.textContent = outputDefString(element2, index)
+    outputShowLink = function(index){
+      var id = terms[index]._id;
+      return "/show/" + id;
+    };
+
+    updateInnerHTML = function(element1, element2, element3, index) {
+      element1.textContent = outputTermString(index);
+      element2.textContent = outputDefString(index);
+      element3.setAttribute("xlink:href", outputShowLink(index));
       if (index < terms.length -1) {
         index1 = index1 + 1;
       }
@@ -51,8 +67,8 @@ window.onload = (function() {
       }
   };
 
-  console.log(terms);
-  startAction = function(){updateInnerHTML1(text1, def1, index1); updateInnerHTML1(text2, def2, index1); updateInnerHTML1(text3, def3, index1); updateInnerHTML1(text4, def4, index1); updateInnerHTML1(text5, def5, index1); updateInnerHTML1(text6, def6, index1); updateInnerHTML1(text7, def7, index1); updateInnerHTML1(text8, def8, index1); updateInnerHTML1(text9, def9, index1)};
+  startAction = function(){updateInnerHTML(text1, def1, xlink1, index1); updateInnerHTML(text2, def2, xlink2, index1); updateInnerHTML(text3, def3, xlink3, index1); updateInnerHTML(text4, def4, xlink4, index1); updateInnerHTML(text5, def5, xlink5, index1); updateInnerHTML(text6, def6, xlink6, index1); updateInnerHTML(text7, def7, xlink7, index1); updateInnerHTML(text8, def8, xlink8, index1); updateInnerHTML(text9, def9, xlink9, index1)};
   startAction();
   });
 });
+;

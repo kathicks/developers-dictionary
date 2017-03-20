@@ -17,6 +17,25 @@
   margin:0 auto;
 }
 
+#scroll-button-left {
+  position:relative;
+  float: left;
+  z-index: 1;
+}
+
+#scroll-button-right {
+  position:relative;
+  float: right;
+  z-index: 1;
+}
+
+#scroll {
+  margin-top: 50vh;
+  align: middle;
+  font-size: 2em;
+  color: black;
+}
+
 a {
   cursor:pointer;
   outline:none;
@@ -48,8 +67,8 @@ body {
 
 .def {
   overflow: visible;
-  font-family: 'Raleway';
-  font-weight: 200;
+  font-family: 'Cutive Mono';
+  font-weight: 100;
   fill: #474747;
 }
 
@@ -64,15 +83,7 @@ symbol {
   overflow:visible;
 }
 
-rect:focus {
-    outline: none;
-}
-
 #itemsContainer {
   display:block;
   margin:0 auto;
-}
-
-#term-05 {
-  fill: #9c56b8;
 }
