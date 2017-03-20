@@ -7,6 +7,7 @@
 }
 
 #svg-menu {
+  z-index: -1;
   display: block;
   position: absolute;
   bottom: 0;
@@ -60,7 +61,7 @@ a {
 }
 
 .term {
-  fill: #9c56b8;
+  fill: #7c4dff;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
 }
