@@ -1,51 +1,29 @@
-.wheel-container {
-  display: inline-block;
-  position: relative;
-  width: 50%;
-  padding-bottom: 60%;
-  vertical-align: middle;
-}
-
-#svg-menu {
-  display: block;
-  position: absolute;
-  bottom: 0;
-}
-
-#wheel {
-  display:block;
-  margin:0 auto;
-}
-
-#scroll-button-left {
-  position:relative;
-  float: left;
-  z-index: 1;
-}
-#scroll-button-right {
-  position:relative;
-  float: right;
-  z-index: 1;
-}
-
-#scroll {
-  margin-top: 50vh;
-  align: middle;
-  font-size: 2em;
-  color: black;
-}
-
 a {
   cursor:pointer;
-  outline:none;
+  outline: none!important;
+}
+
+symbol {
+  overflow:visible;
 }
 
 use {
     z-index: 1;
 }
 
-#wheel-page {
-  overflow: hidden;
+text.term:hover {
+  font-weight: 400;
+  fill:black;
+  opacity: 30%;
+  stroke:none;
+}
+
+.wheel-container {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  padding-bottom: 60%;
+  vertical-align: middle;
 }
 
 .item .sector {
@@ -75,20 +53,42 @@ use {
   fill: #474747;
 }
 
-text.term:hover {
-  font-weight: 400;
-  fill:black;
-  opacity: 30%;
-  stroke:none;
+#wheel-page {
+  overflow: hidden;
 }
 
-symbol {
-  overflow:visible;
+#wheel {
+  display:block;
+  margin:0 auto;
+}
+
+#svg-menu {
+  display: block;
+  position: absolute;
+  bottom: 0;
 }
 
 #itemsContainer {
   display:block;
   margin:0 auto;
+}
+
+#scroll {
+  margin-top: 50vh;
+  align: middle;
+  font-size: 2em;
+  color: black;
+}
+
+#scroll-button-left {
+  position:relative;
+  float: left;
+  z-index: 1;
+}
+#scroll-button-right {
+  position:relative;
+  float: right;
+  z-index: 1;
 }
 
 #term-01, #term-06 {
