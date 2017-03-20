@@ -36,8 +36,8 @@ body {
 .def {
   overflow: visible;
   font-family: 'Raleway';
-  font-weight: 100;
-  fill: #848484;
+  font-weight: 200;
+  fill: #474747;
 }
 
 text.term:hover {
@@ -49,6 +49,10 @@ text.term:hover {
 
 symbol {
   overflow:visible;
+}
+
+rect:focus {
+    outline: none;
 }
 
 #itemsContainer {

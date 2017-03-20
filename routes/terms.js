@@ -7,11 +7,19 @@ router.get('/', function(req, res) {
     var collection = db.get('termcollection');
     collection.find({}, {}, function(e, docs) {
         res.render('index', {
-            term: docs,
+            terms: docs,
             messages: req.flash('errors'),
             notices: req.flash('notice'),
             home: true
         });
+    });
+});
+
+router.get('/wheel', function(req, res) {
+    var db = req.db;
+    var collection = db.get('termcollection');
+    collection.find({}, {}, function(e, docs) {
+        res.json(docs);
     });
 });
 
