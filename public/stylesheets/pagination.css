@@ -1,0 +1,10 @@
+.pagination li a{
+    position: float;
+    float: center;
+    padding: 2px 2px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: grey;
+    text-decoration: none;
+    background-color: none;
+    border: none;
