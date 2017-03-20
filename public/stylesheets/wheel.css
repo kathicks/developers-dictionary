@@ -67,8 +67,8 @@ body {
 
 .def {
   overflow: visible;
-  font-family: 'Raleway';
-  font-weight: 200;
+  font-family: 'Cutive Mono';
+  font-weight: 100;
   fill: #474747;
 }
 
@@ -83,15 +83,7 @@ symbol {
   overflow:visible;
 }
 
-*:focus {
-    outline: none;
-}
-
 #itemsContainer {
   display:block;
   margin:0 auto;
-}
-
-#term-05 {
-  fill: #9c56b8;
 }

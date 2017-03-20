@@ -46,7 +46,7 @@ window.onload = (function() {
     };
 
     outputDefString = function(index){
-      var string = terms[index].summary;
+      var string = terms[index].summary.split('').slice(0, 40).join("") + '...';
       return string;
     };
 
@@ -71,3 +71,4 @@ window.onload = (function() {
   startAction();
   });
 });
+;
