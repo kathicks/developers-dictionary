@@ -1,6 +1,7 @@
 [{
         "term": "Angular",
         "summary": "A structural framework for dynamic web apps",
+        "tags": ["framework"],
         "definitions": [{
             "definition": "It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. AngularJS's data binding and dependency injection eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology.\r\n\r\nAngularJS is what HTML would have been, had it been designed for applications.",
             "source": "https://docs.angularjs.org/guide/introduction",
@@ -10,8 +11,9 @@
     {
         "term": "Atom",
         "summary": "Atom is a hackable and customizable text editor",
+        "tags": ["tool"],
         "definitions": [{
-            "definition": "Atom is built with HTML, JavaScript, CSS, and Node.js integration.\r\nIt's easy to customize and style Atom. You can tweak the look and feel of your UI with CSS/Less and add major features with HTML and JavaScript. \r\n\r\nYou choose from thousands of open source packages that add new features and functionality to Atom—or build a package from scratch and publish it for everyone else to use.",
+            "definition": "Atom is built with HTML, JavaScript, CSS, and Node.js integration. It's easy to customize and style Atom. You can tweak the look and feel of your UI with CSS/Less and add major features with HTML and JavaScript. \r\n\r\nYou choose from thousands of open source packages that add new features and functionality to Atom—or build a package from scratch and publish it for everyone else to use.",
             "source": "https://atom.io/",
             "rating": 0
         }]
@@ -19,19 +21,34 @@
     {
         "term": "API",
         "summary": "A set of routines, protocols, and tools for building software applications",
+        "tags": ["tool"],
         "definitions": [{
-            "definition": "Atom is built with HTML, JavaScript, CSS, and Node.js integration.\r\nIt's easy to customize and style Atom. You can tweak the look and feel of your UI with CSS/Less and add major features with HTML and JavaScript. \r\n\r\nYou choose from thousands of open source packages that add new features and functionality to Atom—or build a package from scratch and publish it for everyone else to use.",
-            "source": "https://atom.io/",
+            "definition": "A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.",
+            "source": "http://www.webopedia.com/TERM/A/API.html",
             "rating": 0
         }]
     },
     {
         "term": ".NET",
         "summary": "Enables rapid development by bundling a collection of software in one package",
+        "tags": ["package"],
         "definitions": [{
             "definition": ".NET is a Microsoft web services strategy to connect information, people, systems, and devices through software, making it easier for users to share and use their information between multiple websites, programs, and computers. Also, being a web service, .NET is also a programming model that enables software developers the ability to do rapid application development by bundling a collection of software in on package. For example, Microsoft Visual Studio .NET is part of the .NET programming model.",
             "source": "http://www.computerhope.com/jargon/n/dotnet.htm",
             "rating": 0
         }]
+    },
+
+    {
+        "term": "Java",
+        "summary": "A general-purpose computer programming language",
+        "tags": ["language"],
+        "definitions": [{
+            "definition": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers 'write once, run anywhere' (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture.",
+            "source": "https://en.wikipedia.org/wiki/Java_(programming_language)",
+            "rating": 0
+        }]
     }
+
+
 ]
