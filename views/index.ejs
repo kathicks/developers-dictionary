@@ -1,24 +1,24 @@
 <?xml version="1.0" standalone="no"?>
 <?xml-stylesheet type="text/css" href="../public/stylesheets/wheel.css"?>
   <div class="container-fluid">
-    <div class="col-md-3"></div>
-      <div class="col-md-6">
-        <div id="search-and-filter">
-          <form class="form-inline" action="/index" method="post">
-            <div class="form-group">
-              <input type="text" class="form-control" id="search" placeholder="search e.g. Ruby">
-            </div>
-            <div class="form-group">
-              <select class="select" id="tag" name="tag">
-                <option hidden>filter</option>
-                <option value="language">Language</option>
-                <option value="framework">Framework</option>
-                <option value="package">Package</option>
-                <option value="tool">Tool</option>
-                <div class="select__arrow"></div>
-              </select>
-            </div>
-          </form>
+     <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <div id="search-and-filter">
+        <form class="form-inline" action="/" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" id="search" placeholder="search e.g. Ruby">
+          </div>
+          <div class="form-group">
+            <select class="select" id="tag" name="tag" onchange="this.form.submit();">
+              <option hidden>filter</option>
+              <option name="language" value="language">Language</option>
+              <option name="framework" value="framework">Framework</option>
+              <option name="package" value="package">Package</option>
+              <option name="tool" value="tool">Tool</option>
+              <div class="select__arrow"></div>
+            </select>
+          </div>
+        </form>
         </div>
       </div>
       <div id="scroll" class="container-fluid">

@@ -40,6 +40,27 @@ router.get('/show/:id', function(req, res) {
     });
 });
 
+/* POST to filter by tag. */
+router.post('/', function(req, res){
+  var db = req.db;
+  var tag = req.body.tag;
+  console.log(req.body);
+  var collection = db.get('termcollection');
+
+  collection.find({
+      "tags": tag,
+  }, function(err, result) {
+    if (err) console.log(err);
+    console.log(result);
+    res.render('index', {
+        term: result,
+        messages: req.flash('errors'),
+        notices: req.flash('notice'),
+        // home: true
+    });
+  });
+});
+
 /* POST to add new term. */
 router.post('/newterm', function(req, res) {
     var db = req.db;
@@ -48,7 +69,6 @@ router.post('/newterm', function(req, res) {
     var definition = req.body.definition;
     var source = req.body.source;
     var tag = req.body.tag;
-
     var collection = db.get('termcollection');
 
     req.checkBody({

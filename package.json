@@ -11,6 +11,7 @@
     "bootstrap": "^3.3.7",
     "chai": "^3.5.0",
     "chai-http": "^3.0.0",
+    "chosen-js": "^1.6.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.0",
