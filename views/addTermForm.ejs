@@ -24,13 +24,12 @@
                         <input type="url" class="form-control" id="source" name="source">
                     </div>
                     <div class="form-group">
-                      <label for="tag">Tag</label>
-                      <select id="choose-tag" name="tag">
-                        <option value="language">Language</option>
-                        <option value="framework">Framework</option>
-                        <option value="package">Package</option>
-                        <option value="tool">Tool</option>
-                      </select>
+                      <div class="check-box">
+                        <label class="checkbox-inline"><input name="tag" type="checkbox" value="language">language</label>
+                        <label class="checkbox-inline"><input name="tag" type="checkbox" value="framework">framework</label>
+                        <label class="checkbox-inline"><input name="tag" type="checkbox" value="tool">tool</label>
+                        <label class="checkbox-inline"><input name="tag" type="checkbox" value="package">package</label>    
+                      </div>
                     </div>
                     <button type="submit" class="btn btn-default btn-addterm">Add</button>
                 </form>
