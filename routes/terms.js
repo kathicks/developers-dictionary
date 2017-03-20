@@ -39,6 +39,7 @@ router.post('/newterm', function(req, res) {
     var summary = req.body.summary;
     var definition = req.body.definition;
     var source = req.body.source;
+    var tag = req.body.tag;
 
     var collection = db.get('termcollection');
 
@@ -81,6 +82,7 @@ router.post('/newterm', function(req, res) {
                     collection.insert({
                         "term": term,
                         "summary": summary,
+                        "tags": tag,
                         "definitions": [{
                             "definition": definition,
                             "source": source,
