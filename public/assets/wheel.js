@@ -40,7 +40,7 @@ window.onload = (function() {
       return string;
     };
 
-    updateInnerHTML1 = function(element1, element2, index) {
+    updateInnerHTML = function(element1, element2, index) {
       element1.textContent = outputTermString(element1, index)
       element2.textContent = outputDefString(element2, index)
       if (index < terms.length -1) {
@@ -51,8 +51,7 @@ window.onload = (function() {
       }
   };
 
-  console.log(terms);
-  startAction = function(){updateInnerHTML1(text1, def1, index1); updateInnerHTML1(text2, def2, index1); updateInnerHTML1(text3, def3, index1); updateInnerHTML1(text4, def4, index1); updateInnerHTML1(text5, def5, index1); updateInnerHTML1(text6, def6, index1); updateInnerHTML1(text7, def7, index1); updateInnerHTML1(text8, def8, index1); updateInnerHTML1(text9, def9, index1)};
+  startAction = function(){updateInnerHTML(text1, def1, index1); updateInnerHTML(text2, def2, index1); updateInnerHTML(text3, def3, index1); updateInnerHTML(text4, def4, index1); updateInnerHTML(text5, def5, index1); updateInnerHTML(text6, def6, index1); updateInnerHTML(text7, def7, index1); updateInnerHTML(text8, def8, index1); updateInnerHTML(text9, def9, index1)};
   startAction();
   });
 });

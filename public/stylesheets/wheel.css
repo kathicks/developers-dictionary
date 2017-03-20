@@ -4,6 +4,25 @@
   margin:0 auto;
 }
 
+#scroll-button-left {
+  position:relative;
+  float: left;
+  z-index: 1;
+}
+
+#scroll-button-right {
+  position:relative;
+  float: right;
+  z-index: 1;
+}
+
+#scroll {
+  margin-top: 50vh;
+  align: middle;
+  font-size: 2em;
+  color: black;
+}
+
 a {
   cursor:pointer;
   outline:none;
@@ -51,7 +70,7 @@ symbol {
   overflow:visible;
 }
 
-rect:focus {
+*:focus {
     outline: none;
 }
 
