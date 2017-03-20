@@ -1,31 +1,47 @@
 #search-and-filter {
-  /*align-items: center;
-  display: inline-block;*/
+  align-items: center;
+  display: inline-block;
 }
 
 #search {
+  -webkit-appearance: none;
   border: 0;
   border width: 0 0 2px 0;
   border-radius: 0px;
-  width:106px;
+  width:120px;
   outline: 0;
   padding: 0;
   background: transparent;
-  border-bottom: solid grey;
+  border-bottom: 1px solid;
+  border-color: #3a3a3a;
   box-shadow: inset 0px 0px 0px 0px;
   font-size: 1.5em;
+  font-family: 'Roboto Mono';
+  font-weight: 200;
+  color: #3a3a3a;
+  cursor: pointer;
 }
 
 #tag {
   -webkit-appearance: none;
   padding: 0px !important;
   border: 0px;
-  border-bottom: 3px solid grey;
+  border-bottom: 1px solid;
+  border-color: #3a3a3a;
   border-radius: 0px !important;
+  width:120px;
   outline: 0;
   background: transparent;
   box-shadow: inset 0px 0px 0px 0px;
   font-size: 1.5em;
+  font-family: 'Roboto Mono';
+  font-weight: 200;
+  color: #3a3a3a;
+  cursor: pointer;
+}
+
+.form-group {
+  color: #3a3a3a;
 }
 
 .select__arrow {

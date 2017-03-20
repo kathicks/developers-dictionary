@@ -86,3 +86,17 @@ $(".tag").on('change', 'select', function(event) {
     event.preventDefault();
     console.log($(".tag").val)
 });
+
+document.body.onkeydown = function(event){
+  event = event || window.event;
+  var keycode = event.charCode || event.keyCode;
+  if(keycode === 37 || keycode === 40 ){
+      startAction();
+  } else if(keycode === 39 || keycode === 38){
+    startAction();
+  }
+}
+
+window.onscroll = function() {
+  console.log("HERE");
+};
