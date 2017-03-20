@@ -1,63 +1,68 @@
 body {
-  font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .content {
-  margin-top: 90px;
+    margin-top: 90px;
 }
 
-#navbar li:hover { cursor:pointer; }
+#navbar li:hover {
+    cursor: pointer;
+}
 
 #listscroll {
-  margin-top: 10%;
-  margin-left: 30%;
-  position: absolute;
-  height: 55%;
-  width: 45%;
-  overflow-y: scroll;
+    margin-top: 10%;
+    margin-left: 30%;
+    position: absolute;
+    height: 55%;
+    width: 45%;
+    overflow-y: scroll;
 }
 
 #termtitle {
-  font-family: 'Roboto'!important;
-  font-weight: 700;
-  font-size: 36px;
-  color: #FF5722;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+    font-family: 'Roboto'!important;
+    font-weight: 700;
+    font-size: 36px;
+    color: #FF5722;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 #shortdefinition {
-  font-family: 'Raleway';
-  font-weight: 200;
-  font-size: 18px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 0px;
-  padding-bottom: 20px;
+    font-family: 'Raleway';
+    font-weight: 200;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 20px;
 }
 
 a {
-  color: #3d3d3c;
+    color: #3d3d3c;
 }
 
 a:link {
-  color: #3d3d3c;
-  text-decoration: none;
-  font-weight: bold;
+    color: #3d3d3c;
+    text-decoration: none;
+    font-weight: bold;
 }
+
 a:visited {
-  color: #3d3d3c;
+    color: #3d3d3c;
 }
+
 a:hover {
-  color: #3d3d3c;
-  text-decoration: none;
+    color: #3d3d3c;
+    text-decoration: none;
 }
+
 a:active {
-  color: #3d3d3c;
+    color: #3d3d3c;
 }
 
 .flash-element {
-  text-transform:capitalize;
+    text-transform: capitalize;
 }

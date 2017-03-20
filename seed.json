@@ -1,0 +1,5 @@
+{
+	"undefined": "localhost:27017/developers-dictionary-development",
+	"dev": "localhost:27017/developers-dictionary-development",
+	"prod": "localhost:27017/developers-dictionary-development"
+}

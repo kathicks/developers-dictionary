@@ -1,49 +1,49 @@
 .modal-title {
-  text-align: center;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 24px;
-  padding-top: 15px;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 24px;
+    padding-top: 15px;
 }
 
 .btn-addterm {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 35px 10px 35px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 35px 10px 35px;
 }
 
 .modal-header .close {
-  padding-top: 16px;
-  padding-right: 22px;
-  font-size: 36px;
+    padding-top: 16px;
+    padding-right: 22px;
+    font-size: 36px;
 }
 
 .modal-header {
-  border-style: none;
+    border-style: none;
 }
 
 .modal {
- text-align: center;
- padding: 0!important;
+    text-align: center;
+    padding: 0!important;
 }
 
 .modal:before {
- content: '';
- display: inline-block;
- height: 100%;
- vertical-align: middle;
- margin-right: -4px;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
 }
 
 .modal-dialog {
- display: inline-block;
- text-align: left;
- vertical-align: middle;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
 }
 
 textarea {
-  resize: none;
+    resize: none;
 }
 
 .modal-body {
-  padding: 10px 40px 40px 40px;
+    padding: 10px 40px 40px 40px;
 }
