@@ -7,7 +7,14 @@
                   <%= term.summary %>
                 </p>
                 <p class="tags">
-                   #<%= term.tags %>
+                   <% term.tags.forEach(function(x){ %>
+                     <form class='form-inline' action='/' method='post'>
+                       <div>
+                         <button class="tag-button" name='tag' value='<%= x %>'>#<%= x %></button>
+                       </div>
+                     </form>
+                   <% }); %>
+
                 </p>
                 <a type="button" data-toggle="modal" data-target="#addDef" class="add-definition-link"><i class="fa fa-plus" aria-hidden="true"></i>   Add an explanation</a>
             </div>
