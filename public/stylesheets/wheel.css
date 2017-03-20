@@ -12,6 +12,15 @@
   bottom: 0;
 }
 
+.noselect {
+-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
 #wheel {
   display:block;
   margin:0 auto;
@@ -69,6 +78,10 @@ a {
   font-family: 'Cutive Mono';
   font-weight: 100;
   fill: #474747;
+}
+
+.item:focus{
+  outline: none !important;
 }
 
 text.term:hover {
