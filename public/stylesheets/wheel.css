@@ -7,10 +7,10 @@
 }
 
 #svg-menu {
-  z-index: -1;
   display: block;
   position: absolute;
   bottom: 0;
+  z-index: -1;
 }
 
 #wheel {
@@ -31,7 +31,7 @@
 }
 
 #scroll {
-  margin-top: 50vh;
+  margin-top: 25vh;
   align: middle;
   font-size: 2em;
   color: black;
@@ -44,6 +44,26 @@ a {
 
 #wheel-page {
   overflow: hidden;
+}
+
+#term-01, #term-06 {
+  fill: #F9C00C;
+}
+
+#term-02, #term-07 {
+  fill: #03A9F4;
+}
+
+#term-03, #term-08 {
+  fill: #9C56BB;
+}
+
+#term-04, #term-09 {
+  fill: #FF5722;
+}
+
+#term-05 {
+  fill: #FF4081;
 }
 
 .item .sector {
@@ -64,14 +84,16 @@ a {
   fill: #7c4dff;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  z-index: 1;
 }
 
 .def {
   overflow: visible;
-  font-family: 'Cutive Mono';
+  font-family: 'Roboto Mono';
   font-weight: 100;
   fill: #474747;
 }
+
 
 text.term:hover {
   font-weight: 400;

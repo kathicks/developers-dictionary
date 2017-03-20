@@ -10,7 +10,11 @@
   background: transparent;
   border-bottom: solid grey;
   box-shadow: inset 0px 0px 0px 0px;
+  font-family: 'Roboto Mono';
+  font-weight: 100;
+  fill: #474747;
   font-size: 2em;
+  cursor:pointer;
 }
 
 #tag {
@@ -22,6 +26,11 @@
   border-bottom: solid grey;
   box-shadow: inset 0px 0px 0px 0px;
   font-size: 2em;
+  font-family: 'Roboto Mono';
+ font-weight: 100;
+ fill: #474747;
+  z-index: 1;
+  cursor:pointer;
 }
 
 .select__arrow {
