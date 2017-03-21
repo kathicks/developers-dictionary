@@ -47,10 +47,11 @@
 }
 .tag-button {
   background: none !important;
-  border: none;
   color: white !important;
-  display: inline-block;
+  display: inline;
+  font-weight: 100;
 }
+
 .jumbotron {
     text-align: center;
     color: #fff;

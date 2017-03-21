@@ -65,6 +65,26 @@ router.post('/wheel', function(req, res){
   }, function(err, result) {
     if (err) console.log(err);
     req.session.results = result;
+    res.json(result)
+    console.log(result)
+    // res.render('index', {
+    //     term: result,
+    //     messages: req.flash('errors'),
+    //     notices: req.flash('notice'),
+    // });
+  });
+});
+
+/* POST to filter by tag. */
+router.post('/wheel/filter', function(req, res){
+  var db = req.db;
+  var tag = req.body.tag;
+  var collection = db.get('termcollection');
+  collection.find({
+      "tags": tag,
+  }, function(err, result) {
+    if (err) console.log(err);
+    req.session.results = result;
     res.render('index', {
         term: result,
         messages: req.flash('errors'),

@@ -47,3 +47,10 @@ textarea {
 .modal-body {
     padding: 10px 40px 40px 40px;
 }
+
+.checkbox {
+    margin-top: 0 !important;
+    margin-right: 6px !important;
+    margin-left: 20px;
+    display: inline;
+}

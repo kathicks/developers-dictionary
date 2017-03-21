@@ -34,36 +34,13 @@
   border: 0;
   border width: 0 0 2px 0;
   border-radius: 0px;
-  width: 140px;
+  width: 180px;
   outline: 0;
   padding: 0;
   background: transparent;
   border-bottom: 1px solid;
   border-color: #3a3a3a;
   box-shadow: inset 0px 0px 0px 0px;
-  font-size: 1em;
-  font-family: 'Roboto Mono';
-  font-weight: 200;
-  color: #3a3a3a;
-  cursor: pointer;
-  display: inline;
-}
-
-#tag {
-  -webkit-appearance: none;
-  padding: 6px !important;
-  border: 0px;
-  border-bottom: 1px solid;
-  border-color: #3a3a3a;
-  border-radius: 0px !important;
-  width:120px;
-  outline: 0;
-  background: transparent;
-  box-shadow: inset 0px 0px 0px 0px;
-  font-size: 1em;
-  width: 140px;
-  color: #9d9d9d;
-  z-index: 1;
   font-size: 1em;
   font-family: 'Roboto Mono';
   font-weight: 200;
@@ -81,13 +58,17 @@ a.clear-filter {
   text-align: center;
   display: block;
   position: relative;
-  left: 110px;
+  left: 142px;
   font-size: 11px;
   margin-top: 10px;
 }
 
 .fa-undo, .fa-search {
   margin-right: 5px;
+}
+
+.fa-filter {
+  margin-left: 185px;
 }
 
 .form-group {
@@ -111,4 +92,69 @@ a.clear-filter {
 }
 .select select:disabled ~ .select__arrow {
   border-top-color: #ccc;
+}
+
+.wrapper-dropdown {
+ /*size and position*/
+ position: absolute;
+ width: 180px;
+ margin: 0 auto;
+ margin-top: -6px;
+ padding: 6.5px !important;
+ display: inline;
+ z-index: 1;
+
+ /*styles*/
+ background: transparent;
+ font-size: 1em;
+ cursor: pointer;
+ outline: none;
+ border-bottom: 1px solid;
+}
+
+.filter-placeholder {
+  float: left;
+}
+
+.wrapper-dropdown .dropdown {
+ /*size and position*/
+ position: absolute;
+ top: 100%;
+ right: 0px;
+ height: 230px;
+ overflow-y: scroll;
+ width: 180px;
+ margin-top: 1px;
+ /*overflow-x: hidden;*/
+
+ /*styles*/
+ background-color: white;
+ transition: all 0.3s ease-out;
+ list-style: none;
+
+ /*hiding*/
+ opacity: 0;
+ pointer-events: none;
+}
+
+.wrapper-dropdown .dropdown li {
+ display: block;
+ text-decoration: none;
+ border-left: 5px solid;
+ padding: 10px;
+ transition: all 0.3s ease-out;
+ border-left-color: grey;
+}
+
+.wrapper-dropdown .dropdown li:hover {
+ color: dark grey;
+}
+
+.wrapper-dropdown.active:after {
+ border-width: 0 6px 6px 6px;
+}
+
+.wrapper-dropdown.active .dropdown {
+ opacity: 1;
+ pointer-events: auto;
 }
