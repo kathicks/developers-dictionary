@@ -70,14 +70,18 @@ router.post('/wheel', function(req, res){
 router.post('/search', function(req, res){
   var db = req.db;
   var term = req.body.search;
-  console.log(term);
   var collection = db.get('termcollection');
   collection.findOne({
       "term": term
   }, function(err, result) {
     if (err) console.log(err);
-    console.log(result);
-    res.redirect("/show/" + result._id);
+    if (result) {
+      res.redirect("/show/" + result._id);
+    }
+    else {
+      req.flash('errors', [{ param: 'term', msg: "Does not exist in the database!" }]);
+      res.redirect('/');
+    }
   });
 });
 
@@ -137,10 +141,7 @@ router.post('/newterm', function(req, res) {
                         }
                     });
                 } else {
-                    req.flash('errors', [{
-                        param: 'term',
-                        msg: "Already added to the database"
-                    }]);
+                    req.flash('errors', [{ param: 'term', msg: "Already added to the database" }]);
                     res.redirect('/');
                 }
             }));
