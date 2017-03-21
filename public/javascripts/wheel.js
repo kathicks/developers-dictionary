@@ -87,31 +87,32 @@ window.onload = (function() {
   };
 
   startLeft = function(){
-    updateInnerHTML(text9, def9, xlink9, index0);
-    updateInnerHTML(text8, def8, xlink8, index1);
-    updateInnerHTML(text7, def7, xlink7, index2);
-    updateInnerHTML(text6, def6, xlink6, index3);
+    updateInnerHTML(text9, def9, xlink9, index8);
+    updateInnerHTML(text8, def8, xlink8, index7);
+    updateInnerHTML(text7, def7, xlink7, index6);
+    updateInnerHTML(text6, def6, xlink6, index5);
     updateInnerHTML(text5, def5, xlink5, index4);
-    updateInnerHTML(text4, def4, xlink4, index5);
-    updateInnerHTML(text3, def3, xlink3, index6);
-    updateInnerHTML(text2, def2, xlink2, index7);
-    updateInnerHTML(text1, def1, xlink1, index8);
+    updateInnerHTML(text4, def4, xlink4, index3);
+    updateInnerHTML(text3, def3, xlink3, index2);
+    updateInnerHTML(text2, def2, xlink2, index1);
+    updateInnerHTML(text1, def1, xlink1, index0);
   };
 
-  startRight = function(){
-    updateInnerHTML(text1, def1, xlink1, index0);
-    updateInnerHTML(text2, def2, xlink2, index1);
-    updateInnerHTML(text3, def3, xlink3, index2);
-    updateInnerHTML(text4, def4, xlink4, index3);
-    updateInnerHTML(text5, def5, xlink5, index4);
-    updateInnerHTML(text6, def6, xlink6, index5);
-    updateInnerHTML(text7, def7, xlink7, index6);
-    updateInnerHTML(text8, def8, xlink8, index7);
-    updateInnerHTML(text9, def9, xlink9, index8);
-  };
+  // startRight = function(){
+  //   updateInnerHTML(text1, def1, xlink1, index0);
+  //   console.log(index0);
+  //   updateInnerHTML(text2, def2, xlink2, index1);
+  //   updateInnerHTML(text3, def3, xlink3, index2);
+  //   updateInnerHTML(text4, def4, xlink4, index3);
+  //   updateInnerHTML(text5, def5, xlink5, index4);
+  //   updateInnerHTML(text6, def6, xlink6, index5);
+  //   updateInnerHTML(text7, def7, xlink7, index6);
+  //   updateInnerHTML(text8, def8, xlink8, index7);
+  //   updateInnerHTML(text9, def9, xlink9, index8);
+  // };
 
   startLeft();
-  startRight();
+  // startRight();
   });
 });
 
