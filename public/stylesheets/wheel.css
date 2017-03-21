@@ -61,7 +61,7 @@ text.term:hover {
   fill: #474747;
 }
 
-#container-fluid {
+.container-fluid {
     height: 2em;
     z-index: -1;
 }
