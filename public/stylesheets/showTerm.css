@@ -68,11 +68,21 @@
     text-align: center;
     margin-bottom: 1em;
     color: #7c4dff;
+    border: none;
 }
 
 .downvote, .upvote, .rating {
     background: transparent;
     display: inline !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.downvote, .upvote, .rating:visited {
+    background: transparent;
+    display: inline !important;
+    outline: none !important
+    box-shadow: none !important;
 }
 
 .add-definition-link {
