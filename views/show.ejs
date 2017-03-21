@@ -9,9 +9,7 @@
                 <p class="tags">
                    <% term.tags.forEach(function(x){ %>
                      <form class='form-inline' action='/wheel/filter' method='post'>
-                       <div>
-                         <button class="tag-button" name='tag' value='<%= x %>'>#<%= x %></button>
-                       </div>
+                         <button class="btn btn-default tag-button" name='tag' value='<%= x %>'>#<%= x %></button>
                      </form>
                    <% }); %>
 
