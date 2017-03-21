@@ -1,7 +1,19 @@
 window.onload = (function() {
 
   var terms;
-  var index1 = 0;
+
+  var index0 = 0;
+  var index1 = 1;
+  var index2 = 2;
+  var index3 = 3;
+  var index4 = 4;
+  var index5 = 5;
+  var index6 = 6;
+  var index7 = 7;
+  var index8 = 8;
+  var index9 = 9;
+
+
   var colours = ["#F9C00C", "#03A9F4", "#9C56BB", "#FF5722", "#FF4081"]
 
   var svg = document.getElementById("svg-menu");
@@ -67,35 +79,35 @@ window.onload = (function() {
       element2.textContent = outputDefString(index);
       element3.setAttribute("xlink:href", outputShowLink(index));
       if (index < terms.length - 1) {
-        index1 = index1 + 1;
+        index = index + 1;
       }
       else {
-        index1 = 0;
+        index = 0;
       }
   };
 
   startLeft = function(){
-    updateInnerHTML(text9, def9, xlink9, index1);
+    updateInnerHTML(text9, def9, xlink9, index0);
     updateInnerHTML(text8, def8, xlink8, index1);
-    updateInnerHTML(text7, def7, xlink7, index1);
-    updateInnerHTML(text6, def6, xlink6, index1);
-    updateInnerHTML(text5, def5, xlink5, index1);
-    updateInnerHTML(text4, def4, xlink4, index1);
-    updateInnerHTML(text3, def3, xlink3, index1);
-    updateInnerHTML(text2, def2, xlink2, index1);
-    updateInnerHTML(text1, def1, xlink1, index1);
+    updateInnerHTML(text7, def7, xlink7, index2);
+    updateInnerHTML(text6, def6, xlink6, index3);
+    updateInnerHTML(text5, def5, xlink5, index4);
+    updateInnerHTML(text4, def4, xlink4, index5);
+    updateInnerHTML(text3, def3, xlink3, index6);
+    updateInnerHTML(text2, def2, xlink2, index7);
+    updateInnerHTML(text1, def1, xlink1, index8);
   };
 
   startRight = function(){
-    updateInnerHTML(text1, def1, xlink1, index1);
+    updateInnerHTML(text1, def1, xlink1, index0);
     updateInnerHTML(text2, def2, xlink2, index1);
-    updateInnerHTML(text3, def3, xlink3, index1);
-    updateInnerHTML(text4, def4, xlink4, index1);
-    updateInnerHTML(text5, def5, xlink5, index1);
-    updateInnerHTML(text6, def6, xlink6, index1);
-    updateInnerHTML(text7, def7, xlink7, index1);
-    updateInnerHTML(text8, def8, xlink8, index1);
-    updateInnerHTML(text9, def9, xlink9, index1);
+    updateInnerHTML(text3, def3, xlink3, index2);
+    updateInnerHTML(text4, def4, xlink4, index3);
+    updateInnerHTML(text5, def5, xlink5, index4);
+    updateInnerHTML(text6, def6, xlink6, index5);
+    updateInnerHTML(text7, def7, xlink7, index6);
+    updateInnerHTML(text8, def8, xlink8, index7);
+    updateInnerHTML(text9, def9, xlink9, index8);
   };
 
   startLeft();
@@ -105,7 +117,6 @@ window.onload = (function() {
 
 $(".tag").on('change', 'select', function(event) {
     event.preventDefault();
-    console.log($(".tag").val)
 });
 
 document.body.onkeydown = function(event){
