@@ -5,7 +5,7 @@ $(".upvote").on('click', function(event) {
     var rating = $(this).siblings('.rating');
     var term = $(this).siblings($("input[name='term']")).val();
     var definition = $(this).siblings(".form-def").val();
-    data = {
+    var data = {
         "term": term,
         "definition": definition
     };
@@ -32,8 +32,8 @@ $(".downvote").on('click', function(event) {
 
     var rating = $(this).siblings('.rating');
     var term = $(this).siblings($("input[name='term']")).val();
-    var definition = $(this).siblings(".form-def").val();
-    data = {
+    var definition = $(this).siblings(".form-def").val().replace(/(\r\n|\n|\r)/gm," ");
+    var data = {
         "term": term,
         "definition": definition
     };
