@@ -1,6 +1,6 @@
 window.onload = (function() {
-  var terms;
 
+  var terms;
   var index1 = 0;
 
   var svg = document.getElementById("svg-menu");
@@ -59,7 +59,7 @@ window.onload = (function() {
       element1.textContent = outputTermString(index);
       element2.textContent = outputDefString(index);
       element3.setAttribute("xlink:href", outputShowLink(index));
-      if (index < terms.length -1) {
+      if (index < terms.length - 1) {
         index1 = index1 + 1;
       }
       else {
@@ -67,7 +67,7 @@ window.onload = (function() {
       }
   };
 
-  startAction = function(){
+  startLeft = function(){
     updateInnerHTML(text1, def1, xlink1, index1);
     updateInnerHTML(text2, def2, xlink2, index1);
     updateInnerHTML(text3, def3, xlink3, index1);
@@ -78,7 +78,21 @@ window.onload = (function() {
     updateInnerHTML(text8, def8, xlink8, index1);
     updateInnerHTML(text9, def9, xlink9, index1);
   };
-  startAction();
+
+  startRight = function(){
+    updateInnerHTML(text9, def9, xlink9, index1);
+    updateInnerHTML(text8, def8, xlink8, index1);
+    updateInnerHTML(text7, def7, xlink7, index1);
+    updateInnerHTML(text6, def6, xlink6, index1);
+    updateInnerHTML(text5, def5, xlink5, index1);
+    updateInnerHTML(text4, def4, xlink4, index1);
+    updateInnerHTML(text3, def3, xlink3, index1);
+    updateInnerHTML(text2, def2, xlink2, index1);
+    updateInnerHTML(text1, def1, xlink1, index1);
+  };
+  
+  startLeft();
+  startRight();
   });
 });
 
@@ -86,3 +100,17 @@ $(".tag").on('change', 'select', function(event) {
     event.preventDefault();
     console.log($(".tag").val)
 });
+
+document.body.onkeydown = function(event){
+  event = event || window.event;
+  var keycode = event.charCode || event.keyCode;
+  if(keycode === 37 || keycode === 40 ){
+      startAction();
+  } else if(keycode === 39 || keycode === 38){
+    startAction();
+  }
+}
+
+window.onscroll = function() {
+  console.log("HERE");
+};

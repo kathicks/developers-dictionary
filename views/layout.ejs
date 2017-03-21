@@ -21,7 +21,7 @@
     <link href="/stylesheets/modal.css" rel="stylesheet">
     <link href="/stylesheets/wheel.css" rel="stylesheet">
     <link href="/stylesheets/searchAndFilter.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Cutive+Mono:100,400,700|Roboto:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Roboto+Mono:100,200,400,700|Roboto:500,700" rel="stylesheet">
 </head>
 
 <body>
@@ -37,10 +37,10 @@
 
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-
-
-                        <li><a class="nav-links" data-toggle="modal" data-target="#addTerm" id="newTerm">Add Entry</a></li>
-                    <li><a class="nav-links">Log In</a></li>
+                  <% if (home) { %>
+                    <li><a class="nav-links" data-toggle="modal" data-target="#addTerm" id="newTerm">Add Entry</a></li>
+                  <% } %>
+                  <li><a class="nav-links">Log In</a></li>
                 </ul>
             </div>
 

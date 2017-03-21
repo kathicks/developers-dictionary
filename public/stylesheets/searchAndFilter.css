@@ -1,9 +1,29 @@
+.form-group {
+  font-family: 'Roboto Mono';
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #474747!important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #474747!important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #474747!important;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #474747!important;
+  opacity: 1;
+}
+
 #search-and-filter {
-  /*align-items: center;
-  display: inline-block;*/
+  align-items: center;
+  display: inline-block;
 }
 
 #search {
+  -webkit-appearance: none;
   border: 0;
   border width: 0 0 2px 0;
   border-radius: 0px;
@@ -11,23 +31,36 @@
   outline: 0;
   padding: 0;
   background: transparent;
-  border-bottom: solid grey;
+  border-bottom: 1px solid;
+  border-color: #3a3a3a;
   box-shadow: inset 0px 0px 0px 0px;
   font-size: 1em;
+  font-family: 'Roboto Mono';
+  font-weight: 200;
+  color: #3a3a3a;
+  cursor: pointer;
 }
 
 #tag {
   -webkit-appearance: none;
   padding: 5px !important;
   border: 0px;
-  border-bottom: 3px solid grey;
+  border-bottom: 1px solid;
+  border-color: #3a3a3a;
   border-radius: 0px !important;
+  width:120px;
   outline: 0;
   background: transparent;
   box-shadow: inset 0px 0px 0px 0px;
   font-size: 1em;
   width: 140px;
   color: #9d9d9d;
+  z-index: 1;
+  font-size: 1.5em;
+  font-family: 'Roboto Mono';
+  font-weight: 200;
+  color: #3a3a3a;
+  cursor: pointer;
 }
 
 .form-control::-webkit-input-placeholder { color: #9d9d9d; }
@@ -43,6 +76,10 @@ a.clear-filter {
 
 .fa-undo, .fa-search {
   margin-right: 5px;
+}
+
+.form-group {
+  color: #3a3a3a;
 }
 
 .select__arrow {
