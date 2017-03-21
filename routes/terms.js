@@ -47,6 +47,7 @@ router.get('/show/:id', function(req, res) {
         docs[0].definitions.sort(function(a, b) {
             return b.rating - a.rating;
         });
+        console.log(docs[0]);
         res.render('show', {
             term: docs[0],
             home: false
@@ -72,6 +73,25 @@ router.post('/wheel', function(req, res){
   });
 });
 
+/* POST to filter by search. */
+router.post('/search', function(req, res){
+  var db = req.db;
+  var term = req.body.search;
+  var collection = db.get('termcollection');
+  collection.findOne({
+      "term": term
+  }, function(err, result) {
+    if (err) console.log(err);
+    if (result) {
+      res.redirect("/show/" + result._id);
+    }
+    else {
+      req.flash('errors', [{ param: 'term', msg: "does not exist in the database!" }]);
+      res.redirect('/');
+    }
+  });
+});
+
 /* POST to add new term. */
 router.post('/newterm', function(req, res) {
     var db = req.db;
@@ -85,7 +105,7 @@ router.post('/newterm', function(req, res) {
         'term': {
             isLength: {
                 options: [{ min: 2, max: 30 }],
-                errorMessage: 'Must be between 2 and 30 characters long'
+                errorMessage: 'must be between 2 and 30 characters long'
             },
             errorMessage: 'Invalid term'
         }
@@ -94,7 +114,7 @@ router.post('/newterm', function(req, res) {
         'summary': {
             isLength: {
                 options: [{ min: 42, max: 80 }],
-                errorMessage: 'Must be between 42 and 80 characters long'
+                errorMessage: 'must be between 42 and 80 characters long'
             },
             errorMessage: 'Invalid summary'
         }
@@ -123,15 +143,12 @@ router.post('/newterm', function(req, res) {
                         if (err) {
                             res.send("Could not add information to the database");
                         } else {
-                            req.flash('notice', [{ param: 'term', msg: "Successfully created a new term!" }]);
+                            req.flash('notice', [{ param: 'term', msg: "successfully created!" }]);
                             res.redirect("/");
                         }
                     });
                 } else {
-                    req.flash('errors', [{
-                        param: 'term',
-                        msg: "Already added to the database"
-                    }]);
+                    req.flash('errors', [{ param: 'term', msg: "already added to the database" }]);
                     res.redirect('/');
                 }
             }));
