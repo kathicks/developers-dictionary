@@ -76,11 +76,14 @@ router.post('/wheel', function(req, res){
 /* POST to filter by search. */
 router.post('/search', function(req, res){
   var db = req.db;
-  var term = req.body.search;
+  var search = req.body.search;
+  var term = search.charAt(0).toUpperCase() + search.slice(1);
+  var termUppercase = search.toUpperCase();
   var collection = db.get('termcollection');
-  collection.findOne({
-      "term": term
-  }, function(err, result) {
+  collection.findOne({ $or: [
+    {"term": term},
+    {"term": termUppercase}
+  ]}, function(err, result) {
     if (err) console.log(err);
     if (result) {
       res.redirect("/show/" + result._id);
@@ -90,6 +93,7 @@ router.post('/search', function(req, res){
       res.redirect('/');
     }
   });
+
 });
 
 /* POST to add new term. */
