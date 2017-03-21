@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var router = express.Router();
 
@@ -5,8 +7,7 @@ var router = express.Router();
 router.get('/', function(req, res) {
     var db = req.db;
     var collection = db.get('termcollection');
-    collection.find({}, {}, function(e, docs) {
-
+    collection.find({}, {}, function(err, docs) {
         res.render('index', {
             terms: docs,
             messages: req.flash('errors'),
@@ -16,10 +17,11 @@ router.get('/', function(req, res) {
     });
 });
 
+/* GET wheel ajax . */
 router.get('/wheel', function(req, res) {
     var db = req.db;
     var collection = db.get('termcollection');
-    collection.find({}, {}, function(e, docs) {
+    collection.find({}, {}, function(err, docs) {
       if (typeof req.session.results != 'undefined') {
         docs = req.session.results;
         req.session.destroy();
@@ -38,11 +40,10 @@ router.get('/wheel', function(req, res) {
 /* GET term page. */
 router.get('/show/:id', function(req, res) {
     var db = req.db;
-    console.log(req.params)
     var collection = db.get('termcollection');
     collection.find({
         '_id': req.params.id
-    }, function(e, docs) {
+    }, function(err, docs) {
         docs[0].definitions.sort(function(a, b) {
             return b.rating - a.rating;
         });
@@ -57,20 +58,16 @@ router.get('/show/:id', function(req, res) {
 router.post('/wheel', function(req, res){
   var db = req.db;
   var tag = req.body.tag;
-  console.log(req.body);
   var collection = db.get('termcollection');
-
   collection.find({
       "tags": tag,
   }, function(err, result) {
     if (err) console.log(err);
-    console.log(result);
     req.session.results = result;
     res.render('index', {
         term: result,
         messages: req.flash('errors'),
         notices: req.flash('notice'),
-        // home: true
     });
   });
 });
@@ -84,36 +81,28 @@ router.post('/newterm', function(req, res) {
     var source = req.body.source;
     var tag = req.body.tag;
     var collection = db.get('termcollection');
-
     req.checkBody({
         'term': {
             isLength: {
-                options: [{
-                    min: 2,
-                    max: 30
-                }],
+                options: [{ min: 2, max: 30 }],
                 errorMessage: 'Must be between 2 and 30 characters long'
             },
-            errorMessage: 'Invalid Term'
+            errorMessage: 'Invalid term'
         }
     });
     req.checkBody({
         'summary': {
             isLength: {
-                options: [{
-                    min: 25,
-                    max: 80
-                }],
-                errorMessage: 'Must be between 25 and 80 characters long'
+                options: [{ min: 42, max: 80 }],
+                errorMessage: 'Must be between 42 and 80 characters long'
             },
-            errorMessage: 'Invalid Summary'
+            errorMessage: 'Invalid summary'
         }
     });
 
     var errors = req.validationErrors();
     if (errors) {
         req.flash('errors', errors);
-        // console.log(errors);
         res.redirect('/');
         return;
     } else {
@@ -134,10 +123,7 @@ router.post('/newterm', function(req, res) {
                         if (err) {
                             res.send("Could not add information to the database");
                         } else {
-                            req.flash('notice', [{
-                                param: 'term',
-                                msg: "Successfully created a new term!"
-                            }]);
+                            req.flash('notice', [{ param: 'term', msg: "Successfully created a new term!" }]);
                             res.redirect("/");
                         }
                     });
@@ -149,15 +135,13 @@ router.post('/newterm', function(req, res) {
                     res.redirect('/');
                 }
             }));
-    }
-
+    };
 });
 
 /* POST to add new definition to term. */
 router.post('/newdefinition', function(req, res) {
     var db = req.db;
     var definition = req.body.definition.replace(/[\n\r]+/g, ' ');
-    console.log(definition)
     var source = req.body.source;
     var term = req.body.term;
     var collection = db.get('termcollection');
