@@ -54,6 +54,13 @@ text.term:hover {
   font-weight: 700;
 }
 
+.item:hover{
+  highlight:
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
 .def {
   overflow: visible;
   font-family: 'Roboto Mono';

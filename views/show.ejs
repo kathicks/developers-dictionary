@@ -1,7 +1,10 @@
 <body id="show-page">
     <div class='jumbotron'>
         <div class='row'>
-            <div class='col-md-12 term-header'>
+          <div class='col-md-2 back-arrow'>
+            <a href='/' id='back-button'><i class="fa fa-chevron-left"></i> Back</a>
+          </div>
+            <div class='col-md-8 term-header'>
                 <h2 class="term-title">What is <%= term.term %>?</h2>
                 <p class="short-def">
                   <%= term.summary %>
@@ -16,6 +19,7 @@
                 </p>
                 <a type="button" data-toggle="modal" data-target="#addDef" class="add-definition-link"><i class="fa fa-plus" aria-hidden="true"></i>   Add an explanation</a>
             </div>
+            <div class='col-md-2'></div>
         </div>
     </div>
     <div class='container'>
