@@ -43,7 +43,7 @@
 
 #tag {
   -webkit-appearance: none;
-  padding: 5px !important;
+  padding: 6px !important;
   border: 0px;
   border-bottom: 1px solid;
   border-color: #3a3a3a;
@@ -56,7 +56,7 @@
   width: 140px;
   color: #9d9d9d;
   z-index: 1;
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: 'Roboto Mono';
   font-weight: 200;
   color: #3a3a3a;
