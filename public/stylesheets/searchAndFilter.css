@@ -7,25 +7,42 @@
   border: 0;
   border width: 0 0 2px 0;
   border-radius: 0px;
-  width:106px;
+  width: 140px;
   outline: 0;
   padding: 0;
   background: transparent;
   border-bottom: solid grey;
   box-shadow: inset 0px 0px 0px 0px;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 #tag {
   -webkit-appearance: none;
-  padding: 0px !important;
+  padding: 5px !important;
   border: 0px;
   border-bottom: 3px solid grey;
   border-radius: 0px !important;
   outline: 0;
   background: transparent;
   box-shadow: inset 0px 0px 0px 0px;
-  font-size: 1.5em;
+  font-size: 1em;
+  width: 140px;
+  color: #9d9d9d;
+}
+
+.form-control::-webkit-input-placeholder { color: #9d9d9d; }
+.form-control:-moz-placeholder { color: #9d9d9d; }
+.form-control::-moz-placeholder { color: #9d9d9d; }
+.form-control:-ms-input-placeholder { color: #9d9d9d; }
+
+a.clear-filter {
+  position: relative;
+  left: 110px;
+  font-size: 11px;
+}
+
+.fa-undo, .fa-search {
+  margin-right: 5px;
 }
 
 .select__arrow {

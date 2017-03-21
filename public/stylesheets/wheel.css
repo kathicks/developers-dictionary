@@ -47,6 +47,13 @@ a {
 .item .sector {
   transition:all .1s linear;
   stroke:none;
+  fill: #ffffff;
+}
+
+.shadow {
+    -webkit-filter: drop-shadow( 0px -5px 10px #f5f4f4 );
+            filter: drop-shadow( 0px -5px 10px #f5f4f4 ); /* Same syntax as box-shadow, except
+                                                       for the spread property */
 }
 
 .menu-trigger {
