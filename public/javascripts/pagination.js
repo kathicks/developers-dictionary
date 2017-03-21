@@ -15,10 +15,10 @@ $( ".paginationLinks" ).click(function(event) {
     };
     var rotateWheel = setInterval(function(){
          startLeft();
-      if ($('#term-01').text() === findWord()){
+      if ($('#term-09').text() === findWord()){
         clearInterval(rotateWheel);
       }
-    }, 100);
+    }, 15);
     rotateWheel();
     };
   });

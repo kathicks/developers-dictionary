@@ -1,7 +1,8 @@
 $(".upvote").on('click', function(event) {
 
     event.preventDefault();
-    
+
+    if(!$(this).hasClass('disabled')){
     var rating = $(this).siblings('.rating');
     var term = $(this).siblings($("input[name='term']")).val();
     var definition = $(this).siblings(".form-def").val();
@@ -24,13 +25,17 @@ $(".upvote").on('click', function(event) {
     }).always(function() {
         console.log("complete");
     });
+    $(this).addClass('disabled')
+    $(this).siblings('.downvote').addClass('disabled')
+  }
 });
 
 $(".downvote").on('click', function(event) {
 
     event.preventDefault();
 
-    var rating = $(this).siblings('.rating');
+    if(!$(this).hasClass('disabled')){
+      var rating = $(this).siblings('.rating');
     var term = $(this).siblings($("input[name='term']")).val();
     var definition = $(this).siblings(".form-def").val().replace(/(\r\n|\n|\r)/gm," ");
     var data = {
@@ -49,5 +54,9 @@ $(".downvote").on('click', function(event) {
         }
     }).fail(function() {
         alert("failure");
-    }).always(function() {});
+    }).always(function() {
+    });
+    $(this).addClass('disabled')
+    $(this).siblings('.upvote').addClass('disabled')
+  }
 });

@@ -11,6 +11,19 @@
     font-size: 15px;
 }
 
+.pagination li a:active{
+  color: black;
+  text-decoration: underline;
+}
+.pagination li a:focus{
+  color: black;
+  text-decoration: underline;
+}
+.pagination li a:hover{
+  color: black;
+  text-decoration: underline;
+}
+
 .disabled .paginationLinks{
   color: #D0D0D0 ;
   font-size: 15px;
