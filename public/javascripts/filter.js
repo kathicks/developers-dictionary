@@ -74,7 +74,9 @@ $(".dropdown").on('click', '.elem', function(event){
 
   var value = this.name
 
-  data = {"tag": value}
+  var data = {"tag": value}
+
+  $(".filter-placeholder").text(value);
 
   $.ajax({
     url: "/wheel",
