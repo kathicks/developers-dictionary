@@ -2,25 +2,25 @@
 <?xml version="1.0" standalone="no"?>
 <?xml-stylesheet type="text/css" href="../public/stylesheets/wheel.css"?>
   <div class="container-fluid">
-    <div class="col-md-6 col-md-offset-3" align="center">
+    <div class="col-md-12 search-bar" align="center">
         <form class="form-inline" action="/wheel" method="post">
           <div class="form-group">
-            <input type="text" class="form-control" id="search" placeholder="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="text" class="form-control" id="search" placeholder="Search e.g. Ruby">
           </div>
           <div class="form-group">
             <select class="select" id="tag" name="tag" onchange="this.form.submit();">
-              <option hidden>filter</option>
+              <option hidden>Filter</option>
               <option name="language" value="language">Language</option>
               <option name="framework" value="framework">Framework</option>
               <option name="package" value="package">Package</option>
               <option name="tool" value="tool">Tool</option>
               <div class="select__arrow"></div>
             </select>
-          </div>
-          <div class="form-group">
-            <a href="/">clear filter</a>
+            <i class="fa fa-filter" aria-hidden="true"></i>
           </div>
         </form>
+        <a href="/" class="clear-filter"><i class="fa fa-undo" aria-hidden="true"></i>Clear filter</a>
       </div>
       <div id="scroll" class="container-fluid">
         <a type="button" id="scroll-button-left" onmousedown="inter=setInterval(startLeft(), 1*150);" onmouseup="clearInterval(inter);" ><i class="fa fa-chevron-left"></i></a>
@@ -35,8 +35,9 @@
     <svg id="svg-menu"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      viewBox="-45 -50 450 225"
+      viewBox="-50 -50 450 225"
       id="wheel"
+      class="shadow"
       style="transform-origin: 50% 50% 0px; transform: matrix3d(0.999999, -0.00156607, 0, 0, 0.00156607, 0.999999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); touch-action: none; user-select: none;">
       <defs>
         <style type="text/css">
@@ -46,15 +47,42 @@
       </defs>
 
     <g id="symbolsContainer">
-      <symbol id="term-1" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-01" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.4em" dy="-0.8em" text-anchor="beginning" font-size="1.7em"></text><text id="Definition1" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
-      <symbol id="term-2" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-02" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.4em" dy="-0.8em" text-anchor="beginning" font-size="1.7em"></text><text id="Definition2" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
-      <symbol id="term-3" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-03" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.4em" dy="-0.8em" text-anchor="beginning" font-size="1.7em"></text><text id="Definition3" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
-      <symbol id="term-4" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-04" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.4em" dy="-0.8em" text-anchor="beginning" font-size="1.7em"></text><text id="Definition4" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
-      <symbol id="term-5" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-05" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.4em" dy="-0.8em" text-anchor="beginning" font-size="1.7em"></text><text id="Definition5" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
-      <symbol id="term-6" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-06" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.4em" dy="-0.8em" text-anchor="beginning" font-size="1.7em"></text><text id="Definition6" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
-      <symbol id="term-7" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-07" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.4em" dy="-0.8em" text-anchor="beginning" font-size="1.7em"></text><text id="Definition7" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
-      <symbol id="term-8" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-08" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.4em" dy="-0.8em" text-anchor="beginning" font-size="1.7em"></text><text id="Definition8" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
-      <symbol id="term-9" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect><text id="term-09" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.4em" dy="-0.8em" text-anchor="beginning" font-size="1.7em"></text><text id="Definition9" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.6em" dy="0em" text-anchor="beginning" font-size="0.5em"></text></symbol>
+      <symbol id="term-1" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect>
+        <text id="term-01" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.5em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text>
+        <text id="Definition1" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.1em" dy="0em" text-anchor="beginning" font-size="0.4em"></text>
+      </symbol>
+      <symbol id="term-2" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect>
+        <text id="term-02" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.5em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text>
+        <text id="Definition2" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.1em" dy="0em" text-anchor="beginning" font-size="0.4em"></text>
+      </symbol>
+      <symbol id="term-3" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect>
+        <text id="term-03" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.5em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text>
+        <text id="Definition3" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.1em" dy="0em" text-anchor="beginning" font-size="0.4em"></text>
+      </symbol>
+      <symbol id="term-4" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect>
+        <text id="term-04" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.5em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text>
+        <text id="Definition4" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.1em" dy="0em" text-anchor="beginning" font-size="0.4em"></text>
+      </symbol>
+      <symbol id="term-5" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect>
+        <text id="term-05" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.5em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text>
+        <text id="Definition5" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.1em" dy="0em" text-anchor="beginning" font-size="0.4em"></text>
+      </symbol>
+      <symbol id="term-6" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect>
+        <text id="term-06" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.5em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text>
+        <text id="Definition6" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.1em" dy="0em" text-anchor="beginning" font-size="0.4em"></text>
+      </symbol>
+      <symbol id="term-7" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect>
+        <text id="term-07" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.5em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text>
+        <text id="Definition7" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.1em" dy="0em" text-anchor="beginning" font-size="0.4em"></text>
+      </symbol>
+      <symbol id="term-8" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect>
+        <text id="term-08" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.5em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text>
+        <text id="Definition8" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.1em" dy="0em" text-anchor="beginning" font-size="0.4em"></text>
+      </symbol>
+      <symbol id="term-9" viewBox="0 0 35 35"><rect fill="none" width="100%" height="100%"></rect>
+        <text id="term-09" class="term" transform="rotate(92)" fill="#222" x="40%" y="-50%" dx="-1.5em" dy="-0.8em" text-anchor="beginning" font-size="1.2em"></text>
+        <text id="Definition9" class="def" transform="rotate(90)" fill="#222" x="40%" y="-50%" dx="-4.1em" dy="0em" text-anchor="beginning" font-size="0.4em"></text>
+      </symbol>
     </g>
 
     <g id="itemsContainer" transform="scale(0.7)" position="fixed" >
