@@ -1,17 +1,87 @@
-[{
+[  {
+      "term": ".NET",
+      "summary": "Enables rapid development by bundling a collection of software in one package",
+      "tags": ["Framework"],
+      "definitions": [{
+          "definition": ".NET is a Microsoft web services strategy to connect information, people, systems, and devices through software, making it easier for users to share and use their information between multiple websites, programs, and computers. Also, being a web service, .NET is also a programming model that enables software developers the ability to do rapid application development by bundling a collection of software in on package. For example, Microsoft Visual Studio .NET is part of the .NET programming model.",
+          "source": "http://www.computerhope.com/jargon/n/dotnet.htm",
+          "rating": 0
+      }]
+  },
+  {
+      "term": "Acceptance Testing",
+      "summary": "A type of software testing that asseses whether software is acceptable for shipping",
+      "tags": ["Testing"],
+      "definitions": [{
+          "definition": "In software testing the ISTQB defines acceptance as: formal testing with respect to user needs, requirements, and business processes conducted to determine whether a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether or not to accept the system. Acceptance testing is also known as user acceptance testing (UAT), end-user testing, operational acceptance testing (OAT) or field (acceptance) testing.",
+          "source": "https://en.wikipedia.org/wiki/Acceptance_testing",
+          "rating": 0
+      },{
+          "definition": "Formal testing with respect to user needs, requirements, and business processes conducted to determine  whether or not a system satisfies the acceptance criteria and to enable the user, customers or other authorized entity to determine whether or not to accept the system.",
+          "source": "http://softwaretestingfundamentals.com/acceptance-testing/",
+          "rating": 0
+      }]
+  },
+  {
+        "term": "Agile",
+        "summary": "An umbrella term for several iterative software development methodologies",
+        "tags": ["Practice"],
+        "definitions": [{
+            "definition": "Agile software development describes a set of principles for software development under which requirements and solutions evolve through the collaborative effort of self-organizing cross-functional teams. It advocates adaptive planning, evolutionary development, early delivery, and continuous improvement, and it encourages rapid and flexible response to change. These principles support the definition and continuing evolution of many software development methods.",
+            "source": "https://en.wikipedia.org/wiki/Agile_software_development",
+            "rating": 0
+        },{
+            "definition": "Agile software development refers to a group of software development methodologies based on iterative development, where requirements and solutions evolve through collaboration between self-organizing cross-functional teams. Agile methods or Agile processes generally promote a disciplined project management process that encourages frequent inspection and adaptation, a leadership philosophy that encourages teamwork, self-organization and accountability, a set of engineering best practices intended to allow for rapid delivery of high-quality software, and a business approach that aligns development with customer needs and company goals. Agile development refers to any development process that is aligned with the concepts of the Agile Manifesto.",
+            "source": "https://www.cprime.com/resources/what-is-agile-what-is-scrum/",
+            "rating": 0
+        }]
+    },
+    {
+          "term": "AJAX",
+          "summary": "The use of the XMLHttpRequest objects to communicate with server-side scripts",
+          "tags": ["World Wide Web"],
+          "definitions": [{
+              "definition": "It can send as well as receive information in a variety of formats, including JSON, XML, HTML, and even text files. AJAX’s most appealing characteristic, however, is its 'asynchronous' nature, which means it can do all of this without having to refresh the page. This lets you update portions of a page based upon user events.",
+              "source": "https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started",
+              "rating": 0
+          },{
+              "definition": "AJAX is a technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Script. Conventional web applications transmit information to and from the server using synchronous requests. It means you fill out a form, hit submit, and get directed to a new page with new information from the server. However with AJAX, when you hit submit, JavaScript will make a request to the server, interpret the results, and update the current screen. In the purest sense, the user would never know that anything was even transmitted to the server.",
+              "source": "https://www.tutorialspoint.com/ajax/what_is_ajax.htm",
+              "rating": 0
+          }]
+      },
+  {
         "term": "Angular",
         "summary": "A structural framework for dynamic web apps",
-        "tags": ["framework", "tool", "language"],
+        "tags": ["Framework", "JavaScript"],
         "definitions": [{
             "definition": "It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. AngularJS's data binding and dependency injection eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology. AngularJS is what HTML would have been, had it been designed for applications.",
             "source": "https://docs.angularjs.org/guide/introduction",
+            "rating": 0
+        },{
+            "definition": "AngularJS is a powerful JavaScript based development framework to create RICH Internet Applications(RIA). It provides developers options to write client side application (using JavaScript) in a clean MVC(Model View Controller) way. Applications written in AngularJS are cross-browser compliantas it automatically handles JavaScript code suitable for each browser. AngularJS is open source, completely free, and used by thousands of developers around the world.",
+            "source": "https://www.tutorialspoint.com/angularjs/angularjs_overview.htm",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "API",
+        "summary": "A set of routines, protocols, and tools for building software applications",
+        "tags": ["Protocol"],
+        "definitions": [{
+            "definition": "A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.",
+            "source": "http://www.webopedia.com/TERM/A/API.html",
+            "rating": 0
+        },{
+            "definition": "It’s like the connectors on the back of your TV. They let you plug in a device from another manufacturer (DVD player, games console, set-top box) and both the TV and the device know what to do next. The connectors are the interface that lets one machine talk to another.",
+            "source": "https://sidewaysdictionary.com/#/term/api",
             "rating": 0
         }]
     },
     {
         "term": "Atom",
         "summary": "Atom is a hackable and customizable text editor",
-        "tags": ["tool"],
+        "tags": ["Software"],
         "definitions": [{
             "definition": "Atom is built with HTML, JavaScript, CSS, and Node.js integration. It's easy to customize and style Atom. You can tweak the look and feel of your UI with CSS/Less and add major features with HTML and JavaScript. You choose from thousands of open source packages that add new features and functionality to Atom—or build a package from scratch and publish it for everyone else to use.",
             "source": "https://atom.io/",
@@ -19,36 +89,1024 @@
         }]
     },
     {
-        "term": "API",
-        "summary": "A set of routines, protocols, and tools for building software applications",
-        "tags": ["tool"],
+        "term": "Backbone",
+        "summary": "A JavaScript framework based on the model–view–presenter application design",
+        "tags": ["JavaScript", "Framework"],
         "definitions": [{
-            "definition": "A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.",
-            "source": "http://www.webopedia.com/TERM/A/API.html",
+            "definition": "Backbone.js is a JavaScript framework with a RESTful JSON interface and is based on the model–view–presenter (MVP) application design paradigm. Backbone is known for being lightweight, as its only hard dependency is on one JavaScript library, Underscore.js, plus jQuery for use of the full library. It is designed for developing single-page web applications, and for keeping various parts of web applications (e.g. multiple clients and the server) synchronized.",
+            "source": "https://en.wikipedia.org/wiki/Backbone.js",
+            "rating": 0
+        }, {
+            "definition": "Backbone.js is basically an uber-light framework that allows you to structure your Javascript code in an MVC (Model, View, Controller) fashion where: Model is part of your code that retrieves and populates the data, View is the HTML representation of this model (views change as models change, etc.) and an optional Controller that in this case allows you to save the state of your Javascript application via a hashbang URL.",
+            "source": "https://en.wikipedia.org/wiki/Backbone.js",
             "rating": 0
         }]
     },
     {
-        "term": ".NET",
-        "summary": "Enables rapid development by bundling a collection of software in one package",
-        "tags": ["package"],
+        "term": "BCrypt",
+        "summary": "A cross platform file encryption utility and password hashing algorithm",
+        "tags": ["Service"],
         "definitions": [{
-            "definition": ".NET is a Microsoft web services strategy to connect information, people, systems, and devices through software, making it easier for users to share and use their information between multiple websites, programs, and computers. Also, being a web service, .NET is also a programming model that enables software developers the ability to do rapid application development by bundling a collection of software in on package. For example, Microsoft Visual Studio .NET is part of the .NET programming model.",
-            "source": "http://www.computerhope.com/jargon/n/dotnet.htm",
+            "definition": "Bcrypt is a cross platform file encryption utility. Encrypted files are portable across all supported operating systems and processors. Passphrases must be between 8 and 56 characters and are hashed internally to a 448 bit key. However, all characters supplied are significant. The stronger your passphrase, the more secure your data.",
+            "source": "http://bcrypt.sourceforge.net",
+            "rating": 0
+        }, {
+            "definition": "bcrypt is a password hashing function designed by Niels Provos and David Mazières, based on the Blowfish cipher, and presented at USENIX in 1999.[1] Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to brute-force search attacks even with increasing computation power.",
+            "source": "https://en.wikipedia.org/wiki/Bcrypt",
             "rating": 0
         }]
     },
-
+    {
+        "term": "Bootstrap",
+        "summary": "An open-source front-end web framework for designing websites and web applications",
+        "tags": ["Framework"],
+        "definitions": [{
+            "definition": "Bootstrap is a free and open-source front-end web framework for designing websites and web applications. It contains HTML- and CSS-based design templates for typography, forms, buttons, navigation and other interface components, as well as optional JavaScript extensions. Unlike many web frameworks, it concerns itself with front-end development only.",
+            "source": "https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)",
+            "rating": 0
+        }, {
+            "definition": "Bootstrap is a powerful front-end framework for faster and easier web development. It includes HTML and CSS based design templates for common user interface components like Typography, Forms, Buttons, Tables, Navigations, Dropdowns, Alerts, Modals, Tabs, Accordion, Carousel and many other as well as optional JavaScript extensions. Bootstrap also gives you ability to create responsive layout with much less efforts.",
+            "source": "http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-introduction.php",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "C#",
+        "summary": "A programming language developed by Microsoft within its .NET initiative",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "C# (pronounced 'C-sharp') is an object-oriented programming language from Microsoft that aims to combine the computing power of C++ with the programming ease of Visual Basic. C# is based on C++ and contains features similar to those of Java. C# simplifies programming through its use of Extensible Markup Language (XML) and Simple Object Access Protocol (SOAP) which allow access to a programming object or method without requiring the programmer to write additional code for each step.",
+            "source": "http://searchwindevelopment.techtarget.com/definition/C",
+            "rating": 0
+        }, {
+            "definition": "C# is a modern, general-purpose, object-oriented programming language developed by Microsoft and approved by European Computer Manufacturers Association (ECMA) and International Standards Organization (ISO). It is designed for Common Language Infrastructure (CLI), which consists of the executable code and runtime environment that allows use of various high-level languages on different computer platforms and architectures. Although C# constructs closely follow traditional high-level languages, C and C++ and being an object-oriented programming language. It has strong resemblance with Java, it has numerous strong programming features that make it endearing to a number of programmers worldwide.",
+            "source": "https://www.tutorialspoint.com/csharp/csharp_overview.htm",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "C++",
+        "summary": "A general-purpose programming language that influenced the development of C# and Java",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "A general-purpose programming language, designed with a bias towards system programming and with performance, efficiency and flexibility of use as its design highlights. Its strengths include desktop applications, servers and performance-critical applications (e.g. telephone switches or space probes).",
+            "source": "https://en.wikipedia.org/wiki/C%2B%2B",
+            "rating": 0
+        }, {
+            "definition": "C++ is known to be a very powerful language. C++ allows you to have a lot of control as to how you use computer resources, so in the right hands its speed and ability to cheaply use resources should be able to surpass other languages. Thanks to C++'s performance, it is often used to develop game engines, games, and desktop apps. Many AAA title video games are built with C++.",
+            "source": "http://www.bestprogramminglanguagefor.me/why-learn-c-plus-plus",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Callbacks",
+        "summary": "A block of code passed as an argument to other code to be executed at a specified time",
+        "tags": ["Pattern"],
+        "definitions": [{
+            "definition": "In computer programming, a callback is any executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at a given time. This execution may be immediate as in a synchronous callback, or it might happen at a later time as in an asynchronous callback.",
+            "source": "https://en.wikipedia.org/wiki/Callback_(computer_programming)",
+            "rating": 0
+        }, {
+            "definition": "A 'callback' is any function that is called by another function which takes the first function as a parameter. A lot of the time, a 'callback' is a function that is called when something happens. That something can be called an 'event' in programmer-speak.",
+            "source": "http://stackoverflow.com/a/9652434",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Capybara",
+        "summary": "Test framework for simulating how a real user would interact with your app",
+        "tags": ["Testing"],
+        "definitions": [{
+            "definition": "Capybara helps you test web applications by simulating how a real user would interact with your app. It is agnostic about the driver running your tests and comes with Rack::Test and Selenium support built in. WebKit is supported through an external gem.",
+            "source": "https://github.com/teamcapybara/capybara",
+            "rating": 0
+        }, {
+            "definition": "Capybara is a web-based test automation software that simulates scenarios for user stories and automates web application testing for behavior-driven software development. It is a part of the Cucumber testing framework written in the Ruby programming language that simulates various aspects of a web browser from the perspective of a real user.",
+            "source": "https://en.wikipedia.org/wiki/Capybara_(software)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Client",
+        "summary": "An application that communicates with a web server using Hypertext Transfer Protocol (HTTP)",
+        "tags": ["World Wide Web"],
+        "definitions": [{
+            "definition": "A web client is an application that communicates with a web server, using Hypertext Transfer Protocol (HTTP). The browser is an example of a web client. The remote machine containing the document requested is called a web server. The client and server communicate using the HTTP protocol. Many clients can use one server simultaneously, and one client can use many servers.",
+            "source": "http://www.oreilly.com/openbook/webclient/ch01.html",
+            "rating": 0
+        }, {
+            "definition": "The Client interface of the ServiceWorker API represents the scope of a service worker client. A service worker client is either a document in a browser context or a SharedWorker, which is controlled by an active worker. A client object acts as a snapshot representation of its associated service worker client in the scope of a service worker.",
+            "source": "https://developer.mozilla.org/en-US/docs/Web/API/Client",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Code Climate",
+        "summary": "Automated code review for test coverage, complexity, duplication, security, style, and more",
+        "tags": ["Testing"],
+        "definitions": [{
+            "definition": "Code Climate consolidates the results from a suite of static analysis tools into a single, real-time report, giving your team the information it needs to identify hotspots, evaluate new approaches, and improve code quality.",
+            "source": "https://codeclimate.com/about",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "CoffeeScript",
+        "summary": "A little language that compiles into JavaScript",
+        "tags": ["Language", "JavaScript"],
+        "definitions": [{
+            "definition": "CoffeeScript is a language that gets compiled to JavaScript. Code in .coffee files are not interpreted at run time, like JavaScript, but are compiled into .js files. Whether you’re writing for JavaScript for the Node.js or any given browser’s implementation, CoffeeScript can be written for any and all flavors of JavaScript.",
+            "source": "http://blog.teamtreehouse.com/the-absolute-beginners-guide-to-coffeescript",
+            "rating": 0
+        }, {
+            "definition": "CoffeeScript is a little language that compiles into JavaScript. Underneath all of those embarrassing braces and semicolons, JavaScript has always had a gorgeous object model at its heart. CoffeeScript is an attempt to expose the good parts of JavaScript in a simple way. The golden rule of CoffeeScript is: 'It's just JavaScript'. The code compiles one-to-one into the equivalent JS, and there is no interpretation at runtime. You can use any existing JavaScript library seamlessly (and vice-versa). The compiled output is readable and pretty-printed, passes through JavaScript Lint without warnings, will work in every JavaScript implementation, and tends to run as fast or faster than the equivalent handwritten JavaScript. So CoffeeScript is a great way to more concisely and nicely write JavaScript!",
+            "source": "http://www.mindscapehq.com/products/web-workbench/what-is-coffee-script",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Continuous Integration",
+        "summary": "A practice of developers integrating code into a shared repository several times a day",
+        "tags": ["Practice"],
+        "definitions": [{
+            "definition": "Continuous Integration (CI) is a development practice where developers integrate code into a shared repository frequently, preferably several times a day. Each integration can then be verified by an automated build and automated tests. While automated testing is not strictly part of CI it is typically implied. Benefits of integrating regularly include swift error detection and location. As each change introduced is typically small, pinpointing the specific change that introduced a defect can be done quickly.",
+            "source": "https://codeship.com/continuous-integration-essentials",
+            "rating": 0
+        }, {
+            "definition": "Continuous integration is a software engineering practice in which isolated changes are immediately tested and reported on when they are added to a larger code base. The goal of CI is to provide rapid feedback so that if a defect is introduced into the code base, it can be identified and corrected as soon as possible. Continuous integration software tools can be used to automate the testing and build a document trail.",
+            "source": "http://searchsoftwarequality.techtarget.com/definition/continuous-integration",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Cookies",
+        "summary": "A small amount of data generated by a website and saved by your web browser",
+        "tags": ["World Wide Web"],
+        "definitions": [{
+            "definition": "A small piece of data sent from a website and stored on the user's computer by the user's browser while browsing. Designed to be a reliable mechanism for websites to remember stateful information (such as items added in the shopping cart in an online store) or to record  browsing activity. They can also be used to remember arbitrary pieces of information that the user previously entered into form fields such as names, addresses, passwords, and credit card numbers. Other kinds of cookies perform essential functions in the modern web: authentication cookies are the most common method used by web servers to know whether the user is logged in or not, and which account they are logged in with. Without such a mechanism, the site would not know whether to send a page containing sensitive information, or require the user to authenticate themselves by logging in. The security of an authentication cookie generally depends on the security of the issuing website and the user's web browser, and on whether the cookie data is encrypted.",
+            "source": "https://en.wikipedia.org/wiki/HTTP_cookie",
+            "rating": 0
+        }, {
+            "definition": "A cookie is a small amount of data generated by a website and saved by your web browser. Its purpose is to remember information about you, similar to a preference file created by a software application. While cookies serve many functions, their most common purpose is to store login information for a specific site. Some sites will save both your username and password in a cookie, while others will only save your username.",
+            "source": "https://techterms.com/definition/cookie",
+            "rating": 0
+        }, {
+            "definition": "It’s like a barista with a good memory. So every morning when you come in for your decaf soy latte with an extra shot and cream, they nod wearily and say ‘The usual?’",
+            "source": "https://sidewaysdictionary.com/#/term/cookie",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Coveralls",
+        "summary": "Coveralls is a web service to help you track your code coverage over time.",
+        "tags": ["Service", "Testing"],
+        "definitions": [{
+            "definition": "Coveralls automatically collects your code coverage data, uploads it to their servers and gives you a nice interface to dig into it. They even show you trends and changes on coverage for all of your files.",
+            "source": "https://blog.codeship.com/codeship-code-coverage-coveralls/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "CSS",
+        "summary": "A language that describes the style of an HTML document",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language. Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.",
+            "source": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets",
+            "rating": 0
+        }, {
+            "definition": "Cascading style sheets are used to format the layout of Web pages. They can be used to define text styles, table sizes, and other aspects of Web pages that previously could only be defined in a page's HTML. CSS helps Web developers create a uniform look across several pages of a Web site. Instead of defining the style of each table and each block of text within a page's HTML, commonly used styles need to be defined only once in a CSS document. Once the style is defined in cascading style sheet, it can be used by any page that references the CSS file.",
+            "source": "https://techterms.com/definition/css",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "CSV",
+        "summary": "A file that stores tabular data in plain text",
+        "tags": ["File Type"],
+        "definitions": [{
+            "definition": "A CSV is a comma separated values file which allows data to be saved in a table structured format. CSVs look like a garden-variety spreadsheet but with a .csv extension (Traditionally they take the form of a text file containing information separated by commas, hence the name).",
+            "source": "https://support.bigcommerce.com/articles/Public/What-is-a-CSV-file-and-how-do-I-save-my-spreadsheet-as-one",
+            "rating": 0
+        }, {
+            "definition": "A CSV file is a way to collect the data from any table so that it can be conveyed as input to another table-oriented application such as a relational database application. Microsoft Excel, a leading spreadsheet or relational database application, can read CSV files. A CSV file is sometimes referred to as a flat file.",
+            "source": "http://searchsqlserver.techtarget.com/definition/comma-separated-values-file",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Datamapper",
+        "summary": "An Object Relational Mapper written in Ruby",
+        "tags": ["Database"],
+        "definitions": [{
+            "definition": "Datamapper is an Object/Relational mapper which uses an API to communicate with a variety of datastores. It allows the user to specify the datastore layout based on models defined by the user.",
+            "source": "http://datamapper.org/why.html",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Dependency Injection",
+        "summary": "A technique whereby the services provided by one object are passed (injected) to another object which uses it.",
+        "tags": ["Pattern"],
+        "definitions": [{
+            "definition": "In software engineering, dependency injection is a technique whereby one object supplies the dependencies of another object. A dependency is an object that can be used (a service). An injection is the passing of a dependency to a dependent object (a client) that would use it.",
+            "source": "https://en.wikipedia.org/wiki/Dependency_injection",
+            "rating": 0
+        }, {
+            "definition": "Dependency injection is a style of object configuration in which an objects fields and collaborators are set by an external entity. In other words objects are configured by an external entity. Dependency injection is an alternative to having the object configure itself.",
+            "source": "http://tutorials.jenkov.com/dependency-injection/index.html",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Deployment",
+        "summary": "All of the activities that make a software system available for use",
+        "tags": ["Deployment"],
+        "definitions": [{
+            "definition": "The general deployment process consists of several interrelated activities with possible transitions between them. These activities can occur on both the producer and consumer side. Deployment encompasses the activities which come after the development process, ranging from release to installation on the end user's machine.",
+            "source": "https://en.wikipedia.org/wiki/Software_deployment",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Django",
+        "summary": "An open-source web framework written in Python which encourages rapid development and clean, pragmatic design",
+        "tags": ["Framework"],
+        "definitions": [{
+            "definition": "A free, open-source and scalable high-level Python web framework, which encourages rapid development and clean, pragmatic design.",
+            "source": "https://www.djangoproject.com",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "DOM",
+        "summary": "A tree-like structured representation of the document",
+        "tags": ["World Wide Web"],
+        "definitions": [{
+            "definition": "The Document Object Model (DOM) is a programming interface for HTML and XML documents. It provides a structured representation of the document and it defines a way that the structure can be accessed from programs so that they can change the document structure, style and content. The DOM provides a representation of the document as a structured group of nodes and objects that have properties and methods. Essentially, it connects web pages to scripts or programming languages.",
+            "source": "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Drupal",
+        "summary": "An open source content-management framework written in PHP",
+        "tags": ["Framework", "World Wide Web"],
+        "definitions": [{
+            "definition": "A free and open source content-management framework written in PHP and distributed under the GNU General Public License. It is used to provide a back-end framework for web sites, for knowledge management and for collaboration within systems.",
+            "source": "https://en.wikipedia.org/wiki/Drupal",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "DRY",
+        "summary": "A principle of software development aimed at reducing repetition of information",
+        "tags": ["Principle"],
+        "definitions": [{
+            "definition": "The DRY principle is stated as 'Every piece of knowledge must have a single, unambiguous, authoritative representation within a system'. The principle was formulated in the book The Pragmatic Programmer.It is broadly applied across the software development process. When the DRY principle is applied successfully, a modification of any single element of a system does not require a change in other logically unrelated elements. Additionally, elements that are logically related all change predictably and uniformly, and are thus kept in sync.",
+            "source": "https://en.wikipedia.org/wiki/Don%27t_repeat_yourself",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Ember",
+        "summary": "An open-source JavaScript web framework based on the Model–View–ViewModel pattern",
+        "tags": ["Framework", "JavaScript"],
+        "definitions": [{
+            "definition": "Ember.js is an open-source JavaScript web framework, based on the Model–view–viewmodel (MVVM) pattern. It allows developers to create scalable single-page web applications by incorporating common idioms and best practices into the framework.",
+            "source": "https://en.wikipedia.org/wiki/Ember.js",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Encapsulation",
+        "summary": "Mechanism, that isolates a particular code and data from all other code and data",
+        "tags": ["Principle", "Pattern"],
+        "definitions": [{
+            "definition": "The mechanism that binds together code and data in manipulates, and keeps both safe from outside interference and misuse.",
+            "source": "https://www.codeproject.com/Articles/27775/Object-Oriented-Programming-Concepts",
+            "rating": 0
+        }, {
+            "definition": "Encapsulation is the process of combining data and functions into a single unit called class. In Encapsulation, the data is not accessed directly; it is accessed through the functions present inside the class. In simpler words, attributes of the class are kept private and public getter and setter methods are provided to manipulate these attributes. Thus, encapsulation makes the concept of data hiding possible.",
+            "source": "http://stackoverflow.com/questions/16014290/simple-way-to-understand-encapsulation-and-abstraction",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "ERB",
+        "summary": "A Ruby templating language that allows you to template Ruby into HTML",
+        "tags": ["Language", "World Wide Web"],
+        "definitions": [{
+            "definition": "ERB (Embedded RuBy) is a feature of Ruby that enables you to conveniently generate any kind of text, in any quantity, from templates. The templates themselves combine plain text with Ruby code for variable substitution and flow control, making them easy to write and maintain. Although ERB is most commonly seen generating Web pages, it is also used to produce XML documents, RSS feeds, source code, and other forms of structured text file. It can be extremely valuable when you need to create files which include many repetitions of a standard pattern, such as unit test suites.",
+            "source": "http://www.stuartellis.name/articles/erb/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Express",
+        "summary": "A web framework for Node.js designed for building web applications and APIs",
+        "tags": ["JavaScript", "Framework"],
+        "definitions": [{
+            "definition": "Express.js, or simply Express, is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It is the de facto standard server framework for Node.js.",
+            "source": "https://en.wikipedia.org/wiki/Express.js",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Foundation",
+        "summary": "A front-end framework with a responsive grid and HTML/CSS components",
+        "tags": ["Framework"],
+        "definitions": [{
+            "definition": "Foundation is a front-end framework consisting of many tools useful for making responsive, mobile first websites. Primarily built with HTML, CSS and jQuery, Foundation uses modern technologies and practices, but gracefully degrades as far back as IE8. Although the framework is most commonly used by HTML and CSS developers, you have the option of taking things further using Foundation in conjunction with Sass and Rails.",
+            "source": "https://webdesign.tutsplus.com/articles/foundation-for-beginners-getting-started--webdesign-12431",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Framework",
+        "summary": "A special case of software libraries that have default behaviour and exert greater control",
+        "tags": ["Framework"],
+        "definitions": [{
+            "definition": "An abstraction in which software providing generic functionality can be selectively changed by additional user-written code, thus providing application-specific software. A universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications. Can include support programs, compilers, code libraries, tool sets and APIs to enable development of a project or system.",
+            "source": "https://en.wikipedia.org/wiki/Software_framework",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Functional Testing",
+        "summary": "A quality assurance process which tests the functionality of a component of a whole system.",
+        "tags": ["Testing"],
+        "definitions": [{
+            "definition": "Functional testing is a quality assurance process which usually describes what the system does, testing a slice of functionality of a whole system. It bases its test cases on the specifications of the software component under test. Functions are tested by feeding them input and examining the output; internal program structure is rarely considered.",
+            "source": "https://en.wikipedia.org/wiki/Functional_testing",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Gem",
+        "summary": "A package written for the Ruby programming language",
+        "tags": ["Library"],
+        "definitions": [{
+            "definition": "A self-contained format for Ruby programs and libraries. Each gem is a code package used to extend the capabilities of the Ruby programming language, which follows a standard file structure. Used via the command line.",
+            "source": "https://en.wikipedia.org/wiki/RubyGems https://www.ruby-lang.org/en/libraries/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Github",
+        "summary": "A web-based version control repository and hosting service",
+        "tags": ["Service", "Software"],
+        "definitions": [{
+            "definition": "A web-based version control repository and Internet hosting service, offering distributed version control, source code management (SCM), access control and collaboration features including bug tracking, feature requests, task management and wikis for every project.",
+            "source": "https://en.wikipedia.org/wiki/GitHub",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Go",
+        "summary": "An open source programming language created by Google in 2007",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "A free and open source programming language created at Google in 2007. It is a compiled, statically typed language in the tradition of Algol and C, with garbage collection, limited structural typing, memory safety features and CSP-style concurrent programming features added. It originated as an experiment to design a new programming language which would resolve common criticisms of other languages, while including scalability, readability, and avoidance of repetition, and supporting networking.",
+            "source": "https://en.wikipedia.org/wiki/Go_(programming_language)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "HAML",
+        "summary": "A templating system that avoids writing the inline code in a web document",
+        "tags": ["Language", "World Wide Web"],
+        "definitions": [{
+            "definition": "Haml (HTML Abstraction Markup Language) is a templating system to avoid writing the inline code in a web document and make HTML easy and clean. Haml gives the flexibility to have some dynamic content in HTML. Similar to other web languages like PHP, ASP, JSP and template systems like eRuby, Haml also embeds some code that gets executed during runtime and generates HTML code in order to provide some dynamic content. In order to run Haml code, files need to have .haml extension. These files are similar to .erb or eRuby files which also help to embed Ruby code while developing a web application. While parsing coding comments Haml uses the same rules as Ruby 1.9 or later. Haml understands only ASCII compatible encodings like UTF-8 but does not understand UTF-16 or UTF-32, since these are not compatible with ASCII.[3][4] Haml can be used in command line, as a separate Ruby module or can be used in a Ruby on Rails application making Haml suitable for a wide range of applications.",
+            "source": "https://en.wikipedia.org/wiki/Haml",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Heroku",
+        "summary": "A cloud platform that allows instant deployment of web applications",
+        "tags": ["Deployment", "World Wide Web", "Service"],
+        "definitions": [{
+            "definition": "A cloud Platform-as-a-Service (PaaS) supporting several programming languages, which is used as a web application deployment model. Supports Java, Node.js, Scala, Clojure, Python, PHP, and Go. Described as a polyglot platform, as it lets the developer build, run and scale applications in a similar manner across all the languages.",
+            "source": "https://en.wikipedia.org/wiki/Heroku",
+            "rating": 0
+        }, {
+            "definition": "Heroku gives apps a place to live on the Internet. Much the way a website host puts your site up on the Web and keeps it running using its own servers, Heroku puts an app you’ve developed on the Internet for others to use. With a few clicks you can “deploy” your app, thus making it possible for others to find and load into their browsers the same way they’d load a Web site.",
+            "source": "http://readwrite.com/2014/09/23/heroku-for-beginners-app-hosting-101/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Homebrew",
+        "summary": "A package management system that simplifies the installation of software on macOS",
+        "tags": ["Software"],
+        "definitions": [{
+            "definition": "A free and open-source software package management system written in Ruby and used via the command line, which simplifies the installation of software on the macOS operating system. Particularly popular in the context of Ruby on Rails.",
+            "source": "https://en.wikipedia.org/wiki/Homebrew_(package_management_software)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "HTML",
+        "summary": "A file type for displaying and sending content on the web",
+        "tags": ["Language", "World Wide Web"],
+        "definitions": [{
+            "definition": "HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript it forms a triad of cornerstone technologies for the World Wide Web. Web browsers receive HTML documents from a webserver or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically; HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items.",
+            "source": "https://en.wikipedia.org/wiki/HTML",
+            "rating": 0
+        }, {
+            "definition": "HTML is a computer language devised to allow website creation. These websites can then be viewed by anyone else connected to the Internet. It is relatively easy to learn, with the basics being accessible to most people in one sitting; and quite powerful in what it allows you to create. It is constantly undergoing revision and evolution to meet the demands and requirements of the growing Internet audience under the direction of the W3C, the organisation charged with designing and maintaining the language.",
+            "source": "http://www.yourhtmlsource.com/starthere/whatishtml.html",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "HTTP",
+        "summary": "An application protocol used to distribute information over the internet, between clients and servers.",
+        "tags": ["World Wide Web", "Protocol"],
+        "definitions": [{
+            "definition": "HTTP  functions as a request-response protocol in the client-server computing model. A web browser, for example, may be the client and an application running on a computer hosting a website may be the server. The client submits an HTTP request message to the server. The server, which provides resouces such as HTML files and other content, or performs other functions on behalf of the client, returns a response message to the client. The response contains completion status information about the request and may also contain requested content in its message body.",
+            "source": "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol",
+            "rating": 0
+        }, {
+            "definition": "HTTP is a protocol which allows the fetching of resources, such as HTML documents. It is the foundation of any data exchange on the Web and a client-server protocol, which means requests are initiated by the recipient, usually the Web browser. A complete document is reconstructed from the different sub-documents fetched, for instance text, layout description, images, videos, scripts, and more.",
+            "source": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Integration Testing",
+        "summary": "A software development process that tests parts of a program in groups",
+        "tags": ["Testing"],
+        "definitions": [{
+            "definition": "Integration testing, also known as integration and testing (I&T), is a software development process which program units are combined and tested as groups in multiple ways. In this context, a unit is defined as the smallest testable part of an application. Integration testing can expose problems with the interfaces among program components before trouble occurs in real-world program execution. Integration testing is a component of Extreme Programming (XP), a pragmatic method of software development that takes a meticulous approach to building a product by means of continual testing and revision.",
+            "source": "http://searchsoftwarequality.techtarget.com/definition/integration-testing",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "IRB",
+        "summary": "A REPL for programming in the object-oriented scripting language Ruby",
+        "tags": ["REPL"],
+        "definitions": [{
+            "definition": "Interactive Ruby Shell (IRB or irb) is a REPL for programming in Ruby. The abbreviation irb comes from the fact that the filename extension for Ruby is '.rb', although interactive Ruby files do not have an extension of '.irb'. The program is launched from a command line and allows the execution of Ruby commands with immediate response, experimenting in real-time. It is able to communicate directly as a shell script over the Internet and interact with a live server.",
+            "source": "https://en.wikipedia.org/wiki/Interactive_Ruby_Shell",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Jasmine",
+        "summary": "An open source, behavior-driven development testing framework for JavaScript",
+        "tags": ["Testing", "JavaScript"],
+        "definitions": [{
+            "definition": "Jasmine is a behavior-driven development framework for testing JavaScript code. It does not depend on any other JavaScript frameworks. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests.",
+            "source": "https://jasmine.github.io/",
+            "rating": 0
+        }]
+    },
     {
         "term": "Java",
         "summary": "A general-purpose computer programming language",
-        "tags": ["language"],
+        "tags": ["Language"],
         "definitions": [{
             "definition": "Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers 'write once, run anywhere' (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture.",
             "source": "https://en.wikipedia.org/wiki/Java_(programming_language)",
             "rating": 0
         }]
-    }
-
-
+    },
+    {
+        "term": "JavaScript",
+        "summary": "The programming language of HTML and the Web",
+        "tags": ["Language", "World Wide Web", "JavaScript"],
+        "definitions": [{
+            "definition": "JavaScript (JS) is a lightweight interpreted or JIT-compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
+            "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "jQuery",
+        "summary": "A feature-rich JavaScript library for event handling, animation and traversing the DOM",
+        "tags": ["JavaScript", "Library"],
+        "definitions": [{
+            "definition": "jQuery is a modular, cross-platform, open-source JavaScript library designed to simplify the client-side scripting of HTML. jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. jQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library.",
+            "source": "https://en.wikipedia.org/wiki/JQuery",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "JSON",
+        "summary": "A lightweight data-interchange format that is easy for machines to parse and generate",
+        "tags": ["File Type", "JavaScript"],
+        "definitions": [{
+            "definition": "JSON (JavaScript Object Notation) is an open-standard format that uses human-readable text to transmit data objects consisting of attribute–value pairs. It is the most common data format used for asynchronous browser/server communication, largely replacing XML, and is used by AJAX. JSON is a language-independent data format originally derived from JavaScript, but now used by numerous programming languages to generate and parse JSON-format data. The official Internet media type for JSON is application/json.",
+            "source": "https://en.wikipedia.org/wiki/JSON",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Law of Demeter",
+        "summary": "A principle of software development also known as the principle of least knowledge",
+        "tags": ["Principle"],
+        "definitions": [{
+            "definition": "The Law of Demeter (LoD) or principle of least knowledge is a design guideline for developing software, particularly object-oriented programs. In its general form, the LoD is a specific case of loose coupling. The guideline can be succinctly summarized in each of the following ways: each unit should have only limited knowledge about other units: only units 'closely' related to the current unit and each unit should only talk to its friends. The fundamental notion is that a given object should assume as little as possible about the structure or properties of anything else (including its subcomponents), in accordance with the principle of information 'hiding'.",
+            "source": "https://en.wikipedia.org/wiki/Law_of_Demeter",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Less",
+        "summary": "A dynamic style sheet language that can be compiled into CSS",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "In simple terms, LESS allows you to write CSS in a smarter way by combining functions, mixins, operations and more. This means you write more concise style information and can reuse things like colors and styles more easily. LESS runs on both the client-side (IE 6+, Webkit, Firefox) and server-side, with Node.js.",
+            "source": "http://www.mindscapehq.com/products/web-workbench/what-is-less",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Library",
+        "summary": "A collection of pre-written code that can be used to achieve more functionality without writing code for it",
+        "tags": ["Library"],
+        "definitions": [{
+            "definition": "A collection of resources used by computer programs to develop software. When a program invokes a library it gains the behaviour implemented inside the library without having to implement the behaviour itself. Libraries encourage the sharing of code in a modular fashion, and ease the distribution of the code.",
+            "source": "https://en.wikipedia.org/wiki/Library_(computing)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Markup Language",
+        "summary": "A language used to specify the layout and style of a text file.",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "Markup languages are designed for the processing, definition and presentation of text. The language specifies code for formatting, both the layout and style, within a text file. The code used to specify the formatting are called tags. HTM Lis an example of a widely known and used markup language.",
+            "source": "http://www.webopedia.com/TERM/M/markup_language.html",
+            "rating": 0
+        },{
+            "definition": "A markup language is a computer language that uses tags to define elements within a document. It is human-readable, meaning markup files contain standard words, rather than typical programming syntax. While several markup languages exist, the two most popular are HTML and XML.",
+            "source": "https://techterms.com/definition/markup_language",
+            "rating": 0
+        },{
+            "definition": "A markup language is a system for annotating a document in a way that is syntactically distinguishable from the text. The idea and terminology evolved from the 'marking up' of paper manuscripts, i.e., the revision instructions by editors, traditionally written with a blue pencil on authors' manuscripts.",
+            "source": "https://en.wikipedia.org/wiki/Markup_language",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Meteor",
+        "summary": "An JavaScript web framework that pproduces cross-platform (Android, iOS, Web) code",
+        "tags": ["JavaScript", "World Wide Web", "Framework"],
+        "definitions": [{
+            "definition": "Meteor.js is a cohesive development platform, a collection of libraries and packages that are bound together in a tidy way to make web development easier. It builds on ideas from previous frameworks and libraries to offer an easy way to start a prototype app, but it gives you the tools and flexibility to build a full fledged production app.",
+            "source": "http://joshowens.me/what-is-meteor-js/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Mocks",
+        "summary": "A method/object that simulates the behavior of a real method/object in controlled ways",
+        "tags": ["Testing", "Pattern"],
+        "definitions": [{
+            "definition": "Mocking is primarily used in unit testing. An object under test may have dependencies on other (complex) objects. To isolate the behaviour of the object you want to test you replace the other objects by mocks that simulate the behavior of the real objects. This is useful if the real objects are impractical to incorporate into the unit test. In short, mocking is creating objects that simulate the behaviour of real objects.",
+            "source": "http://stackoverflow.com/a/2666006",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "MongoDB",
+        "summary": "An open-source NoSQL document database",
+        "tags": ["Database"],
+        "definitions": [{
+            "definition": "MongoDB bridges the gap between key-value stores, which are fast and scalable, and relational databases, which have rich functionality. Instead of storing data in rows and columns as one would with a relational database, MongoDB stores JSON documents in collections with dynamic schemas. MongoDB's document data model makes it easy for you to store and combine data of any structure, without giving up sophisticated validation rules, flexible data access, and rich indexing functionality. You can dynamically modify the schema without downtime – vital for rapidly evolving applications.",
+            "source": "https://www.mongodb.com/blog/post/the-modern-application-stack-part-1-introducing-the-mean-stack",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "MVC",
+        "summary": "A design pattern for relating the user interface of a web app to underlying data models",
+        "tags": ["Pattern"],
+        "definitions": [{
+            "definition": "Model-View-Controller (MVC) is a software architectural pattern for implementing user interfaces on computers. It divides a given applications into three interconnected parts in order to separate internal representations of information from the ways that information is presented to and accepted from the user. The MVC design pattern decouples these major components allowing for efficient code reuse and parallel development.",
+            "source": "https://en.wikipedia.org/wiki/Model–view–controller",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "MySQL",
+        "summary": "An open-source relational database management system",
+        "tags": ["Database"],
+        "definitions": [{
+            "definition": "An open-source relational database management system. The SQL in its name is the abbreviation for Structured Query Language. A central component of the LAMP open-source web application software stack. LAMP is an acronym for 'Linux, Apache, MySQL, Perl/PHP/Python'.",
+            "source": "https://en.wikipedia.org/wiki/MySQL",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Node",
+        "summary": "An open-source JavaScript runtime environment for developing server tools and applications",
+        "tags": ["JavaScript", "Language"],
+        "definitions": [{
+            "definition": "An open-source, cross-platform JavaScript runtime environment for developing a diverse variety of server tools and applications. While not a JavaScript framework, many of its basic modules are written in JavaScript, and developers can write new modules in JavaScript. Node has an event-driven architecture capable of asynchronous I/O. This aims to optimize throughput and scalability in Web applications with many input/output operations, as well as for real-time Web applications.",
+            "source": "https://en.wikipedia.org/wiki/Node.js",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "NPM",
+        "summary": "The package manager for JavaScript",
+        "tags": ["JavaScript", "Package Manager"],
+        "definitions": [{
+            "definition": "The default package manager for the JavaScript runtime environment Node.js. Automatically included when Node.js is installed. It consists of a command line client which interacts with a remote registry, allowing users to consume and distribute JavaScript modules which are available on the registry.",
+            "source": "https://en.wikipedia.org/wiki/Npm_(software)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Objective-C",
+        "summary": "A programming language that adds Smalltalk-style messaging to the C programming language",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "Objective-C is general-purpose language that is developed on top of C Programming language by adding features of Small Talk programming language making it an object-oriented language. It is primarily used in developing iOS and Mac OS X operating systems as well as its applications.",
+            "source": "https://www.tutorialspoint.com/objective_c/objective_c_overview.htm",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "OOD",
+        "summary": "An approach to software design in which the software is a system of interacting objects",
+        "tags": ["Principle", "Practice", "Pattern"],
+        "definitions": [{
+            "definition": "Object-oriented design is the process of planning a system of interacting objects for the purpose of solving a software problem. It is one approach to software design.",
+            "source": "https://en.wikipedia.org/wiki/Object-oriented_design",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "ORM",
+        "summary": "The layer between the database and your application",
+        "tags": ["Database"],
+        "definitions": [{
+            "definition": "A programming technique for converting data between incompatible type systems in object-oriented programming languages. In effect it creates a 'virtual object database' which can be used from within the programming language, comprising models which possess attributed fields to hold each data item which the entry comprises.",
+            "source": "https://en.wikipedia.org/wiki/Object-relational_mapping",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "PHP",
+        "summary": "A widely-used scripting language suited to web development and embedding in HTML",
+        "tags": ["Language", "World Wide Web"],
+        "definitions": [{
+            "definition": "PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used open source general-purpose scripting language, which is especially suited for web development and can be embedded into HTML.",
+            "source": "https://php.net/manual/en/intro-whatis.php",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "PostgreSQL",
+        "summary": "An object-relational database with an emphasis on extensibility and standards compliance",
+        "tags": ["Database"],
+        "definitions": [{
+            "definition": "An open-source, transactional object-relational database system with additional 'object' features, with an emphasis on extensibility and standards compliance. Its primary functions are to store data securely and return that data in response to requests from other software applications. PostgreSQL is the default database on macOS Server; it is also available for Microsoft Windows and Linux.",
+            "source": "https://en.wikipedia.org/wiki/PostgreSQL",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "PRY",
+        "summary": "An interactive shell for the Ruby programming language",
+        "tags": ["REPL"],
+        "definitions": [{
+            "definition": "An interactive shell for the Ruby programming language. Notable for its Smalltalk-inspired ability to start a REPL within a running program, allowing programmers to debug and modify the current state of a system. A number of third party plugins are available, which add tighter integration with other Ruby projects, enhance the abilities of Pry itself, and make Pry available over a remote connection.",
+            "source": "https://en.wikipedia.org/wiki/Pry_(software)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Python",
+        "summary": "A general-purpose programming language with emphasis on readability and brevity",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "A high-level, general-purpose programming language, with a design philosophy which emphasises code readability and concise syntax. It supports object-oriented, imperative, functional and procedural programming styles, and has a large and comprehensive standard library.",
+            "source": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Rails",
+        "summary": "A server-side web application framework written in Ruby",
+        "tags": ["Framework"],
+        "definitions": [{
+            "definition": "A server-side web application framework for Ruby. It is a model-view-controller (MVC) framework which provides default structures for a database, a web service and web pages. It encourages and facilitates the use of web standards such as JSON or XML for data transfer, and HTML, CSS and JavaScript for display and user interfacing. It also emphasises the use of a range of software engineering patterns and paradigms, including CoC (convention over configuration), DRY (don't repeat yourself), and the active record pattern.",
+            "source": "https://en.wikipedia.org/wiki/Ruby_on_Rails",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "React",
+        "summary": "A declarative and flexible JavaScript library for building user interfaces",
+        "tags": ["Library", "JavaScript"],
+        "definitions": [{
+            "definition": "An open-source JavaScript library for building user interfaces. Components are typically written in JSX, a JavaScript extension syntax. Notable features include one-way data flow: components cannot directly modify any properties passed to them; native libraries which provide the React architexture to native iOS, Android and UWP applications; architecture which applies beyond rendering HTML in the browser, and a virtual DOM (Document Object Model) which creates an in-memory data structure cache, computes the resulting differences and updates the browser's displayed DOM efficiently, so that the React library only renders subcomponents which change.",
+            "source": "https://en.wikipedia.org/wiki/React_(JavaScript_library)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "REPL",
+        "summary": "An interactive programming environment that takes single inputs, evaluates them, and returns the result",
+        "tags": ["REPL"],
+        "definitions": [{
+            "definition": "A Read-Eval-Print Loop (REPL), also known as an interactive toplevel, or language shell, is a simple, interactive computer programming environment that takes single user inputs (i.e. single expressions), evaluates them, and returns the result to the user. Common examples include command line shells and similar environments for programming languages, and is particularly characteristic of scripting languages.",
+            "source": "https://en.wikipedia.org/wiki/Read–eval–print_loop",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "RESTFUL",
+        "summary": "An architectural style and communication approach used in the development of web services",
+        "tags": ["World Wide Web", "Protocol"],
+        "definitions": [{
+            "definition": "This chapter introduces and elaborates the Representational State Transfer (REST) architectural style for distributed hypermedia systems, describing the software engineering principles guiding REST and the interaction constraints chosen to retain those principles, while contrasting them to the constraints of other architectural styles. REST is a hybrid style derived from several of the network-based architectural styles described in Chapter 3 and combined with additional constraints that define a uniform connector interface.",
+            "source": "https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm",
+            "rating": 0
+        }, {
+            "definition": "An API that adheres to the principles of REST does not require the client to know anything about the structure of the API. Rather, the server needs to provide whatever information the client needs to interact with the service. An HTML form is an example of this: The server specifies the location of the resource, and the required fields. The browser doesn't know in advance where to submit the information, and it doesn't know in advance what information to submit. Both forms of information are entirely supplied by the server. (This principle is called HATEOAS.)",
+            "source": "http://stackoverflow.com/questions/671118/what-exactly-is-restful-programming",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Routing",
+        "summary": "The process of using URLs to drive the user interface ",
+        "tags": ["World Wide Web"],
+        "definitions": [{
+            "definition": "",
+            "source": "",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "RSpec",
+        "summary": "A behaviour-driven development framework for testing applications written in Ruby",
+        "tags": ["Testing", "Framework"],
+        "definitions": [{
+            "definition": "RSpec is a testing tool for Ruby, created for behavior-driven development (BDD). It is the most frequently used testing library for Ruby in production applications. Even though it has a very rich and powerful DSL (domain-specific language), at its core it is a simple tool which you can start using rather quickly.",
+            "source": "https://semaphoreci.com/community/tutorials/getting-started-with-rspec",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Ruby",
+        "summary": "A dynamic, reflective, object-oriented, general-purpose programming language",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "A dynamic, reflective, object-oriented, general-purpose programming language. Supports multiple programming paradigms, including functional, object-oriented, and imperative. Also has a dynamic type system and automatic memory management.",
+            "source": "https://en.wikipedia.org/wiki/Ruby_(programming_language)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "RVM",
+        "summary": "A command-line tool for easily installing, managing, and working with multiple ruby environments",
+        "tags": ["Package Manager"],
+        "definitions": [{
+            "definition": "A unix-like software platform designed to manage multiple installations of Ruby on the same device. The entire Ruby environment, including the Ruby interpreter, installed RubyGems, and documentation, is partitioned. The different versions can then be switched between to enable a developer to work on several projects with different version requirements. In addition to MRI, the standard Ruby interpreter, RVM functions as an installer for various other implementations of Ruby. Also supports the installation of patched versions of MRI.",
+            "source": "https://en.wikipedia.org/wiki/Ruby_Version_Manager",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "SASS",
+        "summary": "A scripting language that is interpreted into CSS",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "Sass (Syntactically Awesome StyleSheets) is an extension of CSS. Sass allows you to use things like variables, nested rules, inline imports and more. It also helps to keep things organized and allows you to create stylesheets faster.",
+            "source": "http://www.creativebloq.com/web-design/what-is-sass-111517618",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Seperation of Concerns",
+        "summary": "A design principle for separating a computer program into distinct sections, addressing a separate concern",
+        "tags": ["Principle", "Pattern"],
+        "definitions": [{
+            "definition": "It is a key principle of software development. The general idea is that one should avoid co-locating different concerns within the design or code.  For instance, if your application includes business logic for identifying certain noteworthy items to display to the user, and your application formats such items in a certain way to make them more noticeable, it would violate separation of concerns if both the logic for determining which items were noteworthy and the formatting of these items were in the same place.  The design would be more maintainable, less tightly coupled, and less likely to violate the Don’t Repeat Yourself principle if the logic for determining which items needed formatted were located in a single location (with other business logic), and were exposed to the user interface code responsible for formatting simply as a property.",
+            "source": "http://deviq.com/separation-of-concerns/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Server",
+        "summary": "A computer or device on a network that manages network resources",
+        "tags": ["World Wide Web"],
+        "definitions": [{
+            "definition": "In computing, a server is a computer program or a device that provides functionality for other programs or devices, called 'clients'. This architecture is called the client–server model, and a single overall computation is distributed across multiple processes or devices. Servers can provide various functionalities, often called 'services', such as sharing data or resources among multiple clients, or performing computation for a client. A single server can serve multiple clients, and a single client can use multiple servers. A client process may run on the same device or may connect over a network to a server on a different device. Typical servers are database servers, file servers, mail servers, print servers, web servers, game servers, and application servers.",
+            "source": "https://en.wikipedia.org/wiki/Server_(computing)",
+            "rating": 0
+        }, {
+            "definition": "The primary function of a web server is to store, process and deliver web pages to clients. The communication between client and server takes place using the Hypertext Transfer Protocol (HTTP). Pages delivered are most frequently HTML documents, which may include images, style sheets and scripts in addition to text content.",
+            "source": "https://en.wikipedia.org/wiki/Web_server",
+            "rating": 0
+        }, {
+            "definition": "Web server can refer to hardware or software, or both of them working together. On the hardware side, a web server is a computer that stores a website's component files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files) and delivers them to the end-user's device. It is connected to the Internet and can be accessed through a domain name like mozilla.org. On the software side, a web server includes several parts that control how web users access hosted files, at minimum an HTTP server. An HTTP server is a piece of software that understands URLs (web addresses) and HTTP (the protocol your browser uses to view webpages).",
+            "source": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Sinatra",
+        "summary": "A free and open source software web application library written in Ruby",
+        "tags": ["Library", "World Wide Web"],
+        "definitions": [{
+            "definition": "A free and open source web application framework. Rather than following the typical model-view-controller pattern used in other frameworks like Ruby on Rails, it focuses on allowing the quick creation of web applications in Ruby with minimal effort.",
+            "source": "https://en.wikipedia.org/wiki/Sinatra_(software)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "SOLID",
+        "summary": "An acronym for the first five object-oriented design principles",
+        "tags": ["Principle"],
+        "definitions": [{
+            "definition": "In computer programming, SOLID (single responsibility, open-closed, Liskov substitution, interface segregation and dependency inversion) is a mnemonic acronym introduced by Michael Feathers for the 'first five principles' named by Robert C. Martin in the early 2000s that stands for five basic principles of object-oriented programming and design. The intention is that these principles, when applied together, will make it more likely that a programmer will create a system that is easy to maintain and extend over time. The principles of SOLID are guidelines that can be applied while working on software to remove code smells by providing a framework through which the programmer may refactor the software's source code until it is both legible and extensible. It is part of an overall strategy of agile and Adaptive Software Development.",
+            "source": "https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "SQL",
+        "summary": "A standard language for storing, manipulating and retrieving data in databases",
+        "tags": ["Database"],
+        "definitions": [{
+            "definition": "SQL (Structured Query Language) is a standardized programming language used for managing relational databases and performing various operations on the data in them. Initially created in the 1970s, SQL is regularly used by database administrators, as well as by developers writing data integration scripts and data analysts looking to set up and run analytical queries.",
+            "source": "http://searchsqlserver.techtarget.com/definition/SQL",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "SRP",
+        "summary": "A design principle for the encapsulation of different behaviours within software",
+        "tags": ["Principle"],
+        "definitions": [{
+            "definition": "The single responsibility principle states that every module or class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class. All its services should be narrowly aligned with that responsibility.",
+            "source": "https://en.wikipedia.org/wiki/Single_responsibility_principle",
+            "rating": 0
+        }, {
+            "definition": "The Single Responsibility Principle (SRP) states that there should never be more than one reason for a class to change. This means that you should design your classes so that each has a single purpose. This does not mean that each class should have only one method but that all of the members in the class are related to the class's primary function. Where a class has multiple responsibilities, these should be separated into new classes.",
+            "source": "http://www.blackwasp.co.uk/SOLID.aspx",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "SVG",
+        "summary": "An XML-based vector image format that supports interactivity and animation",
+        "tags": ["File Type"],
+        "definitions": [{
+            "definition": "Scalable Vector Graphics are an XML based markup that can contain two-dimensional vectors. The vectors can be simple shapes, paths, or well just about anything you can do in Illustrator. It’s an image format that has more in common with a web page that it does with a JPEG. SVG is much more powerful than other image formats we can use on the web as we can manipulate them with code (either in our text editor or with CSS / JS).",
+            "source": "https://svgontheweb.com/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Swift",
+        "summary": "A programming language developed by Apple for iOS and macOS",
+        "tags": ["Language"],
+        "definitions": [{
+            "definition": "A general-purpose, multi-paradigm, compiled programming language developed by Apple for iOS. Designed to work with Apple's Cocoa and Cocoa Touch frameworks, and intended to be concise and resilient to erroneous code. Uses the Objective-C runtime library, which allows C, Objective-C, C++ and Swift code to run within one program.",
+            "source": "https://en.wikipedia.org/wiki/Swift_(programming_language)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "TDD",
+        "summary": "A software development process that relies on the repetition of a very short development cycle",
+        "tags": ["Practice", "Testing"],
+        "definitions": [{
+            "definition": "A software development process which relies on the repetition of a short development cycle: requirements are turned into very specific test cases and software is built or improved to pass the new tests.",
+            "source": "https://en.wikipedia.org/wiki/Test-driven_development",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Travis",
+        "summary": "A continuous integration service used to build and test software projects hosted at GitHub",
+        "tags": ["Service"],
+        "definitions": [{
+            "definition": "",
+            "source": "https://travis-ci.org",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Underscore",
+        "summary": "A JavaScript library that provides utility functions for common programming tasks",
+        "tags": ["Library", "JavaScript"],
+        "definitions": [{
+            "definition": "A JavaScript library which provides utility functions for common programming tasks. Comparable to features provided by the Ruby language, but opts for a functional programming design instead of extending object prototypes.",
+            "source": "https://en.wikipedia.org/wiki/Underscore.js",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Unit Testing",
+        "summary": "The process of testing the smallest possible units in a software programme",
+        "tags": ["Testing"],
+        "definitions": [{
+            "definition": "Unit testing is a software testing method by which individual units of source code are tested to determine whether they are fit for use.",
+            "source": "https://en.wikipedia.org/wiki/Unit_testing",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "URL",
+        "summary": "A reference to a web resource, used to specify its location on a network",
+        "tags": ["Protocol", "World Wide Web"],
+        "definitions": [{
+            "definition": "A Uniform Resource Locator (URL), commonly informally termed a web address (a term which is not defined identically) is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A URL is a specific type of Uniform Resource Identifier (URI), although many people use the two terms interchangeably. A URL implies the means to access an indicated resource and is denoted by a protocol or an access mechanism, which is not true of every URI. Thus http://www.example.com is an URL, while www.example.com is not. URLs occur most commonly to reference web pages (http), but are also used for file transfer (ftp), email (mailto), database access (JDBC), and many other applications.",
+            "source": "https://en.wikipedia.org/wiki/Uniform_Resource_Locator",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Unix",
+        "summary": "A family of computer operating systems characterised by a modular design, a unified filesystem and a shell scripting and command language to combine the tools to perform complex workflows",
+        "tags": ["OS"],
+        "definitions": [{
+            "definition": "A family of computer operating systems that derive from the original AT&T Unix. Unix systems are characterised by a modular design sometimes called the 'Unix philosophy', meaning that the operating system provides a set of simple tools which each perfom a limited, well-defined function, with a unified filesystem as the main means of communication and a shell scripting and command language to combine the tools to perform complex workflows. The first portable operating system; written almost entriely in C, which allowed Unix to reach numerous platforms.",
+            "source": "https://en.wikipedia.org/wiki/Unix",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Webpack",
+        "summary": "A module bundler that bundles JavaScript files for usage in a browser",
+        "tags": ["Package Manager", "JavaScript"],
+        "definitions": [{
+            "definition": "A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows to load parts for the application on demand. Through 'loaders', modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff.",
+            "source": "https://github.com/webpack/webpack",
+            "rating": 0
+        }, {
+            "definition": "Webpack is an open-source JavaScript module bundler. Webpack takes modules with dependencies and generates static assets representing those modules. The bundler can be used from the command line, or can be configured using a config file which is named webpack.config.js. You will need node.js for installing webpack. Another important aspect about webpack is that it is highly extensible by the use of loaders. Loaders allow you to write custom tasks that you want to perform when bundling files together.",
+            "source": "https://en.wikipedia.org/wiki/Webpack",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Websocket",
+        "summary": "A protocol that enables continuous, real-time communication between a browser and web server",
+        "tags": ["Protocol", "World Wide Web"],
+        "definitions": [{
+            "definition": "The WebSocket protocol enables interaction between a browser and a web server with lower overheads, facilitating real-time data transfer from and to the server. This is made possible by providing a standardized way for the server to send content to the browser without being solicited by the client, and allowing for messages to be passed back and forth while keeping the connection open. In this way, a two-way (bi-directional) ongoing conversation can take place between a browser and the server.",
+            "source": "https://en.wikipedia.org/wiki/WebSocket",
+            "rating": 0
+        }, {
+            "definition": "WebSockets represent a standard for bi-directional realtime communication between servers and clients. Firstly in web browsers, but ultimately between any server and any client. The standards first approach means that as developers we can finally create functionality that works consistently across multiple platforms. Connection limitations are no longer a problem since WebSockets represent a single TCP socket connection.",
+            "source": "https://pusher.com/websockets",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Wordpress",
+        "summary": "A free and open-source content management system based on PHP",
+        "tags": ["CMS"],
+        "definitions": [{
+            "definition": "A free and open-source content management system (CMS) based on PHP and MySQL. WordPress is installed on a web server that is either part of an Internet hosting service or a network host in its own right. The first case may be a service like Wordpress.com, for example, and the second case could be a computer running the software package WordPress.org.",
+            "source": "https://en.wikipedia.org/wiki/WordPress",
+            "rating": 0
+        }, {
+            "definition": "WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability. WordPress is both free and priceless at the same time.",
+            "source": "https://en-gb.wordpress.org",
+            "rating": 0
+        }
+      ]
+    },
+    {
+        "term": "XML",
+        "summary": "An Extensible Markup Language to transport data",
+        "tags": ["File Type"],
+        "definitions": [{
+            "definition": "XML stands for eXtensible Markup Language and is a markup language much like HTML. It was designed to store and transport data and be self-descriptive. XML doesn't actually do anything. It's just information wrapped in tags. Someone must write a piece of software to send, receive, store, or display it. The difference between XML and HTML is that XML was designed to carry data with a focus on what the data is, whereas HTML was designed to display data with a focus on how the data looks. XML tags are not predefined like HTML tags.",
+            "source": "https://www.w3schools.com/xml/xml_whatis.asp",
+            "rating": 0
+        }, {
+            "definition": "XML is used for storing structured data, rather than formatting information on a page. While HTML documents use predefined tags (like the examples above), XML files use custom tags to define elements. XML is called the 'Extensible Markup Language' since custom tags can be used to support a wide range of elements. Each XML file is saved in a standard text format, which makes it easy for software programs to parse or read the data. Therefore, XML is a common choice for exporting structured data and for sharing data between multiple programs.",
+            "source": "https://techterms.com/definition/markup_language",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "XP",
+        "summary": "A software development paradigm that advocates agile processes",
+        "tags": ["Practice"],
+        "definitions": [{
+            "definition": "Extreme programming (XP) is a software development methodology which is intended to improve software quality and responsiveness to changing customer requirements. As a type of agile software development, it advocates frequent 'releases' in short development cycles, which is intended to improve productivity and introduce checkpoints at which new customer requirements can be adopted.",
+            "source": "https://en.wikipedia.org/wiki/Extreme_programming",
+            "rating": 0
+        }, {
+            "definition": "Extreme Programming is one of several popular Agile Processes. Extreme Programming improves a software project in five essential ways; communication, simplicity, feedback, respect, and courage. Extreme Programmers constantly communicate with their customers and fellow programmers. They keep their design simple and clean. They get feedback by testing their software starting on day one. They deliver the system to the customers as early as possible and implement changes as suggested.",
+            "source": "http://www.extremeprogramming.org",
+            "rating": 0
+        }]
+    },
 ]
