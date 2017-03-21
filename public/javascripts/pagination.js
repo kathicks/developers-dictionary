@@ -18,7 +18,7 @@ $( ".paginationLinks" ).click(function(event) {
       if ($('#term-09').text() === findWord()){
         clearInterval(rotateWheel);
       }
-    }, 10);
+    }, 15);
     rotateWheel();
     };
   });
