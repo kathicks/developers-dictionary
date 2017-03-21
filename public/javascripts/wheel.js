@@ -1,4 +1,4 @@
-window.onload = (function() {
+window.onload = function() {
 
   var colours = ["#F9C00C", "#03A9F4", "#9C56BB", "#FF5722", "#FF4081"];
 
@@ -317,7 +317,6 @@ window.onload = (function() {
     updateInnerLeftHTML8();
     updateInnerLeftHTML9();
     console.log("left");
-  };
 
   startLeft = function(){
     updateInnerRightHTML1();
@@ -335,7 +334,7 @@ window.onload = (function() {
   startRight();
   startLeft();
   });
-});
+};
 
 $(".tag").on('change', 'select', function(event) {
     event.preventDefault();
@@ -348,5 +347,10 @@ document.body.onkeydown = function(event){
     startLeft();
   } else if(keycode === 39 || keycode === 38){
     startRight();
-  }
+  };
+};
+
+document.body.onclick = function(event) {
+  bgcolour = ($(event.target.getAttribute('xlink:href')).children(".term")[0].attributes.fill.value);
+  sessionStorage.setItem("bgcolour", bgcolour);
 }
