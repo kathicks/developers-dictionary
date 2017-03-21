@@ -1,7 +1,7 @@
 $(".upvote").on('click', function(event) {
 
     event.preventDefault();
-
+    
     var rating = $(this).siblings('.rating');
     var term = $(this).siblings($("input[name='term']")).val();
     var definition = $(this).siblings(".form-def").val();
