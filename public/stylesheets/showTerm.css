@@ -106,3 +106,9 @@
 .term-header {
     padding-bottom: 18px;
 }
+
+#back-button {
+  font-family: 'Roboto Mono';
+  font-weight: lighter;
+  vertical-align: center;
+}
