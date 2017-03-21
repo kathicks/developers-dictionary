@@ -40,6 +40,7 @@ router.get('/show/:id', function(req, res) {
         docs[0].definitions.sort(function(a, b) {
             return b.rating - a.rating;
         });
+        console.log(docs[0]);
         res.render('show', {
             term: docs[0],
             home: false
@@ -62,6 +63,21 @@ router.post('/wheel', function(req, res){
         messages: req.flash('errors'),
         notices: req.flash('notice'),
     });
+  });
+});
+
+/* POST to filter by search. */
+router.post('/search', function(req, res){
+  var db = req.db;
+  var term = req.body.search;
+  console.log(term);
+  var collection = db.get('termcollection');
+  collection.findOne({
+      "term": term
+  }, function(err, result) {
+    if (err) console.log(err);
+    console.log(result);
+    res.redirect("/show/" + result._id);
   });
 });
 

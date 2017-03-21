@@ -3,11 +3,13 @@
 <?xml-stylesheet type="text/css" href="../public/stylesheets/wheel.css"?>
   <div class="container-fluid">
     <div class="col-md-12 search-bar" align="center">
-        <form class="form-inline" action="/wheel" method="post">
+        <form class="form-inline" action="/search" method="post">
           <div class="form-group">
             <i class="fa fa-search" aria-hidden="true"></i>
-            <input type="text" class="form-control" id="search" placeholder="Search e.g. Ruby">
+            <input type="text" class="form-control" id="search" name="search" placeholder="Search e.g. Ruby">
           </div>
+        </form>
+        <form class="form-inline" action="/wheel" method="post">
           <div class="form-group">
             <select class="select" id="tag" name="tag" onchange="this.form.submit();">
               <option hidden>Filter</option>
