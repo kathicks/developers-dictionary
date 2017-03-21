@@ -7,7 +7,7 @@ router.get('/', function(req, res) {
     var collection = db.get('termcollection');
     collection.find({}, {}, function(e, docs) {
         res.render('index', {
-            terms: docs,
+            docs: docs,
             messages: req.flash('errors'),
             notices: req.flash('notice'),
             home: true
