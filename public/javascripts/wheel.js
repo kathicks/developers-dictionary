@@ -316,7 +316,7 @@ window.onload = function() {
     updateInnerLeftHTML7();
     updateInnerLeftHTML8();
     updateInnerLeftHTML9();
-    console.log("left");
+  }
 
   startLeft = function(){
     updateInnerRightHTML1();
@@ -328,7 +328,6 @@ window.onload = function() {
     updateInnerRightHTML7();
     updateInnerRightHTML8();
     updateInnerRightHTML9();
-    console.log("right");
   };
 
   startRight();

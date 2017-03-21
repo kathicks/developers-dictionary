@@ -28,7 +28,10 @@
 }
 
 .definitions {
+    /*border-style: solid;*/
+    /*border-width: 3px;*/
     border-color: none;
+    /*padding: 2em;*/
     color: black;
     background: #fff;
     border-radius: 1em;
@@ -37,19 +40,17 @@
     text-align: center;
     text-justify: inter-word;
     overflow-wrap: break-word;
+    /*box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);*/
 }
-
 .buttons {
   display: inline-block;
 }
-
 .tag-button {
   background: none !important;
   border: none;
   color: white !important;
   display: inline-block;
 }
-
 .jumbotron {
     text-align: center;
     color: #fff;
@@ -64,21 +65,12 @@
 .vote {
     text-align: center;
     margin-bottom: 1em;
-    border: none;
+    color: #bgcolour;
 }
 
 .downvote, .upvote, .rating {
     background: transparent;
     display: inline !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-
-.downvote, .upvote, .rating:visited {
-    background: transparent;
-    display: inline !important;
-    outline: none !important
-    box-shadow: none !important;
 }
 
 .add-definition-link {
