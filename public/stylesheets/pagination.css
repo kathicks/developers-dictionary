@@ -1,11 +1,18 @@
 .pagination li a{
     position: float;
     float: center;
-    padding: 2px 2px;
+    padding: 2px 6px;
     margin-left: -1px;
     line-height: 1.42857143;
-    color: grey;
+    color: black;
     text-decoration: none;
     background-color: none;
     border: none;
+    font-size: 20px;
+}
+
+.disabled .paginationLinks{
+  color: #D0D0D0 ;
+  font-size: 15px;
+
 }
