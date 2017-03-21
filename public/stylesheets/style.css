@@ -1,5 +1,6 @@
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 100;
 }
 
 .content {
@@ -31,7 +32,7 @@ body {
 }
 
 #shortdefinition {
-    font-family: 'Raleway';
+    font-family: 'Roboto Mono';
     font-weight: 200;
     font-size: 18px;
     margin-top: 0px;

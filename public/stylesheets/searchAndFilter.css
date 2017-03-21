@@ -1,6 +1,9 @@
 .form-group {
   font-family: 'Roboto Mono';
 }
+.form-inline {
+  z-index: 1;
+}
 
 ::-webkit-input-placeholder { /* Chrome */
   color: #474747!important;
