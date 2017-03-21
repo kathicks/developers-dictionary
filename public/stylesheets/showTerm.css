@@ -3,7 +3,7 @@
 }
 
 .source {
-    color: #7c4dff !important;
+    color: #bgcolour !important;
     font-family: 'Roboto Mono', sans-serif;
     text-decoration: underline;
     text-align: center;
@@ -54,7 +54,6 @@
 }
 .jumbotron {
     text-align: center;
-    background: #7c4dff;
     color: #fff;
 }
 
@@ -67,7 +66,7 @@
 .vote {
     text-align: center;
     margin-bottom: 1em;
-    color: #7c4dff;
+    color: #bgcolour;
 }
 
 .downvote, .upvote, .rating {

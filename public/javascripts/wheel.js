@@ -1,4 +1,4 @@
-window.onload = (function() {
+window.onload = function() {
 
   var terms;
   var index1 = 0;
@@ -87,21 +87,21 @@ window.onload = (function() {
   };
 
   startRight = function(){
-    updateInnerHTML(text1, def1, xlink1, index1);
-    updateInnerHTML(text2, def2, xlink2, index1);
-    updateInnerHTML(text3, def3, xlink3, index1);
-    updateInnerHTML(text4, def4, xlink4, index1);
-    updateInnerHTML(text5, def5, xlink5, index1);
-    updateInnerHTML(text6, def6, xlink6, index1);
-    updateInnerHTML(text7, def7, xlink7, index1);
-    updateInnerHTML(text8, def8, xlink8, index1);
     updateInnerHTML(text9, def9, xlink9, index1);
+    updateInnerHTML(text8, def8, xlink8, index1);
+    updateInnerHTML(text7, def7, xlink7, index1);
+    updateInnerHTML(text6, def6, xlink6, index1);
+    updateInnerHTML(text5, def5, xlink5, index1);
+    updateInnerHTML(text4, def4, xlink4, index1);
+    updateInnerHTML(text3, def3, xlink3, index1);
+    updateInnerHTML(text2, def2, xlink2, index1);
+    updateInnerHTML(text1, def1, xlink1, index1);
   };
 
   startLeft();
   startRight();
   });
-});
+};
 
 $(".tag").on('change', 'select', function(event) {
     event.preventDefault();
@@ -115,5 +115,10 @@ document.body.onkeydown = function(event){
       startLeft();
   } else if(keycode === 39 || keycode === 38){
     startRight();
-  }
+  };
+};
+
+document.body.onclick = function(event) {
+  bgcolour = ($(event.target.getAttribute('xlink:href')).children(".term")[0].attributes.fill.value);
+  sessionStorage.setItem("bgcolour", bgcolour);
 }

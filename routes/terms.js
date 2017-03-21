@@ -47,7 +47,7 @@ router.get('/show/:id', function(req, res) {
         docs[0].definitions.sort(function(a, b) {
             return b.rating - a.rating;
         });
-        console.log(docs[0]);
+        var term = docs[0].term;
         res.render('show', {
             term: docs[0],
             home: false
