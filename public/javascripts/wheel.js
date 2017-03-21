@@ -2,6 +2,7 @@ window.onload = (function() {
 
   var terms;
   var index1 = 0;
+  var colours = ["#F9C00C", "#03A9F4", "#9C56BB", "#FF5722", "#FF4081"]
 
   var svg = document.getElementById("svg-menu");
   var text1 = svg.getElementById("term-01");
@@ -55,8 +56,14 @@ window.onload = (function() {
       return "/show/" + id;
     };
 
+    outputColour = function(index){
+      var colour = colours[index % colours.length];
+      return colour;
+    }
+
     updateInnerHTML = function(element1, element2, element3, index) {
       element1.textContent = outputTermString(index);
+      element1.setAttribute("fill", outputColour(index));
       element2.textContent = outputDefString(index);
       element3.setAttribute("xlink:href", outputShowLink(index));
       if (index < terms.length - 1) {
@@ -90,7 +97,7 @@ window.onload = (function() {
     updateInnerHTML(text2, def2, xlink2, index1);
     updateInnerHTML(text1, def1, xlink1, index1);
   };
-  
+
   startLeft();
   startRight();
   });
@@ -105,12 +112,8 @@ document.body.onkeydown = function(event){
   event = event || window.event;
   var keycode = event.charCode || event.keyCode;
   if(keycode === 37 || keycode === 40 ){
-      startAction();
+      startLeft();
   } else if(keycode === 39 || keycode === 38){
-    startAction();
+    startRight();
   }
 }
-
-window.onscroll = function() {
-  console.log("HERE");
-};

@@ -48,7 +48,7 @@ text.term:hover {
 }
 
 .term {
-  fill: #9c56b8;
+  /*fill: #9c56b8;*/
   font-family: 'Roboto Mono', sans-serif;
   font-weight: 700;
 }
@@ -58,6 +58,11 @@ text.term:hover {
   font-family: 'Roboto Mono';
   font-weight: 200;
   fill: #474747;
+}
+
+#container-fluid {
+    height: 2em;
+    z-index: -1;
 }
 
 #wheel-page {
@@ -73,6 +78,7 @@ text.term:hover {
   display: block;
   position: absolute;
   bottom: 0;
+  z-index: -1;
 }
 
 #itemsContainer {
@@ -96,24 +102,4 @@ text.term:hover {
   position:relative;
   float: right;
   z-index: 1;
-}
-
-#term-01, #term-06 {
-   fill: #F9C00C;
-}
-
- #term-02, #term-07 {
-   fill: #03A9F4;
-}
-
- #term-03, #term-08 {
-   fill: #9C56BB;
-}
-
- #term-04, #term-09 {
-   fill: #FF5722;
-}
-
- #term-05 {
-   fill: #FF4081;
 }
