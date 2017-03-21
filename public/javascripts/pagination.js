@@ -2,8 +2,9 @@ var terms;
 //on click of letter
 $( ".paginationLinks" ).click(function(event) {
   event.preventDefault();
-  console.log($(this).text())
-  var jumpToLetter = $(this).text()
+
+  if(!$(this).parent().hasClass('disabled')){
+    var jumpToLetter = $(this).text()
     findWord = function() {
       for (var i = 0; i < terms.length; i++) {
         var searchable = terms[i].term.toLowerCase()
@@ -18,8 +19,9 @@ $( ".paginationLinks" ).click(function(event) {
         clearInterval(rotateWheel);
       }
     }, 100);
-  rotateWheel();
-});
+    rotateWheel();
+    };
+  });
 
 //DISABLE LINKS
 
@@ -42,7 +44,10 @@ $(document).ready(function(){
     paginationArr = $('.paginationLinks').text().split('')
     paginationArr.pop();
     paginationArr.shift();
-
-    console.log(letterArr, paginationArr)
+    paginationArr.forEach(function(letter){
+      if(!letterArr.includes(letter)){
+        $('#'+letter).addClass("disabled")
+      }
+    })
   });
 });
