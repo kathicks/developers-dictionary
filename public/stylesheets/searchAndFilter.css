@@ -1,6 +1,7 @@
 #search-and-filter {
-  /*align-items: center;
-  display: inline-block;*/
+  align-items: center;
+  display: block;
+  top: 0em;
 }
 
 #search {

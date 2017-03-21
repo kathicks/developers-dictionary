@@ -6,6 +6,7 @@ router.get('/', function(req, res) {
     var db = req.db;
     var collection = db.get('termcollection');
     collection.find({}, {}, function(e, docs) {
+
         res.render('index', {
             terms: docs,
             messages: req.flash('errors'),
@@ -23,6 +24,13 @@ router.get('/wheel', function(req, res) {
         docs = req.session.results;
         req.session.destroy();
       }
+      docs.sort(function(a, b){
+        var termA=a.term.toLowerCase(), termB=b.term.toLowerCase();
+        if(termA < termB) return -1;
+        if(termA > termB) return 1;
+        return 0;
+      })
+      console.log(docs)
       res.json(docs);
     });
 });

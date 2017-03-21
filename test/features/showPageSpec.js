@@ -64,7 +64,7 @@ describe('Developers Dictionary', function() {
             beforeEach(function(done) {
                 var self = this;
                 self.browser.visit('/', function(err) {
-                    if (err) return done(err);
+                    if (err) console.log(err);
                     self.browser.clickLink('a.showPage', function() {});
                     done();
                 });
@@ -72,6 +72,7 @@ describe('Developers Dictionary', function() {
 
             it('should have a title', function() {
                 should.exists(this.browser.text('h2', 'What is Angular?'));
+                console.log(this.browser.text('h2'))
             });
 
             it('should not have a space between title and ?', function() {
