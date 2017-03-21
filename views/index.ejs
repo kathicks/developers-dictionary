@@ -19,15 +19,29 @@
       <form class="form-inline" action="/wheel" method="post">
 
         <div class="form-group">
-          <select class="select" id="tag" name="tag" onchange="this.form.submit();">
-            <option hidden>Filter</option>
-            <option name="language" value="language">Language</option>
-            <option name="framework" value="framework">Framework</option>
-            <option name="package" value="package">Package</option>
-            <option name="tool" value="tool">Tool</option>
-            <div class="select__arrow"></div>
-          </select>
-          <i class="fa fa-filter" aria-hidden="true"></i>
+          <div id="dd" class="wrapper-dropdown" name="tag" onchange="this.form.submit();"><span class="filter-placeholder">Filter</span>
+           <ul class="dropdown">
+             <li><a class="elem" href="/wheel" name="CMS" value="CMS">CMS</a></li>
+             <li><a class="elem" href="/wheel" name="Database" value="Database">Database</li>
+             <li><a class="elem" href="/wheel" name="Deployment" value="Deployment">Deployment</li>
+             <li><a class="elem" href="/wheel" name="File Type" value="File Type">File Type</li>
+             <li><a class="elem" href="/wheel" name="Framework" value="Framework">Framework</li>
+             <li><a class="elem" href="/wheel" name="JavaScript" value="JavaScript">JavaScript</li>
+             <li><a class="elem" href="/wheel" name="Language" value="Language">Language</li>
+             <li><a class="elem" href="/wheel" name="Library" value="Library">Library</li>
+             <li><a class="elem" href="/wheel" name="OS" value="OS">OS</li>
+             <li><a class="elem" href="/wheel" name="Package Manager" value="Package Manager">Package Manager</li>
+             <li><a class="elem" href="/wheel" name="Pattern" value="Pattern">Pattern</li>
+             <li><a class="elem" href="/wheel" name="Practice" value="Practice">Practice</li>
+             <li><a class="elem" href="/wheel" name="Principle" value="Principle">Principle</li>
+             <li><a class="elem" href="/wheel" name="Protocol" value="Protocol">Protocol</li>
+             <li><a class="elem" href="/wheel" name="Service" value="Service">Service</li>
+             <li><a class="elem" href="/wheel" name="Software" value="Software">Software</li>
+             <li><a class="elem" href="/wheel" name="Testing" value="Testing">Testing</li>
+             <li><a class="elem" href="/wheel" name="World Wide Web" value="World Wide Web">World Wide Web</li>
+           </ul>
+         </div>
+         <i class="fa fa-filter" aria-hidden="true"></i>
         </div>
 
       </form>
@@ -156,4 +170,5 @@
 
 <script src="/javascripts/wheel.js"></script>
 <script src="/javascripts/pagination.js"></script>
+<script src="/javascripts/filter.js"></script>
 </body>
