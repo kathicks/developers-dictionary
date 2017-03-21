@@ -14,7 +14,7 @@ $( ".paginationLinks" ).click(function(event) {
       }
     };
     var rotateWheel = setInterval(function(){
-         startAction();
+         startLeft();
       if ($('#term-01').text() === findWord()){
         clearInterval(rotateWheel);
       }
@@ -31,7 +31,6 @@ $( ".paginationLinks" ).click(function(event) {
 //disable function greys out letter in pag and doesn't allow clicking.
 
 $(document).ready(function(){
-  console.log();
   $.ajax({
     url: "/wheel",
     method: "GET",
@@ -41,9 +40,8 @@ $(document).ready(function(){
     terms.forEach(function(term){
       letterArr.push(term.term.charAt(0).toLowerCase());
     });
-    paginationArr = $('.paginationLinks').text().split('')
-    paginationArr.pop();
-    paginationArr.shift();
+    paginationArr = $('.paginationLinks').text().split('');
+    console.log(paginationArr, letterArr);
     paginationArr.forEach(function(letter){
       if(!letterArr.includes(letter)){
         $('#'+letter).addClass("disabled")

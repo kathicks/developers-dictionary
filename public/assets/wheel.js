@@ -62,6 +62,7 @@ window.onload = (function() {
     updateInnerHTML(text7, def7, index1);
     updateInnerHTML(text8, def8, index1);
     updateInnerHTML(text9, def9, index1)};
+    index1 - 8;
   startAction();
   });
 });
