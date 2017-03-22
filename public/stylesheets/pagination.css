@@ -1,31 +1,32 @@
 .pagination li a{
-    position: float;
-    float: center;
-    padding: 2px 6px;
-    margin-left: -1px;
-    line-height: 1.42857143;
-    color: black;
-    text-decoration: none;
-    background-color: none;
-    border: none;
-    font-size: 15px;
+  padding: 2px 6px;
+  line-height: 1.42857143;
+  color: black;
+  text-decoration: none;
+  background-color: none;
+  border: none;
+  font-size: 15px;
 }
 
-.pagination li a:active{
-  color: black;
-  text-decoration: underline;
-}
-.pagination li a:focus{
-  color: black;
-  text-decoration: underline;
-}
-.pagination li a:hover{
+.pagination li a:active,
+.pagination li a:focus,
+.pagination li a:hover {
   color: black;
   text-decoration: underline;
 }
 
-.disabled .paginationLinks{
+.disabled .paginationLinks {
   color: #D0D0D0 ;
   font-size: 15px;
   font-weight: 100;
+}
+
+.pagination-container {
+  text-align: center;
+}
+
+@media screen and (max-width: 998px) {
+  .pagination-container {
+    margin-top: 3vh;
+  }
 }
