@@ -34,7 +34,7 @@
   background: #fff;
   border-radius: 1em;
   margin: 2em;
-  font-size: 1.6em;
+  font-size: 1.35em;
   text-align: center;
   text-justify: inter-word;
   overflow-wrap: break-word;
@@ -43,17 +43,24 @@
 .buttons {
   display: inline-block;
 }
+
 .tag-button {
   background: none !important;
   color: white !important;
   display: inline;
   font-weight: 100;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-width: 3px;
+  border-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
 }
 
 .tag-button:focus,
 .tag-button:active,
-.tag-button:active:focus {
-  outline: none;
+.tag-button:hover {
+  border-color: black;
+  color: black !important;
 }
 
 .jumbotron {
@@ -80,6 +87,7 @@
 
 .add-definition-link {
   cursor: default;
+  padding-top: 15px;
 }
 
 .panel-footer {
@@ -106,6 +114,13 @@
   float: left;
   margin-left: 26px;
   margin-top: -24px;
+}
+
+#back-button:focus,
+#back-button:active,
+#back-button:hover {
+  border-color: black;
+  color: black !important;
 }
 
 .back-arrow {
