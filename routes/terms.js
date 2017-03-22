@@ -1,5 +1,9 @@
 'use strict';
-var database = require('../database/db.js')
+
+var database = require('../database/database.js')
+var summaryValidate = require('../database/summaryValidate.js')
+var termValidate = require('../database/termValidate.js')
+var tagValidate = require('../database/tagValidate.js')
 var express = require('express');
 var router = express.Router();
 
@@ -43,24 +47,9 @@ router.post('/new', function(req, res) {
     var definition = req.body.definition;
     var source = req.body.source;
     var tag = req.body.tag;
-    req.checkBody({
-        'term': {
-            isLength: {
-                options: [{ min: 2, max: 30 }],
-                errorMessage: 'must be between 2 and 30 characters long'
-            },
-            errorMessage: 'Invalid term'
-        }
-    });
-    req.checkBody({
-        'summary': {
-            isLength: {
-                options: [{ min: 42, max: 80 }],
-                errorMessage: 'must be between 42 and 80 characters long'
-            },
-            errorMessage: 'Invalid summary'
-        }
-    });
+    termValidate(req, res);
+    summaryValidate(req, res);
+    tagValidate(req, res);
 
     var errors = req.validationErrors();
     if (errors) {

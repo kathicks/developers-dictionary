@@ -1,5 +1,5 @@
 'use strict';
-var database = require('../database/db.js')
+var database = require('../database/database.js')
 var express = require('express');
 var router = express.Router();
 
