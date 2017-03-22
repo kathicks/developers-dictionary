@@ -1,12 +1,11 @@
 'use strict';
-
+var database = require('../database/db.js')
 var express = require('express');
 var router = express.Router();
 
 /* GET index. */
 router.get('/', function(req, res) {
-    var db = req.db;
-    var collection = req.db.get('termcollection');
+    var collection = database(req);
     collection.find({}, {}, function(err, docs) {
         res.render('index', {
             terms: docs,
@@ -19,8 +18,7 @@ router.get('/', function(req, res) {
 
 /* GET wheel ajax . */
 router.get('/show', function(req, res) {
-    var db = req.db;
-    var collection = db.get('termcollection');
+    var collection = database(req);
     collection.find({}, {}, function(err, docs) {
       if (typeof req.session.results != 'undefined') {
         docs = req.session.results;
@@ -39,13 +37,12 @@ router.get('/show', function(req, res) {
 
 /* POST to add new term. */
 router.post('/new', function(req, res) {
-    var db = req.db;
+    var collection = database(req);
     var term = req.body.term.trim();
     var summary = req.body.summary;
     var definition = req.body.definition;
     var source = req.body.source;
     var tag = req.body.tag;
-    var collection = db.get('termcollection');
     req.checkBody({
         'term': {
             isLength: {

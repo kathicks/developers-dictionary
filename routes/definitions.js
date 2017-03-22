@@ -1,12 +1,11 @@
 'use strict';
-
+var database = require('../database/db.js')
 var express = require('express');
 var router = express.Router();
 
 /* GET term page. */
 router.get('/:id', function(req, res) {
-    var db = req.db;
-    var collection = db.get('termcollection');
+    var collection = database(req);
     collection.find({
         '_id': req.params.id
     }, function(err, docs) {
@@ -23,11 +22,10 @@ router.get('/:id', function(req, res) {
 
 /* POST to add new definition to term. */
 router.post('/new', function(req, res) {
-    var db = req.db;
+    var collection = database(req);
     var definition = req.body.definition.replace(/[\n\r]+/g, ' ');
     var source = req.body.source;
     var term = req.body.term;
-    var collection = db.get('termcollection');
     collection.update({
         "term": term
     }, {
@@ -53,11 +51,10 @@ router.post('/new', function(req, res) {
 
 /* POST to filter by search. */
 router.post('/search', function(req, res){
-  var db = req.db;
+  var collection = database(req);
   var search = req.body.search;
   var term = search.charAt(0).toUpperCase() + search.slice(1);
   var termUppercase = search.toUpperCase();
-  var collection = db.get('termcollection');
   collection.findOne({ $or: [
     {"term": term},
     {"term": termUppercase}
@@ -76,11 +73,10 @@ router.post('/search', function(req, res){
 
 /* POST to upvote definition's rating. */
 router.post('/update/up', function(req, res) {
-    var db = req.db;
+    var collection = database(req);
     var term = req.body.term;
     var definition = req.body.definition;
     var rating = req.body.rating;
-    var collection = db.get('termcollection');
     collection.update({
         "term": term,
         "definitions.definition": definition
@@ -101,11 +97,10 @@ router.post('/update/up', function(req, res) {
 
 /* POST to downvote definition's rating. */
 router.post('/update/down', function(req, res) {
-    var db = req.db;
+    var collection = database(req);
     var term = req.body.term;
     var definition = req.body.definition;
     var rating = req.body.rating;
-    var collection = db.get('termcollection');
     collection.update({
         "term": term,
         "definitions.definition": definition

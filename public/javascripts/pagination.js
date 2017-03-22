@@ -19,7 +19,7 @@ $( ".paginationLinks" ).click(function(event) {
         clearInterval(rotateWheel);
       }
     }, 15);
-    rotateWheel();
+    rotateWheel;
     };
   });
 
@@ -41,7 +41,6 @@ $(document).ready(function(){
       letterArr.push(term.term.charAt(0).toLowerCase());
     });
     paginationArr = $('.paginationLinks').text().split('');
-    console.log(paginationArr, letterArr);
     paginationArr.forEach(function(letter){
       if(!letterArr.includes(letter)){
         $('#'+letter).addClass("disabled")

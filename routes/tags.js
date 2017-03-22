@@ -1,13 +1,12 @@
 'use strict';
-
+var database = require('../database/db.js')
 var express = require('express');
 var router = express.Router();
 
 /* POST to filter by tag. */
 router.post('/search', function(req, res){
-  var db = req.db;
+  var collection = database(req);
   var tag = req.body.tag;
-  var collection = db.get('termcollection');
   collection.find({
       "tags": tag,
   }, function(err, result) {
@@ -19,9 +18,8 @@ router.post('/search', function(req, res){
 
 /* POST to filter by tag. */
 router.post('/filter', function(req, res){
-  var db = req.db;
+  var collection = database(req);
   var tag = req.body.tag;
-  var collection = db.get('termcollection');
   collection.find({
       "tags": tag,
   }, function(err, result) {
