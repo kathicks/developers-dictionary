@@ -12,12 +12,13 @@ window.onload = function() {
   createItems("summ");
   createItems("link");
 
-
+  var indexArr = [];
   var terms;
 
   for (var i = 0; i < 9; i++) {
     var index = "index" + i;
     index = i;
+    indexArr.push(index);
   }
 
   $.ajax({
@@ -46,13 +47,25 @@ window.onload = function() {
         return colour;
       };
 
+      changeIndexRight = function(passedIndex){
+        if (passedIndex < terms.length - 1) {
+          return passedIndex + 1;
+        }
+        else {
+          passedIndex = 0;
+          return passedIndex;
+        }
+      };
+
+      changeContentRight = function(index, term, summary, link) {
+        term.textContent = outputTermString(index);
+        term.setAttribute("fill", outputColour(index));
+        summ.textContent = outputDefString(index);
+        link.setAttribute("xlink:href", outputShowLink(index));
+      }
+
     updateInnerRightHTML1 = function() {
-      if (index0 < terms.length - 1) {
-        index0 = index0 + 1;
-      }
-      else {
-        index0 = 0;
-      }
+      index0 = changeIndexRight(index0);
       term1.textContent = outputTermString(index0);
       term1.setAttribute("fill", outputColour(index0));
       summ1.textContent = outputDefString(index0);
@@ -60,12 +73,7 @@ window.onload = function() {
     };
 
     updateInnerRightHTML2 = function() {
-      if (index1 < terms.length - 1) {
-        index1 = index1 + 1;
-      }
-      else {
-        index1 = 0;
-      }
+      index1 = changeIndexRight(index1);
       term2.textContent = outputTermString(index1);
       term2.setAttribute("fill", outputColour(index1));
       summ2.textContent = outputDefString(index1);
@@ -73,12 +81,7 @@ window.onload = function() {
     };
 
     updateInnerRightHTML3 = function() {
-      if (index2 < terms.length - 1) {
-        index2 = index2 + 1;
-      }
-      else {
-        index2 = 0;
-      }
+      index2 = changeIndexRight(index2);
       term3.textContent = outputTermString(index2);
       term3.setAttribute("fill", outputColour(index2));
       summ3.textContent = outputDefString(index2);
@@ -86,12 +89,7 @@ window.onload = function() {
     };
 
     updateInnerRightHTML4 = function() {
-      if (index3 < terms.length - 1) {
-        index3 = index3 + 1;
-      }
-      else {
-        index3 = 0;
-      }
+      index3 = changeIndexRight(index3);
       term4.textContent = outputTermString(index3);
       term4.setAttribute("fill", outputColour(index3));
       summ4.textContent = outputDefString(index3);
@@ -99,12 +97,7 @@ window.onload = function() {
     };
 
     updateInnerRightHTML5 = function() {
-      if (index4 < terms.length - 1) {
-        index4 = index4 + 1;
-      }
-      else {
-        index4 = 0;
-      }
+      index4 = changeIndexRight(index4);
       term5.textContent = outputTermString(index4);
       term5.setAttribute("fill", outputColour(index4));
       summ5.textContent = outputDefString(index4);
@@ -112,12 +105,7 @@ window.onload = function() {
     };
 
     updateInnerRightHTML6 = function() {
-      if (index5 < terms.length - 1) {
-        index5 = index5 + 1;
-      }
-      else {
-        index5 = 0;
-      }
+      index5 = changeIndexRight(index5);
       term6.textContent = outputTermString(index5);
       term6.setAttribute("fill", outputColour(index5));
       summ6.textContent = outputDefString(index5);
@@ -125,12 +113,7 @@ window.onload = function() {
     };
 
     updateInnerRightHTML7 = function() {
-      if (index6 < terms.length - 1) {
-        index6 = index6 + 1;
-      }
-      else {
-        index6 = 0;
-      }
+      index6 = changeIndexRight(index6);
       term7.textContent = outputTermString(index6);
       term7.setAttribute("fill", outputColour(index6));
       summ7.textContent = outputDefString(index6);
@@ -138,12 +121,7 @@ window.onload = function() {
     };
 
     updateInnerRightHTML8 = function() {
-      if (index7 < terms.length - 1) {
-        index7 = index7 + 1;
-      }
-      else {
-        index7 = 0;
-      }
+      index7 = changeIndexRight(index7);
       term8.textContent = outputTermString(index7);
       term8.setAttribute("fill", outputColour(index7));
       summ8.textContent = outputDefString(index7);
@@ -151,12 +129,7 @@ window.onload = function() {
     };
 
     updateInnerRightHTML9 = function() {
-      if (index8 < terms.length - 1) {
-        index8 = index8 + 1;
-      }
-      else {
-        index8 = 0;
-      }
+      index8 = changeIndexRight(index8);
       term9.textContent = outputTermString(index8);
       term9.setAttribute("fill", outputColour(index8));
       summ9.textContent = outputDefString(index8);
