@@ -1,5 +1,6 @@
 'use strict';
-var database = require('../database/database.js')
+
+var database = require('../database/database.js');
 var express = require('express');
 var router = express.Router();
 
@@ -9,14 +10,14 @@ router.get('/:id', function(req, res) {
     collection.find({
         '_id': req.params.id
     }, function(err, docs) {
-        docs[0].definitions.sort(function(a, b) {
-            return b.rating - a.rating;
-        });
-        var term = docs[0].term;
-        res.render('definitions', {
-            term: docs[0],
-            home: false
-        });
+      if (err) console.log(err);
+      docs[0].definitions.sort(function(a, b) {
+          return b.rating - a.rating;
+      });
+      var term = docs[0].term;
+      res.render('definitions', {
+          term: docs[0],
+      });
     });
 });
 
@@ -38,13 +39,14 @@ router.post('/new', function(req, res) {
         }
     }, function(err, doc) {
         if (err) {
-            res.send("Could not add information to the database");
+          console.log(err);
+          res.send("Could not add information to the database");
         } else {
-            collection.findOne({
-                'term': term
-            }, function(e, docs) {
-                res.redirect("/definitions/" + docs._id);
-            });
+          collection.findOne({
+            'term': term
+          }, function(e, docs) {
+            res.redirect("/definitions/" + docs._id);
+          });
         }
     });
 });
@@ -73,26 +75,27 @@ router.post('/search', function(req, res){
 
 /* POST to upvote definition's rating. */
 router.post('/update/up', function(req, res) {
-    var collection = database(req);
-    var term = req.body.term;
-    var definition = req.body.definition;
-    var rating = req.body.rating;
-    collection.update({
-        "term": term,
-        "definitions.definition": definition
+  var collection = database(req);
+  var term = req.body.term;
+  var definition = req.body.definition;
+  var rating = req.body.rating;
+  collection.update({
+    "term": term,
+    "definitions.definition": definition
+  }, {
+    $inc: {
+      "definitions.$.rating": 1
+    }
+  }, function(err, result) {
+    if (err) console.log(err);
+    collection.findOne({
+      "term": term
     }, {
-        $inc: {
-            "definitions.$.rating": 1
-        }
-    }, function(err, result) {
-        collection.findOne({
-            "term": term
-        }, {
-            "definitions": definition
-        }, function(e, doc) {
-            res.json(doc);
-        });
+      "definitions": definition
+    }, function(err, doc) {
+      res.json(doc);
     });
+  });
 });
 
 /* POST to downvote definition's rating. */
@@ -109,13 +112,14 @@ router.post('/update/down', function(req, res) {
             "definitions.$.rating": -1
         }
     }, function(err, result) {
-        collection.findOne({
-            "term": term
-        }, {
-            "definitions": definition
-        }, function(e, doc) {
-            res.json(doc);
-        });
+      if (err) console.log(err);
+      collection.findOne({
+        "term": term
+      }, {
+        "definitions": definition
+      }, function(e, doc) {
+        res.json(doc);
+      });
     });
 });
 

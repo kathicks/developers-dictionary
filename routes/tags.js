@@ -1,5 +1,6 @@
 'use strict';
-var database = require('../database/database.js')
+
+var database = require('../database/database.js');
 var express = require('express');
 var router = express.Router();
 
@@ -8,11 +9,11 @@ router.post('/search', function(req, res){
   var collection = database(req);
   var tag = req.body.tag;
   collection.find({
-      "tags": tag,
+    "tags": tag,
   }, function(err, result) {
     if (err) console.log(err);
     req.session.results = result;
-    res.json(result)
+    res.json(result);
   });
 });
 
@@ -21,14 +22,14 @@ router.post('/filter', function(req, res){
   var collection = database(req);
   var tag = req.body.tag;
   collection.find({
-      "tags": tag,
+    "tags": tag,
   }, function(err, result) {
     if (err) console.log(err);
     req.session.results = result;
     res.render('index', {
-        term: result,
-        messages: req.flash('errors'),
-        notices: req.flash('notice'),
+      term: result,
+      messages: req.flash('errors'),
+      notices: req.flash('notice')
     });
   });
 });
