@@ -14,6 +14,12 @@ var monk = require('monk');
 var db;
 var uri = 'mongodb://heroku_dl15zr4g:31jaefnakg9h3balg4eegh33qt@ds137220.mlab.com:37220/heroku_dl15zr4g';
 
+var terms = require('./routes/terms');
+var tags = require('./routes/tags');
+var definitions = require('./routes/definitions');
+
+
+
 if (process.env.NODE_ENV === "test") {
   db = monk('localhost:27017/developers-dictionary-test');
 }
@@ -24,7 +30,7 @@ else {
   db = monk('localhost:27017/developers-dictionary-development');
 }
 
-var terms = require('./routes/terms');
+
 
 var app = express();
 
@@ -57,6 +63,8 @@ app.use(function(req,res,next){
 });
 
 app.use('/', terms);
+app.use('/tags', tags);
+app.use('/definitions', definitions);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
