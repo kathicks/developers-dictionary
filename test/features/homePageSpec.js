@@ -59,7 +59,7 @@ describe('index page', function() {
         browser.fill('summary', summary);
         browser.pressButton('Add').then(function() {
             assert.ok(browser.success);
-            assert.equal(browser.text('p#successAlert'), 'Successfully created a new term!');
+            assert.equal(browser.text('span#successAlert'), 'successfully created!');
         }).then(done, done);
     });
 
@@ -73,7 +73,7 @@ describe('index page', function() {
             browser.fill('summary', summary);
             browser.pressButton('Add').then(function() {
                 assert.ok(browser.success);
-                assert.equal(browser.text('p#warningAlert'), 'Must be between 2 and 30 characters long');
+                assert.equal(browser.text('span#warningAlert'), 'must be between 2 and 30 characters long');
             }).then(done, done);
         })
 
@@ -85,7 +85,7 @@ describe('index page', function() {
             browser.fill('summary', "summary");
             browser.pressButton('Add').then(function() {
                 assert.ok(browser.success);
-                assert.equal(browser.text('p#warningAlert'), 'Must be between 25 and 80 characters long');
+                assert.equal(browser.text('span#warningAlert'), 'must be between 42 and 80 characters long');
             }).then(done, done);
         })
 
@@ -101,7 +101,7 @@ describe('index page', function() {
             browser.fill('summary', summary);
             browser.pressButton('Add').then(function() {
                 assert.ok(browser.success);
-                assert.equal(browser.text('p#warningAlert'), 'Already added to the database');
+                assert.equal(browser.text('span#warningAlert'), 'already added to the database');
             }).then(done, done);
 
         })

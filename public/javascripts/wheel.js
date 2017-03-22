@@ -4,35 +4,35 @@ window.onload = function() {
 
   var svg = document.getElementById("svg-menu");
 
-  var term1 = svg.getElementById("term-09");
-  var term2 = svg.getElementById("term-08");
-  var term3 = svg.getElementById("term-07");
-  var term4 = svg.getElementById("term-06");
-  var term5 = svg.getElementById("term-05");
-  var term6 = svg.getElementById("term-04");
-  var term7 = svg.getElementById("term-03");
-  var term8 = svg.getElementById("term-02");
-  var term9 = svg.getElementById("term-01");
+  var term1 = document.getElementById("term-09");
+  var term2 = document.getElementById("term-08");
+  var term3 = document.getElementById("term-07");
+  var term4 = document.getElementById("term-06");
+  var term5 = document.getElementById("term-05");
+  var term6 = document.getElementById("term-04");
+  var term7 = document.getElementById("term-03");
+  var term8 = document.getElementById("term-02");
+  var term9 = document.getElementById("term-01");
 
-  var summ1 = svg.getElementById("summary-9");
-  var summ2 = svg.getElementById("summary-8");
-  var summ3 = svg.getElementById("summary-7");
-  var summ4 = svg.getElementById("summary-6");
-  var summ5 = svg.getElementById("summary-5");
-  var summ6 = svg.getElementById("summary-4");
-  var summ7 = svg.getElementById("summary-3");
-  var summ8 = svg.getElementById("summary-2");
-  var summ9 = svg.getElementById("summary-1");
+  var summ1 = document.getElementById("summary-9");
+  var summ2 = document.getElementById("summary-8");
+  var summ3 = document.getElementById("summary-7");
+  var summ4 = document.getElementById("summary-6");
+  var summ5 = document.getElementById("summary-5");
+  var summ6 = document.getElementById("summary-4");
+  var summ7 = document.getElementById("summary-3");
+  var summ8 = document.getElementById("summary-2");
+  var summ9 = document.getElementById("summary-1");
 
-  var link1 = svg.getElementById("item-9");
-  var link2 = svg.getElementById("item-8");
-  var link3 = svg.getElementById("item-7");
-  var link4 = svg.getElementById("item-6");
-  var link5 = svg.getElementById("item-5");
-  var link6 = svg.getElementById("item-4");
-  var link7 = svg.getElementById("item-3");
-  var link8 = svg.getElementById("item-2");
-  var link9 = svg.getElementById("item-1");
+  var link1 = document.getElementById("item-9");
+  var link2 = document.getElementById("item-8");
+  var link3 = document.getElementById("item-7");
+  var link4 = document.getElementById("item-6");
+  var link5 = document.getElementById("item-5");
+  var link6 = document.getElementById("item-4");
+  var link7 = document.getElementById("item-3");
+  var link8 = document.getElementById("item-2");
+  var link9 = document.getElementById("item-1");
 
   var terms;
 

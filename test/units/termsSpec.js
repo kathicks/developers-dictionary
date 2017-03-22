@@ -54,9 +54,11 @@ describe('Developers Dictionary', function() {
                 should.exists(insertion);
                 done();
             });
-            terms.find({}).should.eventually.have.length(1);
-        });
+            terms.find({}, function(err, docs){
+                docs.should.eventually.have.length(1);
+            });
     });
+});
 
     describe('Updating the database', function() {
 
