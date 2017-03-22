@@ -47,7 +47,7 @@ window.onload = function() {
   var index8 = 8;
 
   $.ajax({
-    url: "/wheel",
+    url: "/show",
     method: "GET",
   }).done(function(response) {
 
@@ -65,7 +65,7 @@ window.onload = function() {
       };
       outputShowLink = function(index){
         var id = terms[index]._id;
-        return "/show/" + id;
+        return "/definitions/" + id;
       };
       outputColour = function(index){
         var colour = colours[index % colours.length];

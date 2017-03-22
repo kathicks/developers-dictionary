@@ -32,7 +32,7 @@ $( ".paginationLinks" ).click(function(event) {
 
 $(document).ready(function(){
   $.ajax({
-    url: "/wheel",
+    url: "/show",
     method: "GET",
   }).done(function(response) {
     terms = response;

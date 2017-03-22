@@ -79,7 +79,7 @@ $(".dropdown").on('click', '.elem', function(event){
   $(".filter-placeholder").text(value);
 
   $.ajax({
-    url: "/wheel",
+    url: "/tags/search",
     method: "POST",
     data: data
   }).done(function(response){
@@ -96,7 +96,7 @@ $(".dropdown").on('click', '.elem', function(event){
     };
     outputShowLink = function(index){
       var id = terms[index]._id;
-      return "/show/" + id;
+      return "/definitions/" + id;
     };
     outputColour = function(index){
       var colour = colours[index % colours.length];
