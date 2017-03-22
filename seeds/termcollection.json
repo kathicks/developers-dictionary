@@ -37,20 +37,30 @@
         }]
     },
     {
-          "term": "AJAX",
-          "summary": "The use of the XMLHttpRequest objects to communicate with server-side scripts",
-          "tags": ["World Wide Web"],
-          "definitions": [{
-              "definition": "It can send as well as receive information in a variety of formats, including JSON, XML, HTML, and even text files. AJAX’s most appealing characteristic, however, is its 'asynchronous' nature, which means it can do all of this without having to refresh the page. This lets you update portions of a page based upon user events.",
-              "source": "https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started",
-              "rating": 0
-          },{
-              "definition": "AJAX is a technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Script. Conventional web applications transmit information to and from the server using synchronous requests. It means you fill out a form, hit submit, and get directed to a new page with new information from the server. However with AJAX, when you hit submit, JavaScript will make a request to the server, interpret the results, and update the current screen. In the purest sense, the user would never know that anything was even transmitted to the server.",
-              "source": "https://www.tutorialspoint.com/ajax/what_is_ajax.htm",
-              "rating": 0
-          }]
-      },
-  {
+        "term": "AJAX",
+        "summary": "The use of the XMLHttpRequest objects to communicate with server-side scripts",
+        "tags": ["World Wide Web"],
+        "definitions": [{
+            "definition": "It can send as well as receive information in a variety of formats, including JSON, XML, HTML, and even text files. AJAX’s most appealing characteristic, however, is its 'asynchronous' nature, which means it can do all of this without having to refresh the page. This lets you update portions of a page based upon user events.",
+            "source": "https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started",
+            "rating": 0
+        },{
+            "definition": "AJAX is a technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Script. Conventional web applications transmit information to and from the server using synchronous requests. It means you fill out a form, hit submit, and get directed to a new page with new information from the server. However with AJAX, when you hit submit, JavaScript will make a request to the server, interpret the results, and update the current screen. In the purest sense, the user would never know that anything was even transmitted to the server.",
+            "source": "https://www.tutorialspoint.com/ajax/what_is_ajax.htm",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Alcatraz",
+        "summary": "The package manager for Xcode",
+        "tags": ["Package Manager"],
+        "definitions": [{
+            "definition": "Alcatraz is an open-source package manager for Xcode. It lets you discover and install plugins, templates and color schemes without the need for manually cloning or copying files. It installs itself as a part of Xcode and it feels like home.",
+            "source": "http://alcatraz.io/",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Angular",
         "summary": "A structural framework for dynamic web apps",
         "tags": ["Framework", "JavaScript"],
@@ -72,9 +82,23 @@
             "definition": "A good API makes it easier to develop a program by providing all the building blocks. A programmer then puts the blocks together.",
             "source": "http://www.webopedia.com/TERM/A/API.html",
             "rating": 0
-        },{
+        }, {
             "definition": "It’s like the connectors on the back of your TV. They let you plug in a device from another manufacturer (DVD player, games console, set-top box) and both the TV and the device know what to do next. The connectors are the interface that lets one machine talk to another.",
             "source": "https://sidewaysdictionary.com/#/term/api",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "APM",
+        "summary": "A package manager for Atom",
+        "tags": ["Package Manager"],
+        "definitions": [{
+            "definition": "A nice convenience of using Atom is that you can use their built in Atom Package Manager. It behaves in a very similar way to NPM (Node Package Manager).",
+            "source": "https://www.extreme-creations.co.uk/blog/why-i-use-githubs-code-editor-atom/",
+            "rating": 0
+        }, {
+            "definition": "Atom comes with a few built-in packages, such as integration with Git and tree-view. However, for the purposes of development you will definitely need other packages. Some are great to help organize your messy code, others to help you have better access to your files without leaving Atom.",
+            "source": "http://www.hongkiat.com/blog/useful-atom-packages/",
             "rating": 0
         }]
     },
@@ -85,6 +109,16 @@
         "definitions": [{
             "definition": "Atom is built with HTML, JavaScript, CSS, and Node.js integration. It's easy to customize and style Atom. You can tweak the look and feel of your UI with CSS/Less and add major features with HTML and JavaScript. You choose from thousands of open source packages that add new features and functionality to Atom—or build a package from scratch and publish it for everyone else to use.",
             "source": "https://atom.io/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "AWS",
+        "summary": "Offers a suite of cloud computing services that make up a computing platform",
+        "tags": ["Service"],
+        "definitions": [{
+            "definition": "Amazon Web Services (AWS), a subsidiary of Amazon.com, offers a suite of cloud computing services that make up an on-demand computing platform. These services operate from 16 geographical regions across the world. They include Amazon Elastic Compute Cloud, also known as 'EC2', and Amazon Simple Storage Service, also known as 'S3'. As of 2016 AWS has more than 70 services, spanning a wide range, including compute, storage, networking, database, analytics, application services, deployment, management, mobile, developer tools and tools for the Internet of things. Amazon markets AWS as a service to provide large computing capacity quicker and cheaper than a client company building an actual physical server farm.",
+            "source": "https://en.wikipedia.org/wiki/Amazon_Web_Services",
             "rating": 0
         }]
     },
@@ -103,6 +137,16 @@
         }]
     },
     {
+        "term": "BitBucket",
+        "summary": "A version control system that makes it easy for you to collaborate with your team",
+        "tags": ["Service"],
+        "definitions": [{
+            "definition": "Bitbucket is a system for hosting version control repositories owned by Atlassian. It is a competitor to github.",
+            "source": "https://www.quora.com/What-is-bitbucket",
+            "rating": 0
+        }]
+    },
+    {
         "term": "BCrypt",
         "summary": "A cross platform file encryption utility and password hashing algorithm",
         "tags": ["Service"],
@@ -111,7 +155,7 @@
             "source": "http://bcrypt.sourceforge.net",
             "rating": 0
         }, {
-            "definition": "bcrypt is a password hashing function designed by Niels Provos and David Mazières, based on the Blowfish cipher, and presented at USENIX in 1999.[1] Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to brute-force search attacks even with increasing computation power.",
+            "definition": "bcrypt is a password hashing function designed by Niels Provos and David Mazières, based on the Blowfish cipher, and presented at USENIX in 1999. Besides incorporating a salt to protect against rainbow table attacks, bcrypt is an adaptive function: over time, the iteration count can be increased to make it slower, so it remains resistant to brute-force search attacks even with increasing computation power.",
             "source": "https://en.wikipedia.org/wiki/Bcrypt",
             "rating": 0
         }]
@@ -239,6 +283,16 @@
         }]
     },
     {
+        "term": "Composer",
+        "summary": "The dependency manager for PHP",
+        "tags": ["Package Manager"],
+        "definitions": [{
+            "definition": "Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and helps to manage those dependencies. Dependencies are managed on a per-project basis, installing them in a directory inside your project. For convenience some dependencies can be installed globally (e.g., Symfony project installer).",
+            "source": "http://www.ifdattic.com/how-to-use-composer/",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Cookies",
         "summary": "A small amount of data generated by a website and saved by your web browser",
         "tags": ["World Wide Web"],
@@ -263,6 +317,16 @@
         "definitions": [{
             "definition": "Coveralls automatically collects your code coverage data, uploads it to their servers and gives you a nice interface to dig into it. They even show you trends and changes on coverage for all of your files.",
             "source": "https://blog.codeship.com/codeship-code-coverage-coveralls/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Cloud 9",
+        "summary": "A 100 percent online editor which combines online editing with a Docker UBUNTU workspace",
+        "tags": ["Software"],
+        "definitions": [{
+            "definition": "Cloud9 IDE is a 100 percent online editor which combines online editing with a Docker UBUNTU workspace. The modified Language Tools can handle over 40 languages including Ruby, Python, JavaScript, Go and PHP. With Cloud9 IDE you can create and test you WordPress, Meteor, HTML5 and Django websites on over 300 browser combinations. Compile SASS, check server output and Run the apps you are working on with the Terminals and Runners built-in for your convenience. Forget the days when you code only copy and paste codes, you can now clone your entire IDE (environment) using Cloud9 IDE. You can even share your IDE, preview and workspace according to your wish, control what you share, replay edits and see your codes any time you wish with this complete online software development tool. The debugger enables the users to set breakpoints and inspect variables of any JS/Node.js app. You may as well use the app to jump right to the Immediate Window to execute code during a debugging session.",
+            "source": "http://www.webbuildersguide.com/website-builder-articles/top-10-software-development-tools/",
             "rating": 0
         }]
     },
@@ -295,6 +359,16 @@
         }]
     },
     {
+        "term": "D3",
+        "summary": "Javascript library for creating data visualizations in the browser",
+        "tags": ["Library"],
+        "definitions": [{
+            "definition": "D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. It is an extremely flexible low-level visualization library with a jQuery-like API for mapping data to HTML and SVG documents. It contains a wealth of helpful mathematical functions for data transformation and physics calculations, although most of it’s power comes from manipulating geometries and paths in SVG.",
+            "source": "https://www.sitepoint.com/d3-js-data-visualizations/",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Datamapper",
         "summary": "An Object Relational Mapper written in Ruby",
         "tags": ["Database"],
@@ -305,8 +379,18 @@
         }]
     },
     {
+        "term": "DDP",
+        "summary": "DDP is the heart of MeteorJS and it’s the protocol Meteor uses to communicate between the client and the server",
+        "tags": ["Protocol"],
+        "definitions": [{
+            "definition": "A new protocol created in connection with Meteor. The DDP protocol uses websockets to create a consistent connection between the client and the server. This constant connection let’s websites and data on those websites update in real-time without refreshing your browser.",
+            "source": "https://differential.com/insights/14-technologies-every-web-developer-should-be-able-to-explain/",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Dependency Injection",
-        "summary": "A technique whereby the services provided by one object are passed (injected) to another object which uses it.",
+        "summary": "A technique whereby the services provided by one object are passed (injected) to another object which uses it",
         "tags": ["Pattern"],
         "definitions": [{
             "definition": "In software engineering, dependency injection is a technique whereby one object supplies the dependencies of another object. A dependency is an object that can be used (a service). An injection is the passing of a dependency to a dependent object (a client) that would use it.",
@@ -319,12 +403,50 @@
         }]
     },
     {
+        "term": "Dependency Inversion",
+        "summary": "Reverses the way in which dependencies are managed in software systems",
+        "tags": ["Principle"],
+        "definitions": [{
+            "definition": "Dependency inversion principle is a software design principle which provides us the guidelines to write loosely coupled classes. According to the definition of Dependency inversion principle: High-level modules should not depend on low-level modules. Both should depend on abstractions, and abstractions should not depend upon details. Details should depend upon abstractions.",
+            "source": "https://www.codeproject.com/Articles/615139/An-Absolute-Beginners-Tutorial-on-Dependency-Inver",
+            "rating": 0
+        }, {
+            "definition": "It would be unjust to tell you that any one of the SOLID principles is more important than another. However, probably none of the others have such an immediate and profound effect on your code than the Dependency Inversion Principle, or DIP in short. If you find the other principles hard to grasp or apply, start with this one and apply the rest on code that already respects DIP.",
+            "source": "https://code.tutsplus.com/tutorials/solid-part-4-the-dependency-inversion-principle--net-36872",
+            "rating": 0
+        }, {
+            "definition": "Rather than having the higher-level module directly depending on lower-level modules to carry out their responsibilities, this principle instead makes the higher-level module rely on an ‘abstraction’ or an ‘abstract interface’ representing lower-level module. The actual implementation of lower level module can then vary. As long as the lower-level module’s implementation is accessible to the higher-level module via the abstract interface, the higher-level module is able to invoke it.",
+            "source": "http://www.javabrahman.com/programming-principles/dependency-inversion-principle-example-java/",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Django",
         "summary": "An open-source web framework written in Python which encourages rapid development and clean, pragmatic design",
         "tags": ["Framework"],
         "definitions": [{
             "definition": "A free, open-source and scalable high-level Python web framework, which encourages rapid development and clean, pragmatic design.",
             "source": "https://www.djangoproject.com",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "DNS",
+        "summary": "Is a decentralized naming system for computers, services, or other resources connected to the Internet",
+        "tags": ["Protocol"],
+        "definitions": [{
+            "definition": "DNS servers answer questions from both inside and outside their own domains. When a server receives a request from outside the domain for information about a name or address inside the domain, it provides the authoritative answer. When a server receives a request from inside its own domain for information about a name or address outside that domain, it passes the request out to another server -- usually one managed by its internet service provider. If that server does not know the answer or the authoritative source for the answer, it will reach out to the DNS servers for the top-level domain -- e.g., for all of .com or .edu. Then, it will pass the request down to the authoritative server for the specific domain -- e.g., techtarget.com or stkate.edu; the answer flows back along the same path.",
+            "source": "https://meteorhacks.com/introduction-to-ddp/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Docker",
+        "summary": "An open platform to build, ship, and run distributed applications",
+        "tags": ["Service"],
+        "definitions": [{
+            "definition": "Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package. By doing so, thanks to the container, the developer can rest assured that the application will run on any other Linux machine regardless of any customized settings that machine might have that could differ from the machine used for writing and testing the code.",
+            "source": "https://opensource.com/resources/what-docker",
             "rating": 0
         }]
     },
@@ -403,6 +525,16 @@
         }]
     },
     {
+        "term": "Factory Method",
+        "summary": "Lets a class defer instantiation to subclasses",
+        "tags": ["Pattern"],
+        "definitions": [{
+            "definition": "Also known as Virtual Constructor, the Factory Method is related to the idea on which libraries work: a library uses abstract classes for defining and maintaining relations between objects. One type of responsibility is creating such objects. The library knows when an object needs to be created, but not what kind of object it should create, this being specific to the application using the library. The Factory method works just the same way: it defines an interface for creating an object, but leaves the choice of its type to the subclasses, creation being deferred at run-time.",
+            "source": "http://www.oodesign.com/factory-method-pattern.html",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Foundation",
         "summary": "A front-end framework with a responsive grid and HTML/CSS components",
         "tags": ["Framework"],
@@ -449,6 +581,16 @@
         "definitions": [{
             "definition": "A web-based version control repository and Internet hosting service, offering distributed version control, source code management (SCM), access control and collaboration features including bug tracking, feature requests, task management and wikis for every project.",
             "source": "https://en.wikipedia.org/wiki/GitHub",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Gitlab",
+        "summary": "Is a web-based Git repository manager with wiki and issue tracking features",
+        "tags": ["Service"],
+        "definitions": [{
+            "definition": "GitLab is an application to code, test, and deploy code together. It provides Git repository management with fine grained access controls, code reviews, issue tracking, activity feeds, wikis, and continuous integration.",
+            "source": "https://about.gitlab.com/about/",
             "rating": 0
         }]
     },
@@ -525,12 +667,52 @@
         }]
     },
     {
+        "term": "IMAP",
+        "summary": "Internet Message Access Protocol",
+        "tags": ["Testing"],
+        "definitions": [{
+            "definition": "IMAP is a standard email protocol that stores email messages on a mail server, but allows the end user to view and manipulate the messages as though they were stored locally on the end user's computing device(s). This allows users to organize messages into folders, have multiple client applications know which messages have been read, flag messages for urgency or follow-up and save draft messages on the server.",
+            "source": "http://searchexchange.techtarget.com/definition/IMAP",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Integration Testing",
         "summary": "A software development process that tests parts of a program in groups",
         "tags": ["Testing"],
         "definitions": [{
             "definition": "Integration testing, also known as integration and testing (I&T), is a software development process which program units are combined and tested as groups in multiple ways. In this context, a unit is defined as the smallest testable part of an application. Integration testing can expose problems with the interfaces among program components before trouble occurs in real-world program execution. Integration testing is a component of Extreme Programming (XP), a pragmatic method of software development that takes a meticulous approach to building a product by means of continual testing and revision.",
             "source": "http://searchsoftwarequality.techtarget.com/definition/integration-testing",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Interface Segregation",
+        "summary": "No client should depend on methods it does not use",
+        "tags": ["Principle"],
+        "definitions": [{
+            "definition": "The interface-segregation principle (ISP) states that no client should be forced to depend on methods it does not use. ISP splits interfaces that are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. Such shrunken interfaces are also called role interfaces. ISP is intended to keep a system decoupled and thus easier to refactor, change, and redeploy. ISP is one of the five SOLID principles of object-oriented design.",
+            "source": "https://en.wikipedia.org/wiki/Interface_segregation_principle",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "IP",
+        "summary": "Is an identifier assigned to each computer and other device (e.g., printer, router, mobile device, etc.) connected to a TCP/IP network",
+        "tags": ["Protocol"],
+        "definitions": [{
+            "definition": "Internet Protocol Address (or IP Address) is an unique address that computing devices such as personal computers, tablets, and smartphones use to identify itself and communicate with other devices in the IP network. Any device connected to the IP network must have an unique IP address within the network. An IP address is analogous to a street address or telephone number in that it is used to uniquely identify an entity.",
+            "source": "https://www.iplocation.net/find-ip-address",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Isotope",
+        "summary": "Filter & sort magical layouts",
+        "tags": ["Library"],
+        "definitions": [{
+            "definition": "I’m sure many of you have heard of jQuery Masonry. It “Arranges elements vertically, positioning each element in the next open spot in the grid. The result minimizes vertical gaps between elements of varying height, just like a mason fitting stones in a wall.” Now, I’m not going to lie to you, masonry is definitely an amazing plugin. However, it is missing some functionality that would definitely not be extra, such as advanced filtering and layout modes. Isotope builds upon Masonry, and is basically an enhanced version of it with more features and functionality.",
+            "source": "http://www.designlunatic.com/2011/08/isotope-tutorial/",
             "rating": 0
         }]
     },
@@ -561,6 +743,30 @@
         "definitions": [{
             "definition": "JavaScript (JS) is a lightweight interpreted or JIT-compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as node.js and Apache CouchDB. JS is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles.",
             "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Jenkins",
+        "summary": "Leading open source continuous integration (CI) engine",
+        "tags": ["Software"],
+        "definitions": [{
+            "definition": "Jenkins is a powerful application that allows continuous integration and continuous delivery of projects, regardless of the platform you are working on. It is a free source that can handle any kind of build or continuous integration. You can integrate Jenkins with a number of testing and deployment technologies.",
+            "source": "http://www.tutorialspoint.com/jenkins/",
+            "rating": 0
+        }, {
+            "definition": "Continuous Integration is a development practice that requires developers to integrate code into a shared repository at regular intervals. This concept was meant to remove the problem of finding later occurrence of issues in the build lifecycle. Continuous integration requires the developers to have frequent builds. The common practice is that whenever a code commit occurs, a build should be triggered.",
+            "source": "http://www.tutorialspoint.com/jenkins/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Jira",
+        "summary": "A powerful project management tool also used for bug tracking and issue tracking",
+        "tags": ["Software"],
+        "definitions": [{
+            "definition": "JIRA is a tool developed by Australian Company Atlassian. It is used for bug tracking, issue tracking, and project management. The name 'JIRA' is actually inherited from the Japanese word 'Gojira' which means 'Godzilla'. The basic use of this tool is to track issues, and bugs related to your software and Mobile apps",
+            "source": "http://www.guru99.com/jira-tutorial-a-complete-guide-for-beginners.html",
             "rating": 0
         }]
     },
@@ -625,6 +831,16 @@
         }]
     },
     {
+        "term": "Lottie",
+        "summary": "After Effects plugin for exporting animations to svg/canvas/html + js",
+        "tags": ["Library"],
+        "definitions": [{
+            "definition": "An iOS, Android, and React Native library that renders After Effects animations in real time, and allows native apps to use animations as easily as they use static assets. Lottie uses animation data exported as JSON files from an open-source After Effects extension called Bodymovin. The extension is bundled with a JavaScript player that can render the animations on the web. Since February of 2015, Bodymovin’s creator, Hernan Torrisi, has built a solid foundation by adding features and improvements to the plugin on a monthly basis. Lottie allows engineers to build richer animations without the painstaking overhead of re-writing them.",
+            "source": "http://airbnb.design/introducing-lottie/",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Markup Language",
         "summary": "A language used to specify the layout and style of a text file.",
         "tags": ["Language"],
@@ -659,6 +875,16 @@
         "definitions": [{
             "definition": "Mocking is primarily used in unit testing. An object under test may have dependencies on other (complex) objects. To isolate the behaviour of the object you want to test you replace the other objects by mocks that simulate the behavior of the real objects. This is useful if the real objects are impractical to incorporate into the unit test. In short, mocking is creating objects that simulate the behaviour of real objects.",
             "source": "http://stackoverflow.com/a/2666006",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Moment",
+        "summary": "Parse, validate, manipulate, and display dates in JavaScript",
+        "tags": ["Library"],
+        "definitions": [{
+            "definition": "Don’t you just hate working with JavaScript’s date and time functions? Have you seen how much code it takes to simply print how much time has passed since a certain event? Luckily for you, there is a small JavaScript library called moment.js that you can drop in your website folder and use right away.",
+            "source": "http://tutorialzine.com/2012/08/quick-tip-handle-date-and-time-like-a-boss-with-moment-js/",
             "rating": 0
         }]
     },
@@ -723,6 +949,16 @@
         }]
     },
     {
+        "term": "NuGet Home",
+        "summary": "Package manager for .NET developers",
+        "tags": ["Package Manager"],
+        "definitions": [{
+            "definition": "NuGet is a package management system for .NET. The goal of NuGet is to make the process of incorporating third party libraries into your solutions as simple as possible. Package Management itself is not a new concept. From Apt and ""deity"" before it at the system-level on *nix, to Ruby Gems, Maven, Synaptic, portage, dpkg, rpm and others, it's a well understood space. There are package managers for operating systems that install machine-wide libraries, and there are package managers for developers and their projects that manage dependencies and install libraries. NuGet takes inspiration from Ruby Gems and adds some .NET specifics.",
+            "source": "https://www.hanselman.com/blog/IntroducingNuGetPackageManagementForNETAnotherPieceOfTheWebStack.aspx",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Objective-C",
         "summary": "A programming language that adds Smalltalk-style messaging to the C programming language",
         "tags": ["Language"],
@@ -743,6 +979,16 @@
         }]
     },
     {
+        "term": "Open Close",
+        "summary": "Software entities (classes, etc.) should be open for extension, but closed for modification",
+        "tags": ["Principle"],
+        "definitions": [{
+            "definition": "The Open Close Principle states that the design and writing of the code should be done in a way that new functionality should be added with minimum changes in the existing code. The design should be done in a way to allow the adding of new functionality as new classes, keeping as much as possible existing code unchanged.",
+            "source": "http://www.oodesign.com/open-close-principle.html",
+            "rating": 0
+        }]
+    },
+    {
         "term": "ORM",
         "summary": "The layer between the database and your application",
         "tags": ["Database"],
@@ -759,6 +1005,16 @@
         "definitions": [{
             "definition": "Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. While reviewing, the observer also considers the 'strategic' direction of the work, coming up with ideas for improvements and likely future problems to address. This frees the driver to focus all of his or her attention on the 'tactical' aspects of completing the current task, using the observer as a safety net and guide.",
             "source": "https://en.wikipedia.org/wiki/Pair_programming",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Pip",
+        "summary": "The package manager for Python",
+        "tags": ["Package Manager"],
+        "definitions": [{
+            "definition": "Pip is a package management system used to install and manage software packages written in Python. Many packages can be found in the Python Package Index (PyPI). pip is a recursive acronym that can stand for either 'Pip Installs Packages' or Pip Installs Python",
+            "source": "https://en.wikipedia.org/wiki/Pip_(package_manager)",
             "rating": 0
         }]
     },
@@ -789,6 +1045,16 @@
         "definitions": [{
             "definition": "In object-oriented programming, a protocol or interface is a common means for unrelated objects to communicate with each other. These are definitions of methods and values which the objects agree upon in order to co-operate.",
             "source": "https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Prototype",
+        "summary": "Is a rudimentary working model of a product or information system",
+        "tags": ["Pattern"],
+        "definitions": [{
+            "definition": "Prototype is usually built for demonstration purposes or as part of the development process. In the systems development life cycle (SDLC) Prototyping Model, a basic version of the system is built, tested, and then reworked as necessary until an acceptable prototype is finally achieved from which the complete system or product can now be developed.",
+            "source": "http://searchmanufacturingerp.techtarget.com/definition/prototype",
             "rating": 0
         }]
     },
@@ -897,6 +1163,16 @@
         }]
     },
     {
+        "term": "Rubygems",
+        "summary": "Library packaging and distribution for Ruby",
+        "tags": ["Package Manager"],
+        "definitions": [{
+            "definition": "RubyGems is a package management framework for Ruby. A gem is a packaged Ruby application or library. Gems come from a wonderful pool of open source love but can be a headache to track and integrate.",
+            "source": "http://railsapps.github.io/managing-rails-versions-gems.html",
+            "rating": 0
+        }]
+    },
+    {
         "term": "RVM",
         "summary": "A command-line tool for easily installing, managing, and working with multiple ruby environments",
         "tags": ["Package Manager"],
@@ -965,12 +1241,32 @@
         }]
     },
     {
+        "term": "Singleton",
+        "summary": "Restricts the instantiation of a class to one object",
+        "tags": ["Pattern"],
+        "definitions": [{
+            "definition": "Sometimes it's important to have only one instance for a class. For example, in a system there should be only one window manager (or only a file system or only a print spooler). Usually singletons are used for centralized management of internal or external resources and they provide a global point of access to themselves. The singleton pattern is one of the simplest design patterns: it involves only one class which is responsible to instantiate itself, to make sure it creates not more than one instance; in the same time it provides a global point of access to that instance. In this case the same instance can be used from everywhere, being impossible to invoke directly the constructor each time.",
+            "source": "http://www.oodesign.com/singleton-pattern.html",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Sinatra",
         "summary": "A free and open source software web application library written in Ruby",
         "tags": ["Library", "World Wide Web"],
         "definitions": [{
             "definition": "A free and open source web application framework. Rather than following the typical model-view-controller pattern used in other frameworks like Ruby on Rails, it focuses on allowing the quick creation of web applications in Ruby with minimal effort.",
             "source": "https://en.wikipedia.org/wiki/Sinatra_(software)",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Slack",
+        "summary": "An instant messaging and collaboration system on steroids",
+        "tags": ["Software"],
+        "definitions": [{
+            "definition": "At first glance, Slack appears to be yet another online instant messaging and collaboration solution. However, a closer look will reveal revolutionary innovation under the hood. Integration is what catapults Slack into a category all its own. The solution enables you to centralize all your notifications, from sales to tech support, social media and more, into one searchable place where your team can discuss and take action on each.",
+            "source": "https://smallbiztrends.com/2015/12/slack-use-team.html",
             "rating": 0
         }]
     },
@@ -1015,6 +1311,16 @@
         }, {
             "definition": "The Single Responsibility Principle (SRP) states that there should never be more than one reason for a class to change. This means that you should design your classes so that each has a single purpose. This does not mean that each class should have only one method but that all of the members in the class are related to the class's primary function. Where a class has multiple responsibilities, these should be separated into new classes.",
             "source": "http://www.blackwasp.co.uk/SOLID.aspx",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Sublime",
+        "summary": "Sophisticated text editor for code, markup and prose",
+        "tags": ["Software"],
+        "definitions": [{
+            "definition": "Sublime Text is a cross-platform source code editor with a Python application programming interface (API). It natively supports many programming languages and markup languages, and its functionality can be extended by users with plugins, typically community-built and maintained under free-software licenses.",
+            "source": "http://www.tutorialspoint.com/articles/how-to-install-sublime-text-editor-on-ubuntu",
             "rating": 0
         }]
     },
@@ -1141,6 +1447,20 @@
         }, {
             "definition": "Extreme Programming is one of several popular Agile Processes. Extreme Programming improves a software project in five essential ways; communication, simplicity, feedback, respect, and courage. Extreme Programmers constantly communicate with their customers and fellow programmers. They keep their design simple and clean. They get feedback by testing their software starting on day one. They deliver the system to the customers as early as possible and implement changes as suggested.",
             "source": "http://www.extremeprogramming.org",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Zeplin",
+        "summary": "Collaboration tool for styleguides between designers and developers",
+        "tags": ["Software"],
+        "definitions": [{
+            "definition": "Zeplin is a collaboration tool for UI designers and front end developers. It goes beyond the design workflow and helps teams with the design hand-off. It allows designers to upload their wireframes or visual designs straight from Sketch and add them to project folders in Zeplin. The best thing?  Annotations will automatically be added to the designs (sizes, colours, margins and even CSS suggestions for certain elements) which will leave you with an online repository that the whole team can contribute to.",
+            "source": "https://webdesign.tutsplus.com/articles/sketch-and-zeplin-helping-designers-and-developers-collaborate--cms-26421",
+            "rating": 0
+        }, {
+            "definition": "Pairs with an interface design program like Sketch or Photoshop, allowing designers to document and “publish” UI details for easy review by engineers. In one form or another, these tools let designers generate CSS specs automatically, add manual notes, and define export sizes for visual assets. Engineers, and other team members can then “review” these enhanced design deliverables and quickly access the build specs they need. Launched in July 2015, Zeplin was one of the first tools in this space and has grown steadily with the support of a small, dedicated team. Zeplin is a separate app (requiring a free account) with Sketch and Photoshop plugins that allow simple exports into the tool. The free plan is well suited to most situations and ownership can be easily transferred between teams. Designers will need the desktop app (and Sketch or Photoshop) to upload designs, but engineers can access everything they need via the free web app. After everyone has an account, sharing design specs is as easy as sending a link.",
+            "source": "https://cantina.co/zeplin-sketch-measure-and-invision-inspect/",
             "rating": 0
         }]
     }
