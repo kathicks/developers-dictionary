@@ -6,6 +6,10 @@
 
 Developer's Dictionary was built by [Mica Whitby](https://github.com/MicaW), [Sho Marovatsanga](https://github.com/Taziva), [Kat Hicks](https://github.com/KatHicks), [Tamar Lehmann](https://github.com/tamarlehmann), [Eleanor Kavanagh-Brown](https://github.com/bnzene) and [Barbara Shinkarenko](https://github.com/varvarra) in 8 days as their final project for Makers Academy.
 
+## Using our app
+
+- You can view our app at [www.developers-dictionary.co.uk](http://www.developers-dictionary.co.uk/)
+
 ## Technologies
 
 - Built using `Node.js` and `Express`
