@@ -31,8 +31,7 @@ router.get('/wheel', function(req, res) {
         if(termA < termB) return -1;
         if(termA > termB) return 1;
         return 0;
-      })
-      console.log(docs)
+      });
       res.json(docs);
     });
 });
