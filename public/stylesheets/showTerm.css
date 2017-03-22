@@ -52,6 +52,10 @@
   font-weight: 100;
 }
 
+.tag-button:focus, .tag-button:active, .tag-button:active:focus {
+outline: none;
+}
+
 .jumbotron {
     text-align: center;
     color: #fff;

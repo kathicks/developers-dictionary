@@ -269,7 +269,7 @@
     {
         "term": "CSS",
         "summary": "A language that describes the style of an HTML document",
-        "tags": ["Language"],
+        "tags": ["Language", "File Type"],
         "definitions": [{
             "definition": "Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language. Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML, the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media. Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages, user interfaces for web applications, and user interfaces for many mobile applications.",
             "source": "https://en.wikipedia.org/wiki/Cascading_Style_Sheets",
@@ -315,16 +315,6 @@
         }, {
             "definition": "Dependency injection is a style of object configuration in which an objects fields and collaborators are set by an external entity. In other words objects are configured by an external entity. Dependency injection is an alternative to having the object configure itself.",
             "source": "http://tutorials.jenkov.com/dependency-injection/index.html",
-            "rating": 0
-        }]
-    },
-    {
-        "term": "Deployment",
-        "summary": "All of the activities that make a software system available for use",
-        "tags": ["Deployment"],
-        "definitions": [{
-            "definition": "The general deployment process consists of several interrelated activities with possible transitions between them. These activities can occur on both the producer and consumer side. Deployment encompasses the activities which come after the development process, ranging from release to installation on the end user's machine.",
-            "source": "https://en.wikipedia.org/wiki/Software_deployment",
             "rating": 0
         }]
     },
@@ -395,7 +385,7 @@
     {
         "term": "ERB",
         "summary": "A Ruby templating language that allows you to template Ruby into HTML",
-        "tags": ["Language", "World Wide Web"],
+        "tags": ["Language", "World Wide Web", "File Type"],
         "definitions": [{
             "definition": "ERB (Embedded RuBy) is a feature of Ruby that enables you to conveniently generate any kind of text, in any quantity, from templates. The templates themselves combine plain text with Ruby code for variable substitution and flow control, making them easy to write and maintain. Although ERB is most commonly seen generating Web pages, it is also used to produce XML documents, RSS feeds, source code, and other forms of structured text file. It can be extremely valuable when you need to create files which include many repetitions of a standard pattern, such as unit test suites.",
             "source": "http://www.stuartellis.name/articles/erb/",
@@ -475,7 +465,7 @@
     {
         "term": "HAML",
         "summary": "A templating system that avoids writing the inline code in a web document",
-        "tags": ["Language", "World Wide Web"],
+        "tags": ["Language", "World Wide Web", "File Type"],
         "definitions": [{
             "definition": "Haml (HTML Abstraction Markup Language) is a templating system to avoid writing the inline code in a web document and make HTML easy and clean. Haml gives the flexibility to have some dynamic content in HTML. Similar to other web languages like PHP, ASP, JSP and template systems like eRuby, Haml also embeds some code that gets executed during runtime and generates HTML code in order to provide some dynamic content. In order to run Haml code, files need to have .haml extension. These files are similar to .erb or eRuby files which also help to embed Ruby code while developing a web application. While parsing coding comments Haml uses the same rules as Ruby 1.9 or later. Haml understands only ASCII compatible encodings like UTF-8 but does not understand UTF-16 or UTF-32, since these are not compatible with ASCII.[3][4] Haml can be used in command line, as a separate Ruby module or can be used in a Ruby on Rails application making Haml suitable for a wide range of applications.",
             "source": "https://en.wikipedia.org/wiki/Haml",
@@ -485,7 +475,7 @@
     {
         "term": "Heroku",
         "summary": "A cloud platform that allows instant deployment of web applications",
-        "tags": ["Deployment", "World Wide Web", "Service"],
+        "tags": ["World Wide Web", "Service"],
         "definitions": [{
             "definition": "A cloud Platform-as-a-Service (PaaS) supporting several programming languages, which is used as a web application deployment model. Supports Java, Node.js, Scala, Clojure, Python, PHP, and Go. Described as a polyglot platform, as it lets the developer build, run and scale applications in a similar manner across all the languages.",
             "source": "https://en.wikipedia.org/wiki/Heroku",
@@ -509,7 +499,7 @@
     {
         "term": "HTML",
         "summary": "A file type for displaying and sending content on the web",
-        "tags": ["Language", "World Wide Web"],
+        "tags": ["Language", "World Wide Web", "File Type"],
         "definitions": [{
             "definition": "HyperText Markup Language (HTML) is the standard markup language for creating web pages and web applications. With Cascading Style Sheets (CSS) and JavaScript it forms a triad of cornerstone technologies for the World Wide Web. Web browsers receive HTML documents from a webserver or from local storage and render them into multimedia web pages. HTML describes the structure of a web page semantically; HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects, such as interactive forms, may be embedded into the rendered page. It provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items.",
             "source": "https://en.wikipedia.org/wiki/HTML",
@@ -541,16 +531,6 @@
         "definitions": [{
             "definition": "Integration testing, also known as integration and testing (I&T), is a software development process which program units are combined and tested as groups in multiple ways. In this context, a unit is defined as the smallest testable part of an application. Integration testing can expose problems with the interfaces among program components before trouble occurs in real-world program execution. Integration testing is a component of Extreme Programming (XP), a pragmatic method of software development that takes a meticulous approach to building a product by means of continual testing and revision.",
             "source": "http://searchsoftwarequality.techtarget.com/definition/integration-testing",
-            "rating": 0
-        }]
-    },
-    {
-        "term": "IRB",
-        "summary": "A REPL for programming in the object-oriented scripting language Ruby",
-        "tags": ["REPL"],
-        "definitions": [{
-            "definition": "Interactive Ruby Shell (IRB or irb) is a REPL for programming in Ruby. The abbreviation irb comes from the fact that the filename extension for Ruby is '.rb', although interactive Ruby files do not have an extension of '.irb'. The program is launched from a command line and allows the execution of Ruby commands with immediate response, experimenting in real-time. It is able to communicate directly as a shell script over the Internet and interact with a live server.",
-            "source": "https://en.wikipedia.org/wiki/Interactive_Ruby_Shell",
             "rating": 0
         }]
     },
@@ -591,6 +571,16 @@
         "definitions": [{
             "definition": "jQuery is a modular, cross-platform, open-source JavaScript library designed to simplify the client-side scripting of HTML. jQuery's syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications. jQuery also provides capabilities for developers to create plug-ins on top of the JavaScript library.",
             "source": "https://en.wikipedia.org/wiki/JQuery",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "JPEG",
+        "summary": "The JPEG file extension is used interchangeably with JPG. JPEG stands for Joint Photographic Experts Group who created the standard.",
+        "tags": ["File Type"],
+        "definitions": [{
+            "definition": "JPEG is a commonly used method of lossy compression for digital images, particularly for those images produced by digital photography. The degree of compression can be adjusted, allowing a selectable tradeoff between storage size and image quality. JPEG typically achieves 10:1 compression with little perceptible loss in image quality. JPEG compression is used in a number of image file formats. JPEG/Exif is the most common image format used by digital cameras and other photographic image capture devices; along with JPEG/JFIF, it is the most common format for storing and transmitting photographic images on the World Wide Web. These format variations are often not distinguished, and are simply called JPEG.",
+            "source": "https://en.wikipedia.org/wiki/JPEG",
             "rating": 0
         }]
     },
@@ -683,6 +673,16 @@
         }]
     },
     {
+        "term": "Mongoose",
+        "summary": "A schema-based solution to model your application data in MongoDB",
+        "tags": ["Database"],
+        "definitions": [{
+            "definition": "Mongoose provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.",
+            "source": "http://mongoosejs.com/",
+            "rating": 0
+        }]
+    },
+    {
         "term": "MVC",
         "summary": "A design pattern for relating the user interface of a web app to underlying data models",
         "tags": ["Pattern"],
@@ -753,6 +753,16 @@
         }]
     },
     {
+        "term": "Pair Programming",
+        "summary": "Pair programming is an agile software development technique in which two programmers work together at one workstation",
+        "tags": ["Practice"],
+        "definitions": [{
+            "definition": "Pair programming is an agile software development technique in which two programmers work together at one workstation. One, the driver, writes code while the other, the observer or navigator, reviews each line of code as it is typed in. The two programmers switch roles frequently. While reviewing, the observer also considers the 'strategic' direction of the work, coming up with ideas for improvements and likely future problems to address. This frees the driver to focus all of his or her attention on the 'tactical' aspects of completing the current task, using the observer as a safety net and guide.",
+            "source": "https://en.wikipedia.org/wiki/Pair_programming",
+            "rating": 0
+        }]
+    },
+    {
         "term": "PHP",
         "summary": "A widely-used scripting language suited to web development and embedding in HTML",
         "tags": ["Language", "World Wide Web"],
@@ -773,12 +783,12 @@
         }]
     },
     {
-        "term": "PRY",
-        "summary": "An interactive shell for the Ruby programming language",
-        "tags": ["REPL"],
+        "term": "Protocol",
+        "summary": "A common means for unrelated objects to communicate with each other",
+        "tags": ["Protocol"],
         "definitions": [{
-            "definition": "An interactive shell for the Ruby programming language. Notable for its Smalltalk-inspired ability to start a REPL within a running program, allowing programmers to debug and modify the current state of a system. A number of third party plugins are available, which add tighter integration with other Ruby projects, enhance the abilities of Pry itself, and make Pry available over a remote connection.",
-            "source": "https://en.wikipedia.org/wiki/Pry_(software)",
+            "definition": "In object-oriented programming, a protocol or interface is a common means for unrelated objects to communicate with each other. These are definitions of methods and values which the objects agree upon in order to co-operate.",
+            "source": "https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)",
             "rating": 0
         }]
     },
@@ -813,12 +823,32 @@
         }]
     },
     {
-        "term": "REPL",
-        "summary": "An interactive programming environment that takes single inputs, evaluates them, and returns the result",
-        "tags": ["REPL"],
+        "term": "Red Green Refactor",
+        "summary": "Create a test and make it fail. Make the test pass. Change the code to remove duplication and to improve the design",
+        "tags": ["Practice"],
         "definitions": [{
-            "definition": "A Read-Eval-Print Loop (REPL), also known as an interactive toplevel, or language shell, is a simple, interactive computer programming environment that takes single user inputs (i.e. single expressions), evaluates them, and returns the result to the user. Common examples include command line shells and similar environments for programming languages, and is particularly characteristic of scripting languages.",
-            "source": "https://en.wikipedia.org/wiki/Read–eval–print_loop",
+            "definition": "The motto of test-driven development is 'Red, Green, Refactor.' Red: Create a test and make it fail. Green: Make the test pass by any means necessary. Refactor: Change the code to remove duplication in your project and to improve the design while ensuring that all tests still pass.",
+            "source": "https://msdn.microsoft.com/en-us/library/aa730844(v=vs.80).aspx",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Redis",
+        "summary": "An open-source software project that implements data structure servers",
+        "tags": ["Database"],
+        "definitions": [{
+            "definition": "Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs and geospatial indexes with radius queries.",
+            "source": "https://redis.io/",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Refactoring",
+        "summary": "The process of restructuring existing computer code—changing the factoring—without changing its external behavior",
+        "tags": ["Practice"],
+        "definitions": [{
+            "definition": "Code refactoring is the process of restructuring existing computer code—changing the factoring—without changing its external behavior. Refactoring improves nonfunctional attributes of the software. Advantages include improved code readability and reduced complexity; these can improve source-code maintainability and create a more expressive internal architecture or object model to improve extensibility. Typically, refactoring applies a series of standardised basic micro-refactorings, each of which is (usually) a tiny change in a computer program's source code that either preserves the behaviour of the software, or at least does not modify its conformance to functional requirements.",
+            "source": "https://en.wikipedia.org/wiki/Code_refactoring",
             "rating": 0
         }]
     },
@@ -887,6 +917,16 @@
         }]
     },
     {
+        "term": "Scrum",
+        "summary": "An iterative and incremental agile software development framework for managing product development",
+        "tags": ["Practice"],
+        "definitions": [{
+            "definition": "Scrum is an iterative and incremental agile software development framework for managing product development. It defines 'a flexible, holistic product development strategy where a development team works as a unit to reach a common goal', challenges assumptions of the 'traditional, sequential approach' to product development, and enables teams to self-organize by encouraging physical co-location or close online collaboration of all team members, as well as daily face-to-face communication among all team members and disciplines involved.",
+            "source": "https://en.wikipedia.org/wiki/Scrum_(software_development)",
+            "rating": 0
+        }]
+    },
+    {
         "term": "Seperation of Concerns",
         "summary": "A design principle for separating a computer program into distinct sections, addressing a separate concern",
         "tags": ["Principle", "Pattern"],
@@ -911,6 +951,16 @@
         }, {
             "definition": "Web server can refer to hardware or software, or both of them working together. On the hardware side, a web server is a computer that stores a website's component files (e.g. HTML documents, images, CSS stylesheets, and JavaScript files) and delivers them to the end-user's device. It is connected to the Internet and can be accessed through a domain name like mozilla.org. On the software side, a web server includes several parts that control how web users access hosted files, at minimum an HTTP server. An HTTP server is a piece of software that understands URLs (web addresses) and HTTP (the protocol your browser uses to view webpages).",
             "source": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "Simple Design",
+        "summary": "Simple code design is a key component of extensibility in agile programming",
+        "tags": ["Practice"],
+        "definitions": [{
+            "definition": "A simple design always takes less time to finish than a complex one. So always do the simplest thing that could possibly work next. If you find something that is complex replace it with something simple. It's always faster and cheaper to replace complex code now, before you waste a lot more time on it. Within your project the team decides what is simple. Together you judge your code subjectively. I recommend four subjective qualities; Testable, Understandable, Browsable, and Explainable (TUBE).",
+            "source": "http://www.extremeprogramming.org/rules/simple.html",
             "rating": 0
         }]
     },
@@ -941,6 +991,16 @@
         "definitions": [{
             "definition": "SQL (Structured Query Language) is a standardized programming language used for managing relational databases and performing various operations on the data in them. Initially created in the 1970s, SQL is regularly used by database administrators, as well as by developers writing data integration scripts and data analysts looking to set up and run analytical queries.",
             "source": "http://searchsqlserver.techtarget.com/definition/SQL",
+            "rating": 0
+        }]
+    },
+    {
+        "term": "SQLite",
+        "summary": "A relational database management system contained in a C programming library",
+        "tags": ["Database"],
+        "definitions": [{
+            "definition": "SQLite is a relational database management system contained in a C programming library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program. SQLite is a popular choice as embedded database software for local/client storage in application software such as web browsers. It is arguably the most widely deployed database engine, as it is used today by several widespread browsers, operating systems, and embedded systems (such as mobile phones), among others. SQLite has bindings to many programming languages.",
+            "source": "https://en.wikipedia.org/wiki/SQLite",
             "rating": 0
         }]
     },
@@ -1029,16 +1089,6 @@
         }]
     },
     {
-        "term": "Unix",
-        "summary": "A family of computer operating systems characterised by a modular design, a unified filesystem and a shell scripting and command language to combine the tools to perform complex workflows",
-        "tags": ["OS"],
-        "definitions": [{
-            "definition": "A family of computer operating systems that derive from the original AT&T Unix. Unix systems are characterised by a modular design sometimes called the 'Unix philosophy', meaning that the operating system provides a set of simple tools which each perfom a limited, well-defined function, with a unified filesystem as the main means of communication and a shell scripting and command language to combine the tools to perform complex workflows. The first portable operating system; written almost entriely in C, which allowed Unix to reach numerous platforms.",
-            "source": "https://en.wikipedia.org/wiki/Unix",
-            "rating": 0
-        }]
-    },
-    {
         "term": "Webpack",
         "summary": "A module bundler that bundles JavaScript files for usage in a browser",
         "tags": ["Package Manager", "JavaScript"],
@@ -1065,21 +1115,6 @@
             "source": "https://pusher.com/websockets",
             "rating": 0
         }]
-    },
-    {
-        "term": "Wordpress",
-        "summary": "A free and open-source content management system based on PHP",
-        "tags": ["CMS"],
-        "definitions": [{
-            "definition": "A free and open-source content management system (CMS) based on PHP and MySQL. WordPress is installed on a web server that is either part of an Internet hosting service or a network host in its own right. The first case may be a service like Wordpress.com, for example, and the second case could be a computer running the software package WordPress.org.",
-            "source": "https://en.wikipedia.org/wiki/WordPress",
-            "rating": 0
-        }, {
-            "definition": "WordPress is a state-of-the-art semantic personal publishing platform with a focus on aesthetics, web standards, and usability. WordPress is both free and priceless at the same time.",
-            "source": "https://en-gb.wordpress.org",
-            "rating": 0
-        }
-      ]
     },
     {
         "term": "XML",
