@@ -1,5 +1,6 @@
 #show-page {
     background: #FFFFFF;
+    overflow-x: hidden;
 }
 
 .source {
