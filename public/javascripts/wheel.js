@@ -1,50 +1,24 @@
 window.onload = function() {
 
   var colours = ["#F9C00C", "#03A9F4", "#9C56BB", "#FF5722", "#FF4081"];
+  var createItems = function(item) {
+    for (var j = 1; j < 9; j++) {
+      var item = item + j;
+      item = document.getElementById((item + "-0")+(10-j));
+    }
+  };
 
-  var svg = document.getElementById("svg-menu");
+  createItems("term");
+  createItems("summ");
+  createItems("link");
 
-  var term1 = document.getElementById("term-09");
-  var term2 = document.getElementById("term-08");
-  var term3 = document.getElementById("term-07");
-  var term4 = document.getElementById("term-06");
-  var term5 = document.getElementById("term-05");
-  var term6 = document.getElementById("term-04");
-  var term7 = document.getElementById("term-03");
-  var term8 = document.getElementById("term-02");
-  var term9 = document.getElementById("term-01");
-
-  var summ1 = document.getElementById("summary-9");
-  var summ2 = document.getElementById("summary-8");
-  var summ3 = document.getElementById("summary-7");
-  var summ4 = document.getElementById("summary-6");
-  var summ5 = document.getElementById("summary-5");
-  var summ6 = document.getElementById("summary-4");
-  var summ7 = document.getElementById("summary-3");
-  var summ8 = document.getElementById("summary-2");
-  var summ9 = document.getElementById("summary-1");
-
-  var link1 = document.getElementById("item-9");
-  var link2 = document.getElementById("item-8");
-  var link3 = document.getElementById("item-7");
-  var link4 = document.getElementById("item-6");
-  var link5 = document.getElementById("item-5");
-  var link6 = document.getElementById("item-4");
-  var link7 = document.getElementById("item-3");
-  var link8 = document.getElementById("item-2");
-  var link9 = document.getElementById("item-1");
 
   var terms;
 
-  var index0 = 0;
-  var index1 = 1;
-  var index2 = 2;
-  var index3 = 3;
-  var index4 = 4;
-  var index5 = 5;
-  var index6 = 6;
-  var index7 = 7;
-  var index8 = 8;
+  for (var i = 0; i < 9; i++) {
+    var index = "index" + i;
+    index = i;
+  }
 
   $.ajax({
     url: "/wheel",
