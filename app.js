@@ -17,7 +17,7 @@ var uri = 'mongodb://heroku_dl15zr4g:31jaefnakg9h3balg4eegh33qt@ds137220.mlab.co
 if (process.env.NODE_ENV === "test") {
   db = monk('localhost:27017/developers-dictionary-test');
 }
-else if (process.env,NODE_ENV === "production") {
+else if (process.env.NODE_ENV === "production") {
   db = monk(uri);
 }
 else {
