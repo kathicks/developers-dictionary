@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/run.js",
-    "test": "mocha"
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -29,5 +30,9 @@
     "serve-favicon": "~2.3.2",
     "should": "^11.2.1",
     "zombie": "^5.0.5"
+  },
+  "devDependencies": {
+    "coveralls": "^2.12.0",
+    "nyc": "^10.1.2"
   }
 }

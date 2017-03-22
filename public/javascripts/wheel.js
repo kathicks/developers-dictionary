@@ -2,49 +2,31 @@ window.onload = function() {
 
   var colours = ["#F9C00C", "#03A9F4", "#9C56BB", "#FF5722", "#FF4081"];
 
-  var svg = document.getElementById("svg-menu");
+  var dom = [];
+  var index = [];
 
-  var term1 = svg.getElementById("term-09");
-  var term2 = svg.getElementById("term-08");
-  var term3 = svg.getElementById("term-07");
-  var term4 = svg.getElementById("term-06");
-  var term5 = svg.getElementById("term-05");
-  var term6 = svg.getElementById("term-04");
-  var term7 = svg.getElementById("term-03");
-  var term8 = svg.getElementById("term-02");
-  var term9 = svg.getElementById("term-01");
+  var declareVariables = function(item) {
+    var arr = [];
+    for (var j = 0; j < 9; j++) {
+      arr[j] = document.getElementById(item + "-0" + (j+1) );
+    }
+    dom.push(arr);
+  };
 
-  var summ1 = svg.getElementById("summary-9");
-  var summ2 = svg.getElementById("summary-8");
-  var summ3 = svg.getElementById("summary-7");
-  var summ4 = svg.getElementById("summary-6");
-  var summ5 = svg.getElementById("summary-5");
-  var summ6 = svg.getElementById("summary-4");
-  var summ7 = svg.getElementById("summary-3");
-  var summ8 = svg.getElementById("summary-2");
-  var summ9 = svg.getElementById("summary-1");
+  declareVariables("term");
+  declareVariables("summary");
+  declareVariables("link");
 
-  var link1 = svg.getElementById("item-9");
-  var link2 = svg.getElementById("item-8");
-  var link3 = svg.getElementById("item-7");
-  var link4 = svg.getElementById("item-6");
-  var link5 = svg.getElementById("item-5");
-  var link6 = svg.getElementById("item-4");
-  var link7 = svg.getElementById("item-3");
-  var link8 = svg.getElementById("item-2");
-  var link9 = svg.getElementById("item-1");
+  for (var i = 0; i < 9; i++) {
+    var indexName = "index" + i;
+    indexName = i;
+    index.push(indexName);
+  }
+
+  console.log(dom);
+  console.log(index);
 
   var terms;
-
-  var index0 = 0;
-  var index1 = 1;
-  var index2 = 2;
-  var index3 = 3;
-  var index4 = 4;
-  var index5 = 5;
-  var index6 = 6;
-  var index7 = 7;
-  var index8 = 8;
 
   $.ajax({
     url: "/wheel",
@@ -72,262 +54,54 @@ window.onload = function() {
         return colour;
       };
 
-    updateInnerRightHTML1 = function() {
-      if (index0 < terms.length - 1) {
-        index0 = index0 + 1;
-      }
-      else {
-        index0 = 0;
-      }
-      term1.textContent = outputTermString(index0);
-      term1.setAttribute("fill", outputColour(index0));
-      summ1.textContent = outputDefString(index0);
-      link1.setAttribute("xlink:href", outputShowLink(index0));
-    };
+      changeIndexRight = function(passedIndex){
+        if (passedIndex < terms.length - 1) {
+          return passedIndex + 1;
+        }
+        else {
+          passedIndex = 0;
+          return passedIndex;
+        }
+      };
 
-    updateInnerRightHTML2 = function() {
-      if (index1 < terms.length - 1) {
-        index1 = index1 + 1;
-      }
-      else {
-        index1 = 0;
-      }
-      term2.textContent = outputTermString(index1);
-      term2.setAttribute("fill", outputColour(index1));
-      summ2.textContent = outputDefString(index1);
-      link2.setAttribute("xlink:href", outputShowLink(index1));
-    };
+      changeIndexLeft = function(passedIndex){
+        if (passedIndex === 0) {
+          passedIndex = terms.length - 1;
+          return passedIndex;
+        }
+        else {
+          passedIndex = passedIndex - 1;
+          return passedIndex;
+        }
+      };
 
-    updateInnerRightHTML3 = function() {
-      if (index2 < terms.length - 1) {
-        index2 = index2 + 1;
+      changeContent = function(index, term, summ, link) {
+        term.textContent = outputTermString(index);
+        term.setAttribute("fill", outputColour(index));
+        summ.textContent = outputDefString(index);
+        link.setAttribute("xlink:href", outputShowLink(index));
       }
-      else {
-        index2 = 0;
-      }
-      term3.textContent = outputTermString(index2);
-      term3.setAttribute("fill", outputColour(index2));
-      summ3.textContent = outputDefString(index2);
-      link3.setAttribute("xlink:href", outputShowLink(index2));
-    };
 
-    updateInnerRightHTML4 = function() {
-      if (index3 < terms.length - 1) {
-        index3 = index3 + 1;
-      }
-      else {
-        index3 = 0;
-      }
-      term4.textContent = outputTermString(index3);
-      term4.setAttribute("fill", outputColour(index3));
-      summ4.textContent = outputDefString(index3);
-      link4.setAttribute("xlink:href", outputShowLink(index3));
-    };
-
-    updateInnerRightHTML5 = function() {
-      if (index4 < terms.length - 1) {
-        index4 = index4 + 1;
-      }
-      else {
-        index4 = 0;
-      }
-      term5.textContent = outputTermString(index4);
-      term5.setAttribute("fill", outputColour(index4));
-      summ5.textContent = outputDefString(index4);
-      link5.setAttribute("xlink:href", outputShowLink(index4));
-    };
-
-    updateInnerRightHTML6 = function() {
-      if (index5 < terms.length - 1) {
-        index5 = index5 + 1;
-      }
-      else {
-        index5 = 0;
-      }
-      term6.textContent = outputTermString(index5);
-      term6.setAttribute("fill", outputColour(index5));
-      summ6.textContent = outputDefString(index5);
-      link6.setAttribute("xlink:href", outputShowLink(index5));
-    };
-
-    updateInnerRightHTML7 = function() {
-      if (index6 < terms.length - 1) {
-        index6 = index6 + 1;
-      }
-      else {
-        index6 = 0;
-      }
-      term7.textContent = outputTermString(index6);
-      term7.setAttribute("fill", outputColour(index6));
-      summ7.textContent = outputDefString(index6);
-      link7.setAttribute("xlink:href", outputShowLink(index6));
-    };
-
-    updateInnerRightHTML8 = function() {
-      if (index7 < terms.length - 1) {
-        index7 = index7 + 1;
-      }
-      else {
-        index7 = 0;
-      }
-      term8.textContent = outputTermString(index7);
-      term8.setAttribute("fill", outputColour(index7));
-      summ8.textContent = outputDefString(index7);
-      link8.setAttribute("xlink:href", outputShowLink(index7));
-    };
-
-    updateInnerRightHTML9 = function() {
-      if (index8 < terms.length - 1) {
-        index8 = index8 + 1;
-      }
-      else {
-        index8 = 0;
-      }
-      term9.textContent = outputTermString(index8);
-      term9.setAttribute("fill", outputColour(index8));
-      summ9.textContent = outputDefString(index8);
-      link9.setAttribute("xlink:href", outputShowLink(index8));
-    };
-
-    updateInnerLeftHTML1 = function() {
-      if (index0 === 0) {
-        index0 = terms.length - 1;
-      }
-      else {
-        index0 = index0 - 1;
-      }
-      term1.textContent = outputTermString(index0);
-      term1.setAttribute("fill", outputColour(index0));
-      summ1.textContent = outputDefString(index0);
-      link1.setAttribute("xlink:href", outputShowLink(index0));
-    };
-
-    updateInnerLeftHTML2 = function() {
-      if (index1 === 0) {
-        index1 = terms.length - 1;
-      }
-      else {
-        index1 = index1 - 1;
-      }
-      term2.textContent = outputTermString(index1);
-      term2.setAttribute("fill", outputColour(index1));
-      summ2.textContent = outputDefString(index1);
-      link2.setAttribute("xlink:href", outputShowLink(index1));
-    };
-
-    updateInnerLeftHTML3 = function() {
-      if (index2 === 0) {
-        index2 = terms.length - 1;
-      }
-      else {
-        index2 = index2 - 1;
-      }
-      term3.textContent = outputTermString(index2);
-      term3.setAttribute("fill", outputColour(index2));
-      summ3.textContent = outputDefString(index2);
-      link3.setAttribute("xlink:href", outputShowLink(index2));
-    };
-
-    updateInnerLeftHTML4 = function() {
-      if (index3 === 0) {
-        index3 = terms.length - 1;
-      }
-      else {
-        index3 = index3 - 1;
-      }
-      term4.textContent = outputTermString(index3);
-      term4.setAttribute("fill", outputColour(index3));
-      summ4.textContent = outputDefString(index3);
-      link4.setAttribute("xlink:href", outputShowLink(index3));
-    };
-
-    updateInnerLeftHTML5 = function() {
-      if (index4 === 0) {
-        index4 = terms.length - 1;
-      }
-      else {
-        index4 = index4 - 1;
-      }
-      term5.textContent = outputTermString(index4);
-      term5.setAttribute("fill", outputColour(index4));
-      summ5.textContent = outputDefString(index4);
-      link5.setAttribute("xlink:href", outputShowLink(index4));
-    };
-
-    updateInnerLeftHTML6 = function() {
-      if (index5 === 0) {
-        index5 = terms.length - 1;
-      }
-      else {
-        index5 = index5 - 1;
-      }
-      term6.textContent = outputTermString(index5);
-      term6.setAttribute("fill", outputColour(index5));
-      summ6.textContent = outputDefString(index5);
-      link6.setAttribute("xlink:href", outputShowLink(index5));
-    };
-
-    updateInnerLeftHTML7 = function() {
-      if (index6 === 0) {
-        index6 = terms.length - 1;
-      }
-      else {
-        index6 = index6 - 1;
-      }
-      term7.textContent = outputTermString(index6);
-      term7.setAttribute("fill", outputColour(index6));
-      summ7.textContent = outputDefString(index6);
-      link7.setAttribute("xlink:href", outputShowLink(index6));
-    };
-
-    updateInnerLeftHTML8 = function() {
-      if (index7 === 0) {
-        index7 = terms.length - 1;
-      }
-      else {
-        index7 = index7 - 1;
-      }
-      term8.textContent = outputTermString(index7);
-      term8.setAttribute("fill", outputColour(index7));
-      summ8.textContent = outputDefString(index7);
-      link8.setAttribute("xlink:href", outputShowLink(index7));
-    };
-
-    updateInnerLeftHTML9 = function() {
-      if (index8 === 0) {
-        index8 = terms.length - 1;
-      }
-      else {
-        index8 = index8 - 1;
-      }
-      term9.textContent = outputTermString(index8);
-      term9.setAttribute("fill", outputColour(index8));
-      summ9.textContent = outputDefString(index8);
-      link9.setAttribute("xlink:href", outputShowLink(index8));
+    updateInsides = function(i) {
+      changeContent(index[i], dom[0][i], dom[1][i], dom[2][i])
     };
 
   startRight = function(){
-    updateInnerLeftHTML1();
-    updateInnerLeftHTML2();
-    updateInnerLeftHTML3();
-    updateInnerLeftHTML4();
-    updateInnerLeftHTML5();
-    updateInnerLeftHTML6();
-    updateInnerLeftHTML7();
-    updateInnerLeftHTML8();
-    updateInnerLeftHTML9();
+    index = index.map(function(index){
+      return changeIndexLeft(index);
+    })
+    for (var i = 0; i < 9; i++) {
+      updateInsides(i);
+    }
   }
 
   startLeft = function(){
-    updateInnerRightHTML1();
-    updateInnerRightHTML2();
-    updateInnerRightHTML3();
-    updateInnerRightHTML4();
-    updateInnerRightHTML5();
-    updateInnerRightHTML6();
-    updateInnerRightHTML7();
-    updateInnerRightHTML8();
-    updateInnerRightHTML9();
+    index = index.map(function(index){
+      return changeIndexRight(index);
+    })
+    for (var i = 0; i < 9; i++) {
+      updateInsides(i);
+    }
   };
 
   startRight();
