@@ -67,3 +67,7 @@ a:active {
 .flash-element {
     text-transform: capitalize;
 }
+
+button:focus {
+  outline: 0;
+}

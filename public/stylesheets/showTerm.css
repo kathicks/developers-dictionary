@@ -61,6 +61,7 @@
 .tag-button:hover {
   border-color: black;
   color: black !important;
+  outline: 0 !important;
 }
 
 .jumbotron {
@@ -83,6 +84,13 @@
 .downvote, .upvote, .rating {
   background: transparent;
   display: inline !important;
+}
+
+.downvote:focus,
+.upvote:focus,
+.downvote:active,
+.upvote:active {
+  outline: 0 !important;
 }
 
 .add-definition-link {
@@ -121,6 +129,7 @@
 #back-button:hover {
   border-color: black;
   color: black !important;
+  outline: 0 !important;
 }
 
 .back-arrow {
