@@ -12,10 +12,15 @@ var flash = require('connect-flash');
 var mongo = require('mongodb');
 var monk = require('monk');
 var db;
+var uri = 'mongodb://heroku_dl15zr4g:31jaefnakg9h3balg4eegh33qt@ds137220.mlab.com:37220/heroku_dl15zr4g';
 
 if (process.env.NODE_ENV === "test") {
   db = monk('localhost:27017/developers-dictionary-test');
-} else {
+}
+else if (process.env,NODE_ENV === "production") {
+  db = monk(uri);
+}
+else {
   db = monk('localhost:27017/developers-dictionary-development');
 }
 
