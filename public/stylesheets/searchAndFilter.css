@@ -129,10 +129,20 @@ a.clear-filter {
  position: absolute;
  top: 100%;
  right: 0px;
- height: 230px;
+ height: 120px;
  overflow-y: scroll;
  width: 180px;
  margin-top: 1px;
+ border-top-style: none;
+ border-left-style: solid;
+ border-left-width: 0.1px;
+ border-left-color: #b5b5bd;
+ border-bottom-style: solid;
+ border-bottom-width: 0.1px;
+ border-bottom-color: #b5b5bd;
+ border-right-style: solid;
+ border-right-width: 0.1px;
+ border-right-color: #b5b5bd;
  /*overflow-x: hidden;*/
 
  /*styles*/
