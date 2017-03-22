@@ -17,7 +17,8 @@
   box-shadow: inset 0px 0px 0px 0px;
   font-size: 1em;
   font-family: 'Roboto Mono';
-  font-weight: 200;
+  font-weight: bold;
+  padding-left: 5px;
   color: #3a3a3a;
   cursor: pointer;
   display: inline;
@@ -120,6 +121,7 @@ a.clear-filter {
 
 .filter-placeholder {
   float: left;
+  font-weight: bold;
 }
 
 .wrapper-dropdown .dropdown {
