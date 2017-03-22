@@ -6,7 +6,7 @@ var router = express.Router();
 /* GET index. */
 router.get('/', function(req, res) {
     var db = req.db;
-    var collection = db.get('termcollection');
+    var collection = req.db.get('termcollection');
     collection.find({}, {}, function(err, docs) {
         res.render('index', {
             terms: docs,
