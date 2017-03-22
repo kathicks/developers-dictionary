@@ -3,7 +3,6 @@
 var database = require('../database/database.js')
 var summaryValidate = require('../database/summaryValidate.js')
 var termValidate = require('../database/termValidate.js')
-var tagValidate = require('../database/tagValidate.js')
 var express = require('express');
 var router = express.Router();
 
@@ -49,7 +48,6 @@ router.post('/new', function(req, res) {
     var tag = req.body.tag;
     termValidate(req, res);
     summaryValidate(req, res);
-    tagValidate(req, res);
 
     var errors = req.validationErrors();
     if (errors) {
