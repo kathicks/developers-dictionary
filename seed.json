@@ -1,5 +1,5 @@
 {
-    "undefined": "mongodb://heroku_dl15zr4g:31jaefnakg9h3balg4eegh33qt@ds137220.mlab.com:37220/heroku_dl15zr4g",
-    "dev": "mongodb://heroku_dl15zr4g:31jaefnakg9h3balg4eegh33qt@ds137220.mlab.com:37220/heroku_dl15zr4g",
-    "prod": "mongodb://heroku_dl15zr4g:31jaefnakg9h3balg4eegh33qt@ds137220.mlab.com:37220/heroku_dl15zr4g"
+    "undefined": "localhost:27017/developers-dictionary-development",
+    "dev": "localhost:27017/developers-dictionary-development",
+    "prod": "localhost:27017/developers-dictionary-development"
 }
