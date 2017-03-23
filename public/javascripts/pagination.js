@@ -23,13 +23,6 @@ $( ".paginationLinks" ).click(function(event) {
     };
   });
 
-//DISABLE LINKS
-
-//on page load find all first letters of terms and put into array without duplicates
-//check pagination links against first letters of terms
-//if letter is missing then run disable function
-//disable function greys out letter in pag and doesn't allow clicking.
-
 $(document).ready(function(){
   $.ajax({
     url: "/show",
@@ -43,8 +36,8 @@ $(document).ready(function(){
     paginationArr = $('.paginationLinks').text().split('');
     paginationArr.forEach(function(letter){
       if(!letterArr.includes(letter)){
-        $('#'+letter).addClass("disabled")
+        $('#'+letter).addClass("disabled");
       }
-    })
+    });
   });
 });
