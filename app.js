@@ -18,7 +18,7 @@ var tags = require('./routes/tags');
 var definitions = require('./routes/definitions');
 
 if (process.env.NODE_ENV === "production") {
-  db = monk(process.env.MONGO_URI);
+  db = monk(process.env.MONGODB_URI);
 }
 else if (process.env.NODE_ENV === "test") {
   db = monk('localhost:27017/developers-dictionary-test');
