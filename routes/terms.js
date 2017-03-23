@@ -18,6 +18,17 @@ router.get('/', function(req, res) {
   });
 });
 
+router.get('/clearfilter', function(req, res) {
+  var collection = database(req);
+  collection.find({}, {}, function(err, docs) {
+    res.render('index', {
+      terms: docs,
+      messages: req.flash('errors'),
+      notices: req.flash('notice')
+    });
+  });
+});
+
 /* GET wheel ajax . */
 router.get('/show', function(req, res) {
   var collection = database(req);
