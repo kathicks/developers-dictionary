@@ -11,7 +11,7 @@ $(".upvote").on('click', function(event) {
         "definition": definition
     };
     $.ajax({
-        url: "/show/upvote",
+        url: "/definitions/update/up",
         method: "POST",
         data: data,
     }).done(function(response) {
@@ -43,7 +43,7 @@ $(".downvote").on('click', function(event) {
         "definition": definition
     };
     $.ajax({
-        url: "/show/downvote",
+        url: "/definitions/update/down",
         method: "POST",
         data: data,
     }).done(function(response) {

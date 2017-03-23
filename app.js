@@ -13,13 +13,19 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db;
 
-if (process.env.NODE_ENV === "test") {
-  db = monk('localhost:27017/developers-dictionary-test');
-} else {
-  db = monk('localhost:27017/developers-dictionary-development');
-};
-
 var terms = require('./routes/terms');
+var tags = require('./routes/tags');
+var definitions = require('./routes/definitions');
+
+if (process.env.NODE_ENV === "production") {
+  db = monk(process.env.MONGODB_URI);
+}
+else if (process.env.NODE_ENV === "test") {
+  db = monk('localhost:27017/developers-dictionary-test');
+}
+else {
+  db = monk('localhost:27017/developers-dictionary-development');
+}
 
 var app = express();
 
@@ -52,6 +58,8 @@ app.use(function(req,res,next){
 });
 
 app.use('/', terms);
+app.use('/tags', tags);
+app.use('/definitions', definitions);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

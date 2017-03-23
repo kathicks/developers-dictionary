@@ -1,3 +1,33 @@
+#search-bar {
+  align-items: center;
+  display: inline;
+}
+
+#search {
+  -webkit-appearance: none;
+  border: 0;
+  border width: 0 0 2px 0;
+  border-radius: 0px;
+  width: 180px;
+  outline: 0;
+  padding: 0;
+  background: transparent;
+  border-bottom: 1px solid;
+  border-color: #3a3a3a;
+  box-shadow: inset 0px 0px 0px 0px;
+  font-size: 1em;
+  font-family: 'Roboto Mono';
+  font-weight: bold;
+  padding-left: 5px;
+  color: #3a3a3a;
+  cursor: pointer;
+  display: inline;
+}
+
+#filter-id {
+  pointer-events: none;
+}
+
 .form-group {
   font-family: 'Roboto Mono';
 }
@@ -20,32 +50,7 @@
   opacity: 1;
 }
 
-#search-bar {
-  align-items: center;
-  display: inline;
-}
-
 .form-inline {
-  display: inline;
-}
-
-#search {
-  -webkit-appearance: none;
-  border: 0;
-  border width: 0 0 2px 0;
-  border-radius: 0px;
-  width: 180px;
-  outline: 0;
-  padding: 0;
-  background: transparent;
-  border-bottom: 1px solid;
-  border-color: #3a3a3a;
-  box-shadow: inset 0px 0px 0px 0px;
-  font-size: 1em;
-  font-family: 'Roboto Mono';
-  font-weight: 200;
-  color: #3a3a3a;
-  cursor: pointer;
   display: inline;
 }
 
@@ -69,6 +74,8 @@ a.clear-filter {
 
 .fa-filter {
   margin-left: 185px;
+  pointer-events: none !important;
+  cursor: none !important;
 }
 
 .form-group {
@@ -100,7 +107,7 @@ a.clear-filter {
  width: 180px;
  margin: 0 auto;
  margin-top: -6px;
- padding: 6.5px !important;
+ padding: 6px !important;
  display: inline;
  z-index: 1;
 
@@ -114,6 +121,7 @@ a.clear-filter {
 
 .filter-placeholder {
   float: left;
+  font-weight: bold;
 }
 
 .wrapper-dropdown .dropdown {
@@ -121,10 +129,20 @@ a.clear-filter {
  position: absolute;
  top: 100%;
  right: 0px;
- height: 230px;
+ height: 120px;
  overflow-y: scroll;
  width: 180px;
  margin-top: 1px;
+ border-top-style: none;
+ border-left-style: solid;
+ border-left-width: 0.1px;
+ border-left-color: #b5b5bd;
+ border-bottom-style: solid;
+ border-bottom-width: 0.1px;
+ border-bottom-color: #b5b5bd;
+ border-right-style: solid;
+ border-right-width: 0.1px;
+ border-right-color: #b5b5bd;
  /*overflow-x: hidden;*/
 
  /*styles*/

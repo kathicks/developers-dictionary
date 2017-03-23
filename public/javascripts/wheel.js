@@ -23,13 +23,10 @@ window.onload = function() {
     index.push(indexName);
   }
 
-  console.log(dom);
-  console.log(index);
-
   var terms;
 
   $.ajax({
-    url: "/wheel",
+    url: "/show",
     method: "GET",
   }).done(function(response) {
 
@@ -47,14 +44,14 @@ window.onload = function() {
       };
       outputShowLink = function(index){
         var id = terms[index]._id;
-        return "/show/" + id;
+        return "/definitions/" + id;
       };
       outputColour = function(index){
         var colour = colours[index % colours.length];
         return colour;
       };
 
-      changeIndexRight = function(passedIndex){
+      changeIndexLeft = function(passedIndex){
         if (passedIndex < terms.length - 1) {
           return passedIndex + 1;
         }
@@ -64,7 +61,7 @@ window.onload = function() {
         }
       };
 
-      changeIndexLeft = function(passedIndex){
+      changeIndexRight = function(passedIndex){
         if (passedIndex === 0) {
           passedIndex = terms.length - 1;
           return passedIndex;
@@ -80,26 +77,25 @@ window.onload = function() {
         term.setAttribute("fill", outputColour(index));
         summ.textContent = outputDefString(index);
         link.setAttribute("xlink:href", outputShowLink(index));
-      }
+      };
 
     updateInsides = function(i) {
-      changeContent(index[i], dom[0][i], dom[1][i], dom[2][i])
+      changeContent(index[i], dom[0][i], dom[1][i], dom[2][i]);
     };
-
-
-  startRight = function(){
-    index = index.map(function(index){
-      return changeIndexLeft(index);
-    })
-    for (var i = 0; i < 9; i++) {
-      updateInsides(i);
-    }
-  }
 
   startLeft = function(){
     index = index.map(function(index){
+      return changeIndexLeft(index);
+    });
+    for (var i = 0; i < 9; i++) {
+      updateInsides(i);
+    }
+  };
+
+  startRight = function(){
+    index = index.map(function(index){
       return changeIndexRight(index);
-    })
+    });
     for (var i = 0; i < 9; i++) {
       updateInsides(i);
     }
@@ -121,7 +117,7 @@ document.body.onkeydown = function(event){
     startLeft();
   } else if(keycode === 39 || keycode === 38){
     startRight();
-  };
+  }
 };
 
 $(".item").click(function(event) {
