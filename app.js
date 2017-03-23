@@ -27,8 +27,6 @@ else {
   db = monk('localhost:27017/developers-dictionary-development');
 }
 
-
-
 var app = express();
 
 // view engine setup
