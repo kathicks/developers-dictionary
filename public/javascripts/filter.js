@@ -29,7 +29,7 @@ var index = [];
 var declareVariables = function(item) {
   var arr = [];
   for (var j = 0; j < 9; j++) {
-    arr[j] = document.getElementById(item + "-0" + (j+1) );
+    arr[j] = document.getElementById(item + "-0" + (10-(j+1)) );
   }
   dom.push(arr);
 };
@@ -63,6 +63,17 @@ $(".dropdown").on('click', '.elem', function(event){
   }).done(function(response){
 
     terms = response;
+
+    var letterArr = [];
+    terms.forEach(function(term){
+      letterArr.push(term.term.charAt(0).toLowerCase());
+    });
+    paginationArr = $('.paginationLinks').text().split('');
+    paginationArr.forEach(function(letter){
+      if(!letterArr.includes(letter)){
+        $('#'+letter).addClass("disabled");
+      }
+    });
 
   }).then(function() {
 
@@ -112,28 +123,28 @@ $(".dropdown").on('click', '.elem', function(event){
     };
 
     updateInsides = function(i) {
-    changeContent(index[i], dom[0][i], dom[1][i], dom[2][i]);
-    };
-
-    startLeft = function(){
-    index = index.map(function(index){
-    return changeIndexLeft(index);
-    });
-    for (var i = 0; i < 9; i++) {
-    updateInsides(i);
-    }
+      changeContent(index[i], dom[0][i], dom[1][i], dom[2][i]);
     };
 
     startRight = function(){
-    index = index.map(function(index){
-    return changeIndexRight(index);
-    });
-    for (var i = 0; i < 9; i++) {
-    updateInsides(i);
-    }
+      index = index.map(function(index){
+        return changeIndexLeft(index);
+      });
+      for (var i = 0; i < 9; i++) {
+        updateInsides(i);
+      }
     };
 
-    startRight();
-    startLeft();
+    startLeft = function(){
+      index = index.map(function(index){
+        return changeIndexRight(index);
+      });
+      for (var i = 0; i < 9; i++) {
+        updateInsides(i);
+      }
+    };
+
+  startRight();
+  startLeft();
   });
 });
