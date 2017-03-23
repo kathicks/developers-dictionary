@@ -953,7 +953,7 @@
         "summary": "Package manager for .NET developers",
         "tags": ["Package Manager"],
         "definitions": [{
-            "definition": "NuGet is a package management system for .NET. The goal of NuGet is to make the process of incorporating third party libraries into your solutions as simple as possible. Package Management itself is not a new concept. From Apt and ""deity"" before it at the system-level on *nix, to Ruby Gems, Maven, Synaptic, portage, dpkg, rpm and others, it's a well understood space. There are package managers for operating systems that install machine-wide libraries, and there are package managers for developers and their projects that manage dependencies and install libraries. NuGet takes inspiration from Ruby Gems and adds some .NET specifics.",
+            "definition": "NuGet is a package management system for .NET. The goal of NuGet is to make the process of incorporating third party libraries into your solutions as simple as possible. Package Management itself is not a new concept. From Apt and 'deity' before it at the system-level on *nix, to Ruby Gems, Maven, Synaptic, portage, dpkg, rpm and others, it's a well understood space. There are package managers for operating systems that install machine-wide libraries, and there are package managers for developers and their projects that manage dependencies and install libraries. NuGet takes inspiration from Ruby Gems and adds some .NET specifics.",
             "source": "https://www.hanselman.com/blog/IntroducingNuGetPackageManagementForNETAnotherPieceOfTheWebStack.aspx",
             "rating": 0
         }]
