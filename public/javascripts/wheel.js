@@ -79,30 +79,30 @@ window.onload = function() {
         link.setAttribute("xlink:href", outputShowLink(index));
       };
 
-    updateInsides = function(i) {
-      changeContent(index[i], dom[0][i], dom[1][i], dom[2][i]);
-    };
+      updateInsides = function(i) {
+        changeContent(index[i], dom[0][i], dom[1][i], dom[2][i]);
+      };
 
-  startLeft = function(){
-    index = index.map(function(index){
-      return changeIndexLeft(index);
-    });
-    for (var i = 0; i < 9; i++) {
-      updateInsides(i);
-    }
-  };
+      startRight = function(){
+        index = index.map(function(index){
+          return changeIndexLeft(index);
+        });
+        for (var i = 0; i < 9; i++) {
+          updateInsides(i);
+        }
+      };
 
-  startRight = function(){
-    index = index.map(function(index){
-      return changeIndexRight(index);
-    });
-    for (var i = 0; i < 9; i++) {
-      updateInsides(i);
-    }
-  };
+      startLeft = function(){
+        index = index.map(function(index){
+          return changeIndexRight(index);
+        });
+        for (var i = 0; i < 9; i++) {
+          updateInsides(i);
+        }
+      };
 
-  startRight();
-  startLeft();
+    startRight();
+    startLeft();
   });
 };
 
