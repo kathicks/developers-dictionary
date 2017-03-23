@@ -13,7 +13,7 @@ $(".upvote").on('click', function(event) {
     $.ajax({
         url: "/definitions/update/up",
         method: "POST",
-        data: data,
+        data: data
     }).done(function(response) {
         for (var i = 0; i < response.definitions.length; i++) {
             if (response.definitions[i].definition === definition) {
@@ -21,9 +21,7 @@ $(".upvote").on('click', function(event) {
             }
         }
     }).fail(function() {
-        alert("failure");
-    }).always(function() {
-        console.log("complete");
+        console.log("failure");
     });
     $(this).addClass('disabled')
     $(this).siblings('.downvote').addClass('disabled')
@@ -45,7 +43,7 @@ $(".downvote").on('click', function(event) {
     $.ajax({
         url: "/definitions/update/down",
         method: "POST",
-        data: data,
+        data: data
     }).done(function(response) {
         for (var i = 0; i < response.definitions.length; i++) {
             if (response.definitions[i].definition === definition) {
@@ -53,8 +51,7 @@ $(".downvote").on('click', function(event) {
             }
         }
     }).fail(function() {
-        alert("failure");
-    }).always(function() {
+        console.log("failure");
     });
     $(this).addClass('disabled')
     $(this).siblings('.upvote').addClass('disabled')

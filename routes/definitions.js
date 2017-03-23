@@ -16,7 +16,7 @@ router.get('/:term', function(req, res) {
       });
       var term = docs[0].term;
       res.render('definitions', {
-          term: docs[0],
+          term: docs[0]
       });
     });
 });
@@ -92,7 +92,8 @@ router.post('/update/up', function(req, res) {
     }, {
       "definitions": definition
     }, function(err, doc) {
-      res.json(doc);
+        if (err) console.log(err);
+        res.json(doc);
     });
   });
 });
