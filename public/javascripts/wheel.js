@@ -43,8 +43,8 @@ window.onload = function() {
         return string;
       };
       outputShowLink = function(index){
-        var id = terms[index]._id;
-        return "/definitions/" + id;
+        var term = terms[index].term;
+        return "/definitions/" + term;
       };
       outputColour = function(index){
         var colour = colours[index % colours.length];

@@ -5,10 +5,10 @@ var express = require('express');
 var router = express.Router();
 
 /* GET term page. */
-router.get('/:id', function(req, res) {
+router.get('/:term', function(req, res) {
     var collection = database(req);
     collection.find({
-        '_id': req.params.id
+        'term': req.params.term
     }, function(err, docs) {
       if (err) console.log(err);
       docs[0].definitions.sort(function(a, b) {
@@ -45,7 +45,7 @@ router.post('/new', function(req, res) {
           collection.findOne({
             'term': term
           }, function(e, docs) {
-            res.redirect("/definitions/" + docs._id);
+            res.redirect("/definitions/" + docs.term);
           });
         }
     });
@@ -63,7 +63,7 @@ router.post('/search', function(req, res){
   ]}, function(err, result) {
     if (err) console.log(err);
     if (result) {
-      res.redirect("/definitions/" + result._id);
+      res.redirect("/definitions/" + result.term);
     }
     else {
       req.flash('errors', [{ param: 'term', msg: "does not exist in the database!" }]);
