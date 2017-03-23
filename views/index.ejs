@@ -165,15 +165,9 @@
     </g>
     </svg>
   </div>
-
 <script src="/javascripts/wheel.js"></script>
 <script src="/javascripts/pagination.js"></script>
 <script src="/javascripts/filter.js"></script>
-<script type="text/javascript">
-if (sessionStorage.getItem("filter-placeholder")) {
-  var value = sessionStorage.getItem("filter-placeholder");
-    $(".filter-placeholder").text(value);
-  sessionStorage.removeItem("filter-placeholder")
-}
+<script src="/javascripts/persistanceFilter.js">
 </script>
 </body>
