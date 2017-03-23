@@ -11,6 +11,7 @@ router.get('/:term', function(req, res) {
         'term': req.params.term
     }, function(err, docs) {
       if (err) console.log(err);
+      console.log(docs)
       docs[0].definitions.sort(function(a, b) {
           return b.rating - a.rating;
       });
