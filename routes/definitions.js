@@ -54,11 +54,20 @@ router.post('/new', function(req, res) {
 router.post('/search', function(req, res){
   var collection = database(req);
   var search = req.body.search;
-  var term = search.charAt(0).toUpperCase() + search.slice(1);
   var termUppercase = search.toUpperCase();
+  var termTitleCase  = titleCase(search);
+
+  function titleCase(str) {
+     var splitStr = str.toLowerCase().split(' ');
+     for (var i = 0; i < splitStr.length; i++) {
+         splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+     }
+     return splitStr.join(' ');
+  }
+
   collection.findOne({ $or: [
-    {"term": term},
-    {"term": termUppercase}
+    {"term": termUppercase},
+    {"term": termTitleCase}
   ]}, function(err, result) {
     if (err) console.log(err);
     if (result) {
