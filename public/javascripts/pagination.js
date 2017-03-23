@@ -14,7 +14,7 @@ $( ".paginationLinks" ).click(function(event) {
       }
     };
     var rotateWheel = setInterval(function(){
-         startRight();
+         startLeft();
       if ($('#term-09').text() === findWord()){
         clearInterval(rotateWheel);
       }

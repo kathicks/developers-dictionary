@@ -83,7 +83,7 @@ window.onload = function() {
         changeContent(index[i], dom[0][i], dom[1][i], dom[2][i]);
       };
 
-      startRight = function(){
+      startLeft = function(){
         index = index.map(function(index){
           return changeIndexLeft(index);
         });
@@ -92,7 +92,7 @@ window.onload = function() {
         }
       };
 
-      startLeft = function(){
+      startRight = function(){
         index = index.map(function(index){
           return changeIndexRight(index);
         });
