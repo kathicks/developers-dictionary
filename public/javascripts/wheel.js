@@ -8,7 +8,7 @@ window.onload = function() {
   var declareVariables = function(item) {
     var arr = [];
     for (var j = 0; j < 9; j++) {
-      arr[j] = document.getElementById(item + "-0" + (j+1) );
+      arr[j] = document.getElementById(item + "-0" + (10-(j+1)) );
     }
     dom.push(arr);
   };
@@ -120,7 +120,7 @@ document.body.onkeydown = function(event){
   }
 };
 
-document.body.onclick = function(event) {
+$(".item").click(function(event) {
   bgcolour = ($(event.target.getAttribute('xlink:href')).children(".term")[0].attributes.fill.value);
   sessionStorage.setItem("bgcolour", bgcolour);
-};
+});
