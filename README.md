@@ -51,7 +51,7 @@ I want to be able to add a new definition for each term.
 
 ```
 As a developer,
-So that I can contribute to the dictionary(and ratings),
+So that I can contribute to the dictionary (and ratings),
 I want to be able to sign up and sign in to the dictionary.
 
 As a developer,
