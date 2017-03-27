@@ -11,10 +11,9 @@
 >
 >You can use any technology you like! It will be easier to use technologies you've already used at Makers. But you can use ones that are completely new.
 
-* Very little guidance was provided
-* As a group, we developed the following user stories that defined our goals for the project as well as what we considered to be the minimum viable product (MVP)
-
 ### User stories
+
+As a group, we developed the following user stories that defined our goals for the project as well as what we considered to be the minimum viable product (MVP)
 
 **MVP**
 
