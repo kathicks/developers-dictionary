@@ -109,8 +109,7 @@ I want to be able to skip to a letter in the dictionary.
 * Download the source code by cloning this repo with `$ git clone`
 * Navigate into the root of the directory using `$ cd developers-dictionary`
 * Within the command line, run `$ npm test`
-
-  With this command, you will be able to see each test, results of the test and a table summarising the test coverage
+* With this command, you will be able to see each test, results of the test and a table summarising the test coverage
 
 ### Technologies
 
