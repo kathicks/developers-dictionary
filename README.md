@@ -126,18 +126,18 @@ I want to be able to skip to a letter in the dictionary.
 * **Idea generation and user stories**
   * We started off by brainstorming all possible features for the app and then using the development of user stories to ensure that the features really were of value to the user
 * **Wireframes**
-  * We each drew our vision of the app design on a piece of paper and then came together to compare our drawings
+  * We each drew our vision of the app on a piece of paper and then came together to compare our drawings
   * We took the best bits from each drawing to develop our wireframes which acted as a template for the front-end design
 * **Deciding our tech**
   * We decided to use the Node, Express and MongoDB tech stack for this project as an opportunity to learn something new
 * **Adding a project on GitHub**
-  * We decided to use the project management tool on Github (which can be seen on this repo by selecting the [projects](https://github.com/KatHicks/developers-dictionary/projects/1) tab above
+  * We decided to use the project management tool on Github (which can be seen on this repo by selecting the [projects](https://github.com/KatHicks/developers-dictionary/projects/1) tab above)
   * We entered all the user stories as to-do items and tagged them as either MVP or Version 1
 * **Pairing**
   * We paired each day and pairs rotated regularly
   * We made sure that as far as possible everyone got to work on the bits of the app that most interested them
 * **Standups and retros**
-  * We had stand up meetings at the beginning of each day to discuss what work was going to be done that day and decide on the pairings
+  * We had stand up meetings at the beginning of each day to discuss what work was going to be done that day
   * We also had retrospective meetings at the end of each day to review how things had gone and identify any problems or blockers
 * **Code reviews**
   * As not everyone was working on the same thing, it was important to have code reviews so that we all understood how other bits of the app were working
