@@ -109,7 +109,7 @@ I want to be able to skip to a letter in the dictionary.
 * Download the source code by cloning this repo with `$ git clone`
 * Navigate into the root of the directory using `$ cd developers-dictionary`
 * Within the command line, run `$ npm test`
-* With this command, you will be able to see each test, results of the test and a table summarising the test coverage
+* With this command, you will be able to see each test, their result and a table summarising the test coverage
 
 ### Technologies
 
@@ -119,7 +119,7 @@ I want to be able to skip to a letter in the dictionary.
 * Tested using **Mocha**, **Chai**, **Should** and **Zombie**
 * Test coverage statistics calculated using **NYC** and **Coveralls**
 * Front-end design uses **SVG** as well as **jQuery**, **Bootstrap** and **CSS**
-* Various packages used within the back-end logic including **Express Validator** to validating entries to the database, **Node-Mongo-Seeds** for seeding the database and **Connect Flash** for error messages
+* Various packages used within the back-end logic including **Express Validator** to validate entries in the database, **Node-Mongo-Seeds** for seeding the database and **Connect Flash** for error messages
 
 ### Approach
 
