@@ -1,25 +1,23 @@
 # Developer's Dictionary
-
-#### A fun and engaging definitions resource for software developers
+### A fun and engaging definitions resource for software developers
 
 [![Build Status](https://travis-ci.org/KatHicks/developers-dictionary.svg?branch=master)](https://travis-ci.org/KatHicks/developers-dictionary) [![Code Climate](https://codeclimate.com/github/KatHicks/developers-dictionary/badges/gpa.svg)](https://codeclimate.com/github/KatHicks/developers-dictionary)
 
-Developer's Dictionary was built by [Mica Whitby](https://github.com/MicaW), [Sho Marovatsanga](https://github.com/Taziva), [Kat Hicks](https://github.com/KatHicks), [Tamar Lehmann](https://github.com/tamarlehmann), [Eleanor Kavanagh-Brown](https://github.com/bnzene) and [Barbara Shinkarenko](https://github.com/varvarra) in 8 days as their final project for Makers Academy.
+**Built by [Mica Whitby](https://github.com/MicaW), [Sho Marovatsanga](https://github.com/Taziva), [Kat Hicks](https://github.com/KatHicks), [Tamar Lehmann](https://github.com/tamarlehmann), [Eleanor Kavanagh-Brown](https://github.com/bnzene) and [Barbara Shinkarenko](https://github.com/varvarra) in 8 days as the final project for Makers Academy**
 
-## Using our app
+### Instructions
 
-- You can view our app at [www.developers-dictionary.co.uk](http://www.developers-dictionary.co.uk/)
+* Very little guidance beyond that written below was provided
 
-## Technologies
+> Production code is generally built by a team of developers. It is important that you leave Makers with the skills needed to work in a team, and this is the primary reason that project weeks exist in the curriculum.
 
-- Built using `Node.js` and `Express`
-- Runs off a `MongoDB` database
+> The final projects also provide a safe environment for you to be creative and enjoy exploring new directions with your code.
 
-## Objectives
+> You can use any technology you like! It will be easier to use technologies you've already used at Makers. But you can use ones that are completely new.
 
-## Processes
+* As a group, we developed the following user stories that defined our goals for the project as well as what we considered to be the minimum viable product (MVP)
 
-## User Stories
+### User stories
 
 **MVP**
 
@@ -53,7 +51,7 @@ So that I can contribute to the dictionary,
 I want to be able to add a new definition for each term.
 ```
 
-**V1**
+  **Version 1**
 
 ```
 As a developer,
@@ -97,3 +95,47 @@ So that I can quickly find what I'm looking for,
 I want to be able to skip to a letter in the dictionary.
 
 ```
+
+### Objectives
+
+* Are you having fun?
+* Are you a better developer than you were yesterday?
+* **Can you use high-quality processes to build an extended project in a team?**
+
+### Using our app
+
+* You can view our app at [www.developers-dictionary.co.uk](http://www.developers-dictionary.co.uk/)
+
+### Running the tests
+
+* Download the source code by cloning this repo with `$ git clone`
+* Navigate into the root of the directory using `$ cd developers-dictionary`
+* Within the command line, run `$ npm test`
+
+  With this command, you will be able to see each test, results of the test and a table summarising the test coverage
+
+### Technologies
+
+* Built using **Node.js** with **Express**
+* Runs off a **MongoDB** database
+* Deployed using **Heroku**
+* Tested using **Mocha**, **Chai**, **Should** and **Zombie**
+* Test coverage statistics calculated using **NYC** and **Coveralls**
+* Front-end design uses **SVG** as well as **jQuery**, **Bootstrap** and **CSS**
+* Various packages used within the back-end logic including **Express Validator** to validating entries to the database, **Node-Mongo-Seeds** for seeding the database and **Connect Flash** for error messages
+
+### Approach
+
+* **Idea generation and user stories**
+* **Wireframes**
+* **Deciding our tech**
+* **Adding a project on GitHub**
+* **Pairing**
+* **Standups and retros**
+* **Code reviews**
+
+### Ideas for extension
+
+* **Users**
+* **Extending search**
+* **Wildcard button**
