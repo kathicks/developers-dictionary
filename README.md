@@ -7,14 +7,11 @@
 
 ### Instructions
 
-* Very little guidance beyond that written below was provided
+>The final project provides a safe environment for you to be creative and enjoy exploring new directions with your code.
+>
+>You can use any technology you like! It will be easier to use technologies you've already used at Makers. But you can use ones that are completely new.
 
-> Production code is generally built by a team of developers. It is important that you leave Makers with the skills needed to work in a team, and this is the primary reason that project weeks exist in the curriculum.
-
-> The final projects also provide a safe environment for you to be creative and enjoy exploring new directions with your code.
-
-> You can use any technology you like! It will be easier to use technologies you've already used at Makers. But you can use ones that are completely new.
-
+* Very little guidance was provided
 * As a group, we developed the following user stories that defined our goals for the project as well as what we considered to be the minimum viable product (MVP)
 
 ### User stories
@@ -108,6 +105,8 @@ I want to be able to skip to a letter in the dictionary.
 
 ### Running the tests
 
+* If you do not have MongoDB installed, you will need to install it using the instructions [here](http://treehouse.github.io/installation-guides/mac/mongo-mac.html)
+  * You will then need to create two databases within the console called `developers-dictionary-development` and `developers-dictionary-test`
 * Download the source code by cloning this repo with `$ git clone`
 * Navigate into the root of the directory using `$ cd developers-dictionary`
 * Within the command line, run `$ npm test`
@@ -127,15 +126,34 @@ I want to be able to skip to a letter in the dictionary.
 ### Approach
 
 * **Idea generation and user stories**
+  * We started off by brainstorming all possible features for the app and then using the development of user stories to ensure that the features really were of value to the user
 * **Wireframes**
+  * We each drew our vision of the app design on a piece of paper and then came together to compare our drawings
+  * We took the best bits from each drawing to develop our wireframes which acted as a template for the front-end design
 * **Deciding our tech**
+  * We decided to use the Node, Express and MongoDB tech stack for this project as an opportunity to learn something new
 * **Adding a project on GitHub**
+  * We decided to use the project management tool on Github (which can be seen on this repo by selecting the [projects](https://github.com/KatHicks/developers-dictionary/projects/1) tab above
+  * We entered all the user stories as to-do items and tagged them as either MVP or Version 1
 * **Pairing**
+  * We paired each day and pairs rotated regularly
+  * We made sure that as far as possible everyone got to work on the bits of the app that most interested them
 * **Standups and retros**
+  * We had stand up meetings at the beginning of each day to discuss what work was going to be done that day and decide on the pairings
+  * We also had retrospective meetings at the end of each day to review how things had gone and identify any problems or blockers
 * **Code reviews**
+  * As not everyone was working on the same thing, it was important to have code reviews so that we all understood how other bits of the app were working
 
 ### Ideas for extension
 
+There are lots of features that we would have liked to include but didn't have time to implement. Below is just a small selection:
+
 * **Users**
+  * Currently anyone who visits the app can add a term or explanation to the dictionary, which makes it liable to mis-use and inaccuracies
+  * Our plan is to include user accounts using OAuth with users signing up using their Github
 * **Extending search**
+  * Currently the search only works on exact matches
+  * It would be much more user friendly if we could run auto-correct, fuzzy matching and matching on first letters
 * **Wildcard button**
+  * One of the main aims of the app was to make researching software development jargon more fun and engaging
+  * We had the idea of a wildcard button in the middle of the wheel which takes you to a random page - not only would it be fun, but it might help you learn something new too!
