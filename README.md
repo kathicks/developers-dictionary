@@ -5,6 +5,8 @@
 
 **Built by [Mica Whitby](https://github.com/MicaW), [Sho Marovatsanga](https://github.com/Taziva), [Kat Hicks](https://github.com/KatHicks), [Tamar Lehmann](https://github.com/tamarlehmann), [Eleanor Kavanagh-Brown](https://github.com/bnzene) and [Barbara Shinkarenko](https://github.com/varvarra) in 8 days as the final project for Makers Academy**
 
+![Screenshot of landing page](/screenshot.png?raw=true "Screenshot of landing page")
+
 ### Instructions
 
 >The final project provides a safe environment for you to be creative and enjoy exploring new directions with your code.
