@@ -27,7 +27,7 @@
     "mocha": "^3.2.0",
     "mongodb": "^2.2.24",
     "monk": "^4.0.0",
-    "morgan": "~1.7.0",
+    "morgan": "~1.10.0",
     "node-mongo-seeds": "^2.3.1",
     "nodemon": "^1.11.0",
     "serve-favicon": "~2.3.2",
