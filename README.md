@@ -102,7 +102,7 @@ I want to be able to skip to a letter in the dictionary.
 
 ### Using our app
 
-* You can view our app at [www.developers-dictionary.co.uk](http://www.developers-dictionary.co.uk/)
+* You can view our app at [https://developers-dictionary.herokuapp.com/](https://developers-dictionary.herokuapp.com/)
 
 ### Running the tests
 
