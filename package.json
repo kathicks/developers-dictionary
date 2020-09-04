@@ -25,7 +25,7 @@
     "express-session": "^1.15.1",
     "express-validator": "^3.1.2",
     "mocha": "^3.2.0",
-    "mongodb": "^2.2.24",
+    "mongodb": "^3.6.1",
     "monk": "^4.0.0",
     "morgan": "~1.10.0",
     "node-mongo-seeds": "^2.3.1",
